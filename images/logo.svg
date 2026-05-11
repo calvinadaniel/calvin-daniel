@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" width="280" height="72" role="img" aria-label="Calvin Daniel">
+  <title>Calvin Daniel</title>
+
+  <!-- Script CD mark — 52×68 centered in a 68px tall column -->
+
+  <!-- C: sweeping arc with entry hairline and exit tail -->
+  <path d="M 35 10 C 31 5, 22 5, 17 11 C 8 23, 8 43, 14 55 C 18 63, 27 67, 34 63"
+        fill="none" stroke="white" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- C entry hairline flourish -->
+  <path d="M 34 8 C 32 3, 25 4, 27 10"
+        fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.72"/>
+  <!-- C exit tail flowing into D -->
+  <path d="M 34 63 C 37 61, 40 60, 42 60"
+        fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity="0.58"/>
+
+  <!-- D: spine shared with C, bowl arcs right -->
+  <path d="M 42 65 L 42 10"
+        fill="none" stroke="white" stroke-width="4.2" stroke-linecap="round"/>
+  <!-- D entry loop at top -->
+  <path d="M 42 10 C 45 3, 53 4, 54 11"
+        fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" opacity="0.68"/>
+  <!-- D bowl -->
+  <path d="M 42 10 C 58 8, 64 22, 64 37 C 64 53, 57 65, 42 65"
+        fill="none" stroke="white" stroke-width="4.2" stroke-linecap="round"/>
+  <!-- D exit tail flourish -->
+  <path d="M 42 65 C 50 69, 60 67, 65 61"
+        fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- Orange underswing accent -->
+  <path d="M 10 71 C 28 78, 50 77, 66 71"
+        fill="none" stroke="#FF5910" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Ink drop -->
+  <circle cx="10" cy="71" r="3.2" fill="#FF5910"/>
+
+  <!-- Wordmark: Calvin Daniel in Dancing Script Bold -->
+  <text
+    x="84"
+    y="52"
+    font-family="'Dancing Script', cursive"
+    font-weight="700"
+    font-size="38"
+    fill="white"
+    letter-spacing="0.5">Calvin Daniel</text>
+
+</svg>
