@@ -1,5 +1,5 @@
 import Reveal from './Reveal'
-const runnerImg = '/images/fitsum-admasu-oGv9xIl7DkY-unsplash.jpg'
+const runnerImg = `${import.meta.env.BASE_URL}images/fitsum-admasu-oGv9xIl7DkY-unsplash.jpg`
 
 const pillars = [
   { icon: '</>', label: 'Web Dev'   },

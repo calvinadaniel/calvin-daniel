@@ -10,7 +10,7 @@ const CLIENTS = [
     description: 'Independent freelancer website built on WordPress with a polished, professional presence that immediately establishes credibility. Features a custom contact form implementation for client intake, mobile-first responsive design, and optimized load times — giving a solo practitioner the same digital authority as a full firm.',
     platform: ['WordPress', 'Custom CSS', 'Contact Form', 'SEO'],
     siteUrl: 'https://minerdisputeresolution.com/',
-    image: '/images/gurvis-miner-screenshot.png',
+    image: `${import.meta.env.BASE_URL}images/gurvis-miner-screenshot.png`,
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const CLIENTS = [
     description: 'Fully custom-coded storefront built from the ground up — no templates, no shortcuts. Features dynamic order forms, presale window open/close functionality that activates and deactivates ordering on a schedule, and deep SEO optimization to drive organic traffic. Fast load times and a mobile experience as smooth as the desktop keep customers engaged from first visit to checkout.',
     platform: ['Custom Code', 'JavaScript', 'Order Forms', 'SEO'],
     siteUrl: 'https://bachatabakery.com/',
-    image: '/images/place-an-order-bachata-bakery-screenshot.png',
+    image: `${import.meta.env.BASE_URL}images/place-an-order-bachata-bakery-screenshot.png`,
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const CLIENTS = [
     description: 'A single-page freelance site for a professional makeup artist serving DE, PA, NJ, and MD. Beautifully showcases services and pricing in a clean, scrollable layout, with integrated contact form functionality for booking inquiries. Optimized for mobile — because clients are booking on their phones — with lightning-fast load times and a customized visual identity that reflects the brand.',
     platform: ['Custom Code', 'CSS', 'Contact Form', 'Mobile-First'],
     siteUrl: 'https://raquelariana.com/',
-    image: '/images/raquel-ariana-homepage-screenshot.png',
+    image: `${import.meta.env.BASE_URL}images/raquel-ariana-homepage-screenshot.png`,
   },
 ]
 
