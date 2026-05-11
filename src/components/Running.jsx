@@ -19,15 +19,15 @@ const RACE_STATS = [
 ]
 
 const GOALS = [
-  { text: 'Sub-4:00 Marathon' },
-  { text: 'Complete Chicago Major' },
-  { text: '1,000 miles in 2026' },
+  { text: 'Run Boston Marathon', achieved: false },
+  { text: 'Complete Chicago Major', achieved: false },
+  { text: '1,000 miles in 2026', achieved: false },
 ]
 
 const MAJORS = [
-  { name: 'New York City', status: '3× Finisher', completed: true  },
-  { name: 'Chicago',       status: 'On the list', completed: false },
-  { name: 'Boston',        status: 'On the list', completed: false },
+  { name: 'New York City', status: '3× Finisher',  completed: true  },
+  { name: 'Chicago',       status: 'Next Target',  completed: false },
+  { name: 'Boston',        status: 'Next Target',  completed: false },
   { name: 'London',        status: 'On the list', completed: false },
   { name: 'Berlin',        status: 'On the list', completed: false },
   { name: 'Tokyo',         status: 'On the list', completed: false },
@@ -124,9 +124,12 @@ export default function Running() {
                   <span className="absolute top-4 right-4 text-orange text-[1.2rem]">★</span>
                   <div className="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-2">Full Marathon</div>
                   <div className="font-display text-[clamp(2.5rem,8vw,4rem)] text-orange leading-none">
-                    4:10<span className="text-[0.5em] opacity-60">:00</span>
+                    3:54<span className="text-[0.5em] opacity-60">:23</span>
                   </div>
-                  <div className="font-mono text-[0.65rem] tracking-widest text-navy-bg/60 dark:text-offwhite/60 mt-2">~9:33 / mile</div>
+                  <div className="font-mono text-[0.65rem] tracking-widest text-navy-bg/60 dark:text-offwhite/60 mt-2">~8:57 / mile</div>
+                  <div className="mt-3 inline-flex items-center gap-1.5 bg-orange text-offwhite px-3 py-1 rounded-full font-mono text-[0.6rem] tracking-widest uppercase">
+                    <span>✓</span> Sub-4 Achieved
+                  </div>
                 </div>
               </div>
             </div>
@@ -137,6 +140,10 @@ export default function Running() {
                 Current Goals
               </h3>
               <div className="flex flex-wrap gap-3">
+                <span className="inline-flex items-center gap-2 border border-orange bg-orange text-offwhite px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]">
+                  <span aria-hidden="true">✓</span>
+                  Sub-4:00 Marathon
+                </span>
                 {GOALS.map(({ text }) => (
                   <span
                     key={text}

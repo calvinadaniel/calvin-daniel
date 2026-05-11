@@ -86,7 +86,7 @@ export default function Hero() {
     'Based in Delaware | Available for freelance work'
   )
   const [racesRef,    racesVal]    = useCountUp(9)
-  const [marathonRef, marathonVal] = useCountUp(10)
+  const [marathonRef, marathonVal] = useCountUp(54)
   const [nycRef,      nycVal]      = useCountUp(3)
 
   useEffect(() => {
@@ -243,7 +243,7 @@ export default function Hero() {
         <div className="w-px h-10 bg-navy-bg/10 dark:bg-offwhite/10 flex-shrink-0" aria-hidden="true" />
         <div ref={marathonRef} className="flex flex-col gap-1 mb-[5%]">
           <span className="flex items-baseline gap-0.5 leading-none">
-            <span className="font-display text-[clamp(2rem,5vw,3rem)] text-orange">4:</span>
+            <span className="font-display text-[clamp(2rem,5vw,3rem)] text-orange">3:</span>
             <span className="font-display text-[clamp(2rem,5vw,3rem)] text-orange">
               {String(marathonVal).padStart(2, '0')}
             </span>
