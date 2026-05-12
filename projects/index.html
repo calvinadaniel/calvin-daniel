@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Calvin Daniel</title>
+  <script>(function(){if(localStorage.getItem('theme')!=='light')document.documentElement.classList.add('dark');}());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg" />
+</head>
+<body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-[100] h-[70px]">
+  <div class="flex items-center justify-between h-full px-[5%] max-w-[1240px] mx-auto">
+    <a href="../" aria-label="Calvin Daniel Home" class="hover:opacity-90 transition-opacity">
+      <span class="font-script text-[1.9rem] font-bold text-orange leading-none">Calvin Daniel</span>
+    </a>
+    <nav class="hidden lg:flex gap-6 items-center" aria-label="Main navigation">
+      <a href="../#about"   class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a>
+      <a href="../#web-dev" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Developer</a>
+      <a href="../#analyst" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Analyst</a>
+      <a href="../#running" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Runner</a>
+      <a href="../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border-b-2 border-orange pb-0.5">Projects</a>
+      <a href="../clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
+      <button id="theme-toggle" aria-label="Switch to light mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
+        <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
+    </nav>
+    <button id="menu-open" class="lg:hidden flex flex-col justify-center gap-[5px] w-9 h-9 p-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="off-canvas-nav">
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+    </button>
+  </div>
+</header>
+
+<div id="menu-overlay" class="fixed inset-0 bg-black/65 z-[200] opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+<nav id="off-canvas-nav" aria-label="Mobile navigation" class="fixed top-0 right-0 h-full w-[min(320px,85vw)] bg-warm-section dark:bg-navy-dark z-[300] flex flex-col px-8 pt-16 pb-8 border-l border-navy-bg/10 dark:border-offwhite/10 translate-x-full transition-transform duration-500">
+  <button id="menu-close" class="absolute top-5 right-5 text-navy-bg/40 dark:text-offwhite/60 text-xl hover:text-navy-bg dark:hover:text-offwhite transition-colors" aria-label="Close navigation menu">&#10005;</button>
+  <button id="mobile-theme-toggle" class="absolute top-5 left-8 flex items-center gap-2 font-mono text-[0.65rem] tracking-widest uppercase text-navy-bg/50 dark:text-offwhite/50 hover:text-orange transition-colors">
+    <svg id="m-icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg id="m-icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span id="mobile-toggle-label">Light</span>
+  </button>
+  <ul class="flex flex-col gap-8 mt-4">
+    <li><a href="../#about"   class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a></li>
+    <li><a href="../#web-dev" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Developer</a></li>
+    <li><a href="../#analyst" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Analyst</a></li>
+    <li><a href="../#running" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Runner</a></li>
+    <li><a href="../projects/" class="font-display text-[2rem] text-orange tracking-wide">Projects</a></li>
+    <li><a href="../clients/"  class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a></li>
+    <li><a href="../#contact" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Let's Connect</a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- Page header -->
+  <section class="bg-warm-bg dark:bg-navy-bg pt-[100px] pb-14 border-b border-navy-bg/10 dark:border-offwhite/10">
+    <div class="w-[90%] max-w-[1240px] mx-auto">
+      <div data-reveal>
+        <a href="../" class="inline-flex items-center gap-1 font-mono text-[0.65rem] tracking-[0.15em] uppercase text-navy-bg/45 dark:text-offwhite/45 hover:text-orange transition-colors mb-6">← Home</a>
+        <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none text-navy-bg dark:text-offwhite">Projects</h1>
+        <p class="font-body text-[1.05rem] text-navy-bg/60 dark:text-offwhite/60 mt-3">Personal builds, experiments, and tools</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-[90%] max-w-[1240px] mx-auto py-16">
+    <!-- Filter pills -->
+    <div data-reveal class="flex flex-wrap gap-3 mb-12">
+      <button data-filter="All"              data-active="true"  class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">All</button>
+      <button data-filter="Web Dev"          data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Web Dev</button>
+      <button data-filter="Data / Analytics" data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Data / Analytics</button>
+      <button data-filter="Tool"             data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Tool</button>
+    </div>
+    <!-- Project grid -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <div data-reveal>
+        <article data-category="Web Dev" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&auto=format&fit=crop&q=80" alt="Portfolio Website" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Portfolio Website</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Personal portfolio built with HTML, CSS, and vanilla JS. Features dark/light mode, particle canvas, and scroll animations.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">HTML</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">JavaScript</span></div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div data-reveal>
+        <article data-category="Data / Analytics" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Operations Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Operations Dashboard</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Power BI dashboard for commercial operations tracking KPIs, revenue trends, and pipeline metrics across business units.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Power BI</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">DAX</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">SQL</span></div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div data-reveal>
+        <article data-category="Tool" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&auto=format&fit=crop&q=80" alt="Race Training Tracker" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Race Training Tracker</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">A lightweight tool for logging marathon training runs, race results, and personal records over time.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">JavaScript</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span><span class="font-mono text-[0.6rem] tracking-widests uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">HTML</span></div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div data-reveal>
+        <article data-category="Web Dev" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80" alt="Small Business Site" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Small Business Site</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Custom WordPress theme for a local service business. Mobile-first, SEO optimized, and easy for the owner to manage.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">WordPress</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">PHP</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span></div>
+            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="bg-warm-section dark:bg-navy-dark border-t border-navy-bg/10 dark:border-offwhite/10 py-8">
+  <div class="w-[90%] max-w-[1240px] mx-auto">
+    <div class="flex flex-col items-center gap-2 text-center md:flex-row md:justify-between">
+      <a href="../" aria-label="Calvin Daniel Home" class="hover:opacity-80 transition-opacity"><span class="font-script text-[1.7rem] font-bold text-orange leading-none">Calvin Daniel</span></a>
+      <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 · Developer · Analyst · Runner</span>
+      <a href="https://calantdigital.com" target="_blank" rel="noopener noreferrer" class="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-orange hover:opacity-75 transition-opacity">Calant Digital</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/projects.js"></script>
+</body>
+</html>
