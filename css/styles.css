@@ -2415,7 +2415,7 @@ video {
 /* ── Header scroll state ───────────────────────────────── */
 #site-header { transition: height 0.3s, background-color 0.3s, box-shadow 0.3s; }
 #site-header.scrolled {
-  height: 58px !important;
+  height: 75px !important;
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -2446,3 +2446,9 @@ video {
   border-color: #FF5910;
   color: #F5F7FA;
 }
+
+/* ── Logo theme switching ──────────────────────────────── */
+.logo-light { display: block; height:150px;}
+.logo-dark  { display: none;  }
+.dark .logo-light { display: none;  }
+.dark .logo-dark  { display: block; height:150px;}
