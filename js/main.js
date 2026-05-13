@@ -1,6 +1,6 @@
 // Dark mode init — runs before DOMContentLoaded to prevent flash
 (function () {
-  if (localStorage.getItem('theme') !== 'light') {
+  if (localStorage.getItem('theme') === 'dark') {
     document.documentElement.classList.add('dark');
   }
 })();
