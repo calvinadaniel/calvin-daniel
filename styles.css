@@ -1035,3 +1035,94 @@ body {
 @media (min-width: 1440px) {
   .hero-content { padding-top: var(--space-xl); }
 }
+
+/* ── Running Analysis Dashboard ─────────────────────────── */
+.summary-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .summary-bar { grid-template-columns: repeat(4, 1fr); }
+}
+
+.stat-chip {
+  background: white;
+  border: 1px solid rgba(13, 27, 62, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.dark .stat-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0D1B3E;
+  line-height: 1;
+}
+.dark .stat-value { color: #F5F0E8; }
+
+.stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(13, 27, 62, 0.45);
+}
+.dark .stat-label { color: rgba(245, 240, 232, 0.45); }
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.panel {
+  background: white;
+  border: 1px solid rgba(13, 27, 62, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.dark .panel {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.panel--wide  { grid-column: 1 / -1; }
+
+.panel--hero {
+  border-color: rgba(255, 89, 16, 0.35);
+  border-width: 2px;
+}
+
+.panel-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: #0D1B3E;
+  margin-bottom: 0.125rem;
+}
+.dark .panel-title { color: #F5F0E8; }
+
+.panel-subtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(13, 27, 62, 0.4);
+  margin-bottom: 1rem;
+}
+.dark .panel-subtitle { color: rgba(245, 240, 232, 0.4); }
+
+.chart-wrap      { position: relative; height: 250px; }
+.chart-wrap--tall { height: 320px; }
