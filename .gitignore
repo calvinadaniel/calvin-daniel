@@ -5,3 +5,6 @@ dist
 .DS_Store
 .claude/
 .playwright-mcp/
+scripts/.env
+scripts/__pycache__/
+scripts/tests/__pycache__/
