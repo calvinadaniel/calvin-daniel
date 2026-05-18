@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Running Analysis — Calvin Daniel</title>
+  <script>(function(){if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');}());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="icon" type="image/png" href="../../images/favicon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
+
+  <!-- Nav -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-warm-bg/90 dark:bg-navy-bg/90 backdrop-blur border-b border-navy-bg/10 dark:border-offwhite/10 px-6 py-4 flex items-center justify-between">
+    <a href="../../index.html">
+      <img src="../../images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-10 w-auto" />
+      <img src="../../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-10 w-auto" />
+    </a>
+    <nav class="hidden md:flex gap-8">
+      <a href="../../index.html#about"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a>
+      <a href="../../projects/"         class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
+      <a href="../../clients/"          class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
+    </nav>
+    <button id="theme-toggle" aria-label="Switch to dark mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
+      <svg class="block dark:hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+      <svg class="hidden dark:block w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-12 px-6 max-w-6xl mx-auto">
+    <a href="../../projects/" class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">← Back to Projects</a>
+    <h1 class="font-display text-5xl md:text-7xl text-navy-bg dark:text-offwhite mt-4">Running Analysis</h1>
+    <p class="font-mono text-sm text-navy-bg/50 dark:text-offwhite/50 mt-2 tracking-wide">Sep 2024 – Present &nbsp;·&nbsp; Boston Marathon Trajectory</p>
+  </section>
+
+  <!-- Summary Bar -->
+  <section class="px-6 max-w-6xl mx-auto mb-12">
+    <div class="summary-bar">
+      <div class="stat-chip">
+        <span id="stat-runs"  class="stat-value">—</span>
+        <span class="stat-label">Total Runs</span>
+      </div>
+      <div class="stat-chip">
+        <span id="stat-miles" class="stat-value">—</span>
+        <span class="stat-label">Total Miles</span>
+      </div>
+      <div class="stat-chip">
+        <span id="stat-time"  class="stat-value">—</span>
+        <span class="stat-label">Total Hours</span>
+      </div>
+      <div class="stat-chip">
+        <span id="stat-pace"  class="stat-value">—</span>
+        <span class="stat-label">Current Avg Pace</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Grid -->
+  <div class="px-6 max-w-6xl mx-auto pb-24 dashboard-grid">
+
+    <div class="panel panel--wide">
+      <h2 class="panel-title">Pace Trend</h2>
+      <p class="panel-subtitle">Monthly average pace with regression trend line</p>
+      <div class="chart-wrap"><canvas id="chart-pace"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h2 class="panel-title">Heart Rate Efficiency</h2>
+      <p class="panel-subtitle">Pace vs. HR — newer runs should appear lower-right</p>
+      <div class="chart-wrap"><canvas id="chart-hr"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h2 class="panel-title">Weekly Volume</h2>
+      <p class="panel-subtitle">Total miles per week</p>
+      <div class="chart-wrap"><canvas id="chart-volume"></canvas></div>
+    </div>
+
+    <div class="panel panel--wide">
+      <h2 class="panel-title">Relative Effort</h2>
+      <p class="panel-subtitle">Strava suffer score per month with 4-month rolling average</p>
+      <div class="chart-wrap"><canvas id="chart-effort"></canvas></div>
+    </div>
+
+    <div class="panel panel--wide panel--hero">
+      <h2 class="panel-title">Boston Qualifier Projection</h2>
+      <p class="panel-subtitle">Current PR: 3:54:23 &nbsp;·&nbsp; BQ target: 3:05:00 (Males 40–44) &nbsp;·&nbsp; Target pace: 7:03/mi</p>
+      <div class="chart-wrap chart-wrap--tall"><canvas id="chart-bq"></canvas></div>
+    </div>
+
+  </div>
+
+  <script src="../../js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
