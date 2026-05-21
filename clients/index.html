@@ -11,12 +11,6 @@
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/nav-dropdown.css" />
   <link rel="icon" type="image/png" href="../images/favicon-social-logo.png" />
-  <style>
-    .client-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,26,77,0.2); border: none; padding: 0; cursor: pointer; transition: background .2s, transform .2s; flex-shrink: 0; }
-    .dark .client-dot { background: rgba(245,247,250,0.2); }
-    .client-dot.is-active { background: #FF5910; transform: scale(1.4); }
-    #client-prev:disabled, #client-next:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
-  </style>
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
 
@@ -87,126 +81,104 @@
     </div>
   </section>
 
-  <!-- Carousel -->
+  <!-- Client grid -->
   <div class="w-[90%] max-w-[1240px] mx-auto py-16">
-    <div data-reveal>
+    <div class="grid gap-6 md:grid-cols-2">
 
-      <!-- Arrow + viewport row -->
-      <div class="flex items-center gap-4 justify-center">
-
-        <button id="client-prev" aria-label="Previous client"
-          class="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/50 dark:text-offwhite/50 hover:border-orange hover:text-orange transition-all rounded-sm">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="10,3 5,8 10,13"/></svg>
-        </button>
-
-        <!-- Clipping viewport -->
-        <div class="overflow-hidden max-w-md w-full">
-          <div id="client-track" class="flex" style="transition:transform .65s cubic-bezier(.25,1,.5,1);will-change:transform">
-
-            <!-- Card 1: Gurvis Miner -->
-            <article aria-label="Gurvis Miner Dispute Resolution"
-              class="flex-shrink-0 w-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden">
-              <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
-                <img src="../images/logo-miner-dispute.png" alt="Gurvis Miner Dispute Resolution logo"
-                  class="max-h-full max-w-full object-contain" loading="eager" />
-              </div>
-              <div class="flex flex-col flex-1 p-6">
-                <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Legal / Mediation</span>
-                <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Gurvis Miner Dispute Resolution</h3>
-                <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Independent freelancer website built on WordPress with a polished, professional presence that establishes immediate credibility. Features a custom contact form for client intake, mobile-first responsive design, and optimized load times &mdash; giving a solo practitioner the same digital authority as a full firm.</p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">WordPress</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom CSS</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Contact Form</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">SEO</span>
-                </div>
-                <a href="https://minerdisputeresolution.com/" target="_blank" rel="noopener noreferrer"
-                  class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
-              </div>
-            </article>
-
-            <!-- Card 2: Bachata Bakery -->
-            <article aria-label="Bachata Bakery"
-              class="flex-shrink-0 w-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden">
-              <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
-                <img src="../images/logo-bachata-bakery.png" alt="Bachata Bakery logo"
-                  class="max-h-full max-w-full object-contain" loading="lazy" />
-              </div>
-              <div class="flex flex-col flex-1 p-6">
-                <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Food &amp; Beverage</span>
-                <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Bachata Bakery</h3>
-                <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Fully custom-coded storefront built from the ground up &mdash; no templates, no shortcuts. Features dynamic order forms, a presale window that activates and deactivates ordering on a schedule, and deep SEO optimization to drive organic traffic. Fast load times and a seamless mobile experience keep customers engaged from first visit to checkout.</p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom Code</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">JavaScript</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Order Forms</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">SEO</span>
-                </div>
-                <a href="https://bachatabakery.com/" target="_blank" rel="noopener noreferrer"
-                  class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
-              </div>
-            </article>
-
-            <!-- Card 3: Raquel Ariana -->
-            <article aria-label="Raquel Ariana"
-              class="flex-shrink-0 w-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden">
-              <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
-                <img src="../images/logo-raquel-ariana.png" alt="Raquel Ariana logo"
-                  class="max-h-full max-w-full object-contain" loading="lazy" />
-              </div>
-              <div class="flex flex-col flex-1 p-6">
-                <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Beauty / Makeup Artist</span>
-                <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Raquel Ariana</h3>
-                <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">A single-page freelance site for a professional makeup artist serving DE, PA, NJ, and MD. Showcases services and pricing in a clean, scrollable layout with integrated booking inquiry forms. Optimized for mobile &mdash; because clients are booking on their phones &mdash; with a customized visual identity that reflects the brand.</p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom Code</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Contact Form</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Mobile-First</span>
-                </div>
-                <a href="https://raquelariana.com/" target="_blank" rel="noopener noreferrer"
-                  class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
-              </div>
-            </article>
-
-            <!-- Card 4: Gregory Duane -->
-            <article aria-label="Gregory Duane"
-              class="flex-shrink-0 w-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden">
-              <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
-                <img src="../images/logo-gregory-duane.png" alt="Gregory Duane logo"
-                  class="max-h-full max-w-full object-contain" loading="lazy" />
-              </div>
-              <div class="flex flex-col flex-1 p-6">
-                <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Fashion / Bridal</span>
-                <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Gregory Duane</h3>
-                <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">A custom suit and bridal boutique offering tailored fittings, online sales, and arranged in-person consultations. Squarespace's commerce platform handles the shopping cart and secure checkout, while a full custom design overhaul sets the site apart &mdash; giving the boutique an elevated identity that matches the premium quality of their handcrafted garments.</p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Squarespace</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom CSS</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">E-Commerce</span>
-                  <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Appointments</span>
-                </div>
-                <a href="https://gregoryduane.com" target="_blank" rel="noopener noreferrer"
-                  class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
-              </div>
-            </article>
-
+      <!-- Card 1: Gurvis Miner -->
+      <div data-reveal class="h-full">
+        <article aria-label="Gurvis Miner Dispute Resolution"
+          class="h-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
+            <img src="../images/logo-miner-dispute.png" alt="Gurvis Miner Dispute Resolution logo"
+              class="max-h-full max-w-full object-contain" loading="eager" />
           </div>
-        </div><!-- /viewport -->
+          <div class="flex flex-col flex-1 p-6">
+            <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Legal / Mediation</span>
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Gurvis Miner Dispute Resolution</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Independent freelancer website built on WordPress with a polished, professional presence that establishes immediate credibility. Features a custom contact form for client intake, mobile-first responsive design, and optimized load times &mdash; giving a solo practitioner the same digital authority as a full firm.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">WordPress</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom CSS</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Contact Form</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">SEO</span>
+            </div>
+            <a href="https://minerdisputeresolution.com/" target="_blank" rel="noopener noreferrer"
+              class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
+          </div>
+        </article>
+      </div>
 
-        <button id="client-next" aria-label="Next client"
-          class="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/50 dark:text-offwhite/50 hover:border-orange hover:text-orange transition-all rounded-sm">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6,3 11,8 6,13"/></svg>
-        </button>
+      <!-- Card 2: Bachata Bakery -->
+      <div data-reveal class="h-full">
+        <article aria-label="Bachata Bakery"
+          class="h-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
+            <img src="../images/logo-bachata-bakery.png" alt="Bachata Bakery logo"
+              class="max-h-full max-w-full object-contain" loading="lazy" />
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Food &amp; Beverage</span>
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Bachata Bakery</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Fully custom-coded storefront built from the ground up &mdash; no templates, no shortcuts. Features dynamic order forms, a presale window that activates and deactivates ordering on a schedule, and deep SEO optimization to drive organic traffic. Fast load times and a seamless mobile experience keep customers engaged from first visit to checkout.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom Code</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">JavaScript</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Order Forms</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">SEO</span>
+            </div>
+            <a href="https://bachatabakery.com/" target="_blank" rel="noopener noreferrer"
+              class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
+          </div>
+        </article>
+      </div>
 
-      </div><!-- /flex row -->
+      <!-- Card 3: Raquel Ariana -->
+      <div data-reveal class="h-full">
+        <article aria-label="Raquel Ariana"
+          class="h-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
+            <img src="../images/logo-raquel-ariana.png" alt="Raquel Ariana logo"
+              class="max-h-full max-w-full object-contain" loading="lazy" />
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Beauty / Makeup Artist</span>
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Raquel Ariana</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">A single-page freelance site for a professional makeup artist serving DE, PA, NJ, and MD. Showcases services and pricing in a clean, scrollable layout with integrated booking inquiry forms. Optimized for mobile &mdash; because clients are booking on their phones &mdash; with a customized visual identity that reflects the brand.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom Code</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Contact Form</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Mobile-First</span>
+            </div>
+            <a href="https://raquelariana.com/" target="_blank" rel="noopener noreferrer"
+              class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
+          </div>
+        </article>
+      </div>
 
-      <!-- Dot indicators -->
-      <div id="client-dots" class="flex items-center justify-center gap-3 mt-6" role="tablist" aria-label="Go to client">
-        <button class="client-dot is-active" role="tab" aria-selected="true"  aria-label="Gurvis Miner &ndash; 1 of 4"></button>
-        <button class="client-dot"           role="tab" aria-selected="false" aria-label="Bachata Bakery &ndash; 2 of 4"></button>
-        <button class="client-dot"           role="tab" aria-selected="false" aria-label="Raquel Ariana &ndash; 3 of 4"></button>
-        <button class="client-dot"           role="tab" aria-selected="false" aria-label="Gregory Duane &ndash; 4 of 4"></button>
+      <!-- Card 4: Gregory Duane -->
+      <div data-reveal class="h-full">
+        <article aria-label="Gregory Duane"
+          class="h-full group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="flex items-center justify-center h-52 flex-shrink-0 p-10" style="background:#001A4D;">
+            <img src="../images/logo-gregory-duane.png" alt="Gregory Duane logo"
+              class="max-h-full max-w-full object-contain" loading="lazy" />
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <span class="font-mono text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm inline-block w-fit mb-3">Fashion / Bridal</span>
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Gregory Duane</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">A custom suit and bridal boutique offering tailored fittings, online sales, and arranged in-person consultations. Squarespace's commerce platform handles the shopping cart and secure checkout, while a full custom design overhaul sets the site apart &mdash; giving the boutique an elevated identity that matches the premium quality of their handcrafted garments.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Squarespace</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom CSS</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">E-Commerce</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Appointments</span>
+            </div>
+            <a href="https://gregoryduane.com" target="_blank" rel="noopener noreferrer"
+              class="text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">Visit Site</a>
+          </div>
+        </article>
       </div>
 
     </div>
@@ -235,48 +207,5 @@
 </footer>
 
 <script src="../js/main.js"></script>
-<script>
-(function () {
-  var track   = document.getElementById('client-track');
-  var dots    = document.querySelectorAll('#client-dots .client-dot');
-  var prevBtn = document.getElementById('client-prev');
-  var nextBtn = document.getElementById('client-next');
-  var cards   = track.querySelectorAll('article');
-  var total   = cards.length;
-  var current = 0;
-
-  function goTo(index) {
-    current = Math.max(0, Math.min(index, total - 1));
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
-    dots.forEach(function (dot, i) {
-      var active = i === current;
-      dot.classList.toggle('is-active', active);
-      dot.setAttribute('aria-selected', active ? 'true' : 'false');
-    });
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current === total - 1;
-  }
-
-  prevBtn.addEventListener('click', function () { goTo(current - 1); });
-  nextBtn.addEventListener('click', function () { goTo(current + 1); });
-  dots.forEach(function (dot, i) {
-    dot.addEventListener('click', function () { goTo(i); });
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft')  goTo(current - 1);
-    if (e.key === 'ArrowRight') goTo(current + 1);
-  });
-
-  var touchX = 0;
-  track.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend',   function (e) {
-    var dx = e.changedTouches[0].clientX - touchX;
-    if (Math.abs(dx) > 50) goTo(dx > 0 ? current - 1 : current + 1);
-  });
-
-  goTo(0);
-}());
-</script>
 </body>
 </html>
