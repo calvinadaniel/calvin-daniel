@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/nav-dropdown.css" />
   <link rel="icon" type="image/png" href="../images/favicon-social-logo.png" />
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
@@ -21,11 +22,15 @@
       <img src="../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-10 w-auto" />
     </a>
     <nav class="hidden lg:flex gap-6 items-center" aria-label="Main navigation">
-      <a href="../#about"   class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a>
-      <a href="../#web-dev" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Developer</a>
-      <a href="../#analyst" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Analyst</a>
-      <a href="../#running" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Runner</a>
-      <a href="../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border-b-2 border-orange pb-0.5">Projects</a>
+      <div class="nav-projects">
+        <a href="../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border-b-2 border-orange pb-0.5 flex items-center gap-1">
+          Projects
+          <svg class="nav-projects-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 5,6 9,1"/></svg>
+        </a>
+        <div class="nav-dropdown" role="menu" aria-label="Projects submenu">
+          <a href="../projects/running-analysis-app/" class="nav-dropdown-link" role="menuitem">Running Analysis</a>
+        </div>
+      </div>
       <a href="../clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
       <button id="theme-toggle" aria-label="Switch to light mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
         <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -50,24 +55,30 @@
     <span id="mobile-toggle-label">Light</span>
   </button>
   <ul class="flex flex-col gap-8 mt-4">
-    <li><a href="../#about"   class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a></li>
-    <li><a href="../#web-dev" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Developer</a></li>
-    <li><a href="../#analyst" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Analyst</a></li>
-    <li><a href="../#running" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Runner</a></li>
-    <li><a href="../projects/" class="font-display text-[2rem] text-orange tracking-wide">Projects</a></li>
+    <li>
+      <a href="../projects/" class="font-display text-[2rem] text-orange tracking-wide">Projects</a>
+      <div class="mobile-sub-nav">
+        <a href="../projects/running-analysis-app/">Running Analysis</a>
+      </div>
+    </li>
     <li><a href="../clients/"  class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a></li>
     <li><a href="../#contact" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Let's Connect</a></li>
   </ul>
 </nav>
 
 <main>
-  <!-- Page header -->
-  <section class="bg-warm-bg dark:bg-navy-bg pt-[100px] pb-14 border-b border-navy-bg/10 dark:border-offwhite/10">
+  <!-- Profile Hero -->
+  <section class="bg-warm-bg dark:bg-navy-bg pt-[100px] pb-16 border-b border-navy-bg/10 dark:border-offwhite/10">
     <div class="w-[90%] max-w-[1240px] mx-auto">
       <div data-reveal>
         <a href="../" class="inline-flex items-center gap-1 font-mono text-[0.65rem] tracking-[0.15em] uppercase text-navy-bg/45 dark:text-offwhite/45 hover:text-orange transition-colors mb-6">← Home</a>
-        <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none text-navy-bg dark:text-offwhite">Projects</h1>
-        <p class="font-body text-[1.05rem] text-navy-bg/60 dark:text-offwhite/60 mt-3">Personal builds, experiments, and tools</p>
+        <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none text-navy-bg dark:text-offwhite mb-3">Calvin Daniel</h1>
+        <p class="font-mono text-[0.8rem] tracking-[0.12em] uppercase text-orange/80 mb-5">Production Operations · Data Analysis · Web Development</p>
+        <p class="font-body text-[1.05rem] text-navy-bg/60 dark:text-offwhite/60 max-w-[640px] mb-8">Operations professional with 17+ years at John Wiley &amp; Sons. Experienced in cross-functional process improvement, Power BI dashboards, financial analysis, and web development.</p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-5 py-[0.5rem] border border-orange text-orange rounded-sm hover:bg-orange hover:text-offwhite transition-all">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/calvin-daniel-6229054/" target="_blank" rel="noopener noreferrer" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-5 py-[0.5rem] border border-navy-bg/30 dark:border-offwhite/30 text-navy-bg/70 dark:text-offwhite/70 rounded-sm hover:border-orange hover:text-orange transition-all">LinkedIn ↗</a>
+        </div>
       </div>
     </div>
   </section>
@@ -137,13 +148,19 @@
 
 <footer class="bg-warm-section dark:bg-navy-dark border-t border-navy-bg/10 dark:border-offwhite/10 py-8">
   <div class="w-[90%] max-w-[1240px] mx-auto">
-    <div class="flex flex-col items-center gap-2 text-center md:flex-row md:justify-between">
-      <a href="../" aria-label="Calvin Daniel Home" class="hover:opacity-80 transition-opacity">
+    <div class="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:items-center">
+      <a href="../" aria-label="Calvin Daniel Home" class="hover:opacity-80 transition-opacity flex-shrink-0">
         <img src="../images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-8 w-auto" />
         <img src="../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-8 w-auto" />
       </a>
-      <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 · Developer · Analyst · Runner</span>
-      <a href="https://calantdigital.com" target="_blank" rel="noopener noreferrer" class="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-orange hover:opacity-75 transition-opacity">Calant Digital</a>
+      <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+        <a href="../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Projects</a>
+        <a href="../clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Clients</a>
+      </nav>
+      <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
+        <a href="../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
+        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 Calvin Daniel</span>
+      </div>
     </div>
   </div>
 </footer>
