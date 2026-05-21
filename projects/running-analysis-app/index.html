@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,61 +7,105 @@
   <script>(function(){if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');}());</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../styles.css" />
-  <link rel="icon" type="image/png" href="../../images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/nav-dropdown.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="icon" type="image/png" href="../../images/favicon-social-logo.png" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
 
-  <!-- Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-warm-bg/90 dark:bg-navy-bg/90 backdrop-blur border-b border-navy-bg/10 dark:border-offwhite/10 px-6 py-4 flex items-center justify-between">
-    <a href="../../index.html">
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-[100] h-[70px]">
+  <div class="flex items-center justify-between h-full px-[5%] max-w-[1240px] mx-auto">
+    <a href="../../index.html" aria-label="Calvin Daniel Home" class="hover:opacity-90 transition-opacity">
       <img src="../../images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-10 w-auto" />
       <img src="../../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-10 w-auto" />
     </a>
-    <nav class="hidden md:flex gap-8">
-      <a href="../../index.html#about"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a>
-      <a href="../../projects/"         class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
-      <a href="../../clients/"          class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
+    <nav class="hidden lg:flex gap-6 items-center" aria-label="Main navigation">
+      <div class="nav-projects">
+        <a href="../../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors flex items-center gap-1">
+          Projects
+          <svg class="nav-projects-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 5,6 9,1"/></svg>
+        </a>
+        <div class="nav-dropdown" role="menu" aria-label="Projects submenu">
+          <a href="../../projects/running-analysis-app/" class="nav-dropdown-link" role="menuitem">Running Analysis</a>
+          <a href="https://statcast-rank-app.vercel.app/" class="nav-dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Statcast Rank</a>
+        </div>
+      </div>
+      <a href="../../clients/"           class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
+      <button id="theme-toggle" aria-label="Switch to light mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
+        <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="../../index.html#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
     </nav>
-    <button id="theme-toggle" aria-label="Switch to dark mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
-      <svg class="block dark:hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-      <svg class="hidden dark:block w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+    <button id="menu-open" class="lg:hidden flex flex-col justify-center gap-[5px] w-9 h-9 p-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="off-canvas-nav">
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
     </button>
-  </header>
+  </div>
+</header>
+
+<!-- Overlay -->
+<div id="menu-overlay" class="fixed inset-0 bg-black/65 z-[200] opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+
+<!-- Off-canvas nav -->
+<nav id="off-canvas-nav" aria-label="Mobile navigation" class="fixed top-0 right-0 h-full w-[min(320px,85vw)] bg-warm-section dark:bg-navy-dark z-[300] flex flex-col px-8 pt-16 pb-8 border-l border-navy-bg/10 dark:border-offwhite/10 translate-x-full transition-transform duration-500">
+  <button id="menu-close" class="absolute top-5 right-5 text-navy-bg/40 dark:text-offwhite/60 text-xl hover:text-navy-bg dark:hover:text-offwhite transition-colors" aria-label="Close navigation menu">&#10005;</button>
+  <button id="mobile-theme-toggle" class="absolute top-5 left-8 flex items-center gap-2 font-mono text-[0.65rem] tracking-widest uppercase text-navy-bg/50 dark:text-offwhite/50 hover:text-orange transition-colors">
+    <svg id="m-icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg id="m-icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span id="mobile-toggle-label">Light</span>
+  </button>
+  <ul class="flex flex-col gap-8 mt-4">
+    <li>
+      <a href="../../projects/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
+      <div class="mobile-sub-nav">
+        <a href="../../projects/running-analysis-app/">Running Analysis</a>
+        <a href="https://statcast-rank-app.vercel.app/" target="_blank" rel="noopener noreferrer">Statcast Rank</a>
+      </div>
+    </li>
+    <li><a href="../../clients/"           class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a></li>
+    <li><a href="../../index.html#contact" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Let's Connect</a></li>
+  </ul>
+</nav>
+
+<main>
 
   <!-- Hero -->
-  <section class="pt-32 pb-12 px-6 max-w-6xl mx-auto">
+  <section class="pt-32 pb-12 px-[5%] max-w-[1240px] mx-auto">
     <a href="../../projects/" class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">← Back to Projects</a>
-    <h1 class="font-display text-5xl md:text-7xl text-navy-bg dark:text-offwhite mt-4">Running Analysis</h1>
+    <h1 class="font-display text-[clamp(3rem,10vw,6rem)] text-navy-bg dark:text-offwhite leading-none mt-4">Running Analysis</h1>
     <p class="font-mono text-sm text-navy-bg/50 dark:text-offwhite/50 mt-2 tracking-wide">Sep 2024 – Present &nbsp;·&nbsp; Boston Marathon Trajectory</p>
   </section>
 
   <!-- Summary Bar -->
-  <section class="px-6 max-w-6xl mx-auto mb-12">
+  <section class="px-[5%] max-w-[1240px] mx-auto mb-12">
     <div class="summary-bar">
       <div class="stat-chip">
-        <span id="stat-runs"  class="stat-value">—</span>
-        <span class="stat-label">Total Runs</span>
+        <span id="stat-runs"  class="stat-chip-value">—</span>
+        <span class="stat-chip-label">Total Runs</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-miles" class="stat-value">—</span>
-        <span class="stat-label">Total Miles</span>
+        <span id="stat-miles" class="stat-chip-value">—</span>
+        <span class="stat-chip-label">Total Miles</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-time"  class="stat-value">—</span>
-        <span class="stat-label">Total Hours</span>
+        <span id="stat-time"  class="stat-chip-value">—</span>
+        <span class="stat-chip-label">Total Hours</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-pace"  class="stat-value">—</span>
-        <span class="stat-label">Current Avg Pace</span>
+        <span id="stat-pace"  class="stat-chip-value">—</span>
+        <span class="stat-chip-label">Current Avg Pace</span>
       </div>
     </div>
   </section>
 
   <!-- Dashboard Grid -->
-  <div class="px-6 max-w-6xl mx-auto pb-24 dashboard-grid">
+  <div class="px-[5%] max-w-[1240px] mx-auto pb-24 dashboard-grid">
 
     <div class="panel panel--wide">
       <h2 class="panel-title">Pace Trend</h2>
@@ -95,7 +139,29 @@
 
   </div>
 
-  <script src="../../js/main.js"></script>
-  <script src="js/dashboard.js"></script>
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer class="bg-warm-section dark:bg-navy-dark border-t border-navy-bg/10 dark:border-offwhite/10 py-8">
+  <div class="w-[90%] max-w-[1240px] mx-auto">
+    <div class="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:items-center">
+      <a href="../../" aria-label="Calvin Daniel Home" class="hover:opacity-80 transition-opacity flex-shrink-0">
+        <img src="../../images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-8 w-auto" />
+        <img src="../../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-8 w-auto" />
+      </a>
+      <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+        <a href="../../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Projects</a>
+        <a href="../../clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Clients</a>
+      </nav>
+      <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
+        <a href="../../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
+        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 Calvin Daniel</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>
