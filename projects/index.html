@@ -173,15 +173,39 @@
 
   <!-- Projects -->
   <div class="w-[90%] max-w-[1240px] mx-auto py-16">
-    <!-- Filter pills -->
-    <div data-reveal class="flex flex-wrap gap-3 mb-12">
-      <button data-filter="All"              data-active="true"  class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">All</button>
-      <button data-filter="Web Dev"          data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Web Dev</button>
-      <button data-filter="Data / Analytics" data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Data / Analytics</button>
-      <button data-filter="Tool"             data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Tool</button>
+    <div data-reveal class="mb-10">
+      <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/45 dark:text-offwhite/45 mb-6">Projects</h2>
+      <div class="flex flex-wrap gap-3">
+        <button data-filter="All"              data-active="true"  class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">All</button>
+        <button data-filter="Web Dev"          data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Web Dev</button>
+        <button data-filter="Data / Analytics" data-active="false" class="font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 rounded-sm border transition-all duration-200 border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 hover:border-orange/50 hover:text-orange">Data / Analytics</button>
+      </div>
     </div>
-    <!-- Project grid -->
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <div data-reveal>
+        <article data-category="Web Dev" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1508344928928-7165b67de128?w=800&auto=format&fit=crop&q=80" alt="Statcast Rank App" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Statcast Rank App</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">MLB batter leaderboard ranking players by HardContact+ (Hard Hit% − Whiff%). Built with React, Tailwind, and the Baseball Savant Statcast API.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">React</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Tailwind</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Node.js</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Baseball Savant</span></div>
+            <div class="flex gap-3"><a href="https://statcast-rank-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div data-reveal>
+        <article data-category="Data / Analytics" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&auto=format&fit=crop&q=80" alt="Running Analysis App" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Running Analysis App</h3>
+            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Personal Strava running dashboard with weekly mileage charts and Boston Marathon qualifying time projection.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Python</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Chart.js</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Strava API</span></div>
+            <div class="flex gap-3"><a href="../projects/running-analysis-app/" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
+          </div>
+        </article>
+      </div>
 
       <div data-reveal>
         <article data-category="Web Dev" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
@@ -190,43 +214,7 @@
             <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Portfolio Website</h3>
             <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Personal portfolio built with HTML, CSS, and vanilla JS. Features dark/light mode, particle canvas, and scroll animations.</p>
             <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">HTML</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">JavaScript</span></div>
-            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
-          </div>
-        </article>
-      </div>
-
-      <div data-reveal>
-        <article data-category="Data / Analytics" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Operations Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
-          <div class="flex flex-col flex-1 p-6">
-            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Operations Dashboard</h3>
-            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Power BI dashboard for commercial operations tracking KPIs, revenue trends, and pipeline metrics across business units.</p>
-            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Power BI</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">DAX</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">SQL</span></div>
-            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
-          </div>
-        </article>
-      </div>
-
-      <div data-reveal>
-        <article data-category="Tool" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&auto=format&fit=crop&q=80" alt="Race Training Tracker" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
-          <div class="flex flex-col flex-1 p-6">
-            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Race Training Tracker</h3>
-            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">A lightweight tool for logging marathon training runs, race results, and personal records over time.</p>
-            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">JavaScript</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span><span class="font-mono text-[0.6rem] tracking-widests uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">HTML</span></div>
-            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
-          </div>
-        </article>
-      </div>
-
-      <div data-reveal>
-        <article data-category="Web Dev" class="group flex flex-col bg-warm-section dark:bg-navy-dark/50 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-          <div class="overflow-hidden aspect-video flex-shrink-0"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80" alt="Small Business Site" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" /></div>
-          <div class="flex flex-col flex-1 p-6">
-            <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mb-2">Small Business Site</h3>
-            <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7] mb-4 flex-1">Custom WordPress theme for a local service business. Mobile-first, SEO optimized, and easy for the owner to manage.</p>
-            <div class="flex flex-wrap gap-2 mb-5"><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">WordPress</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">PHP</span><span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">CSS</span></div>
-            <div class="flex gap-3"><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
+            <div class="flex gap-3"><a href="../" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">View Live</a><a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center font-mono text-[0.7rem] tracking-[0.1em] uppercase px-4 py-2 border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-colors rounded-sm">View Code</a></div>
           </div>
         </article>
       </div>
