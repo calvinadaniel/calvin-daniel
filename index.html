@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/nav-dropdown.css" />
   <link rel="icon" type="image/png" href="images/favicon-social-logo.png" />
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
@@ -21,11 +22,28 @@
       <img src="images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-10 w-auto" />
     </a>
     <nav class="hidden lg:flex gap-6 items-center" aria-label="Main navigation">
-      <a href="#about"   class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a>
-      <a href="#web-dev" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Developer</a>
-      <a href="#analyst" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Analyst</a>
-      <a href="#running" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Runner</a>
-      <a href="projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
+      <div class="nav-projects">
+        <a href="/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors flex items-center gap-1">
+          Home
+          <svg class="nav-projects-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 5,6 9,1"/></svg>
+        </a>
+        <div class="nav-dropdown" role="menu" aria-label="Home sections">
+          <a href="#about"   class="nav-dropdown-link" role="menuitem">About</a>
+          <a href="#web-dev" class="nav-dropdown-link" role="menuitem">Developer</a>
+          <a href="#analyst" class="nav-dropdown-link" role="menuitem">Analyst</a>
+          <a href="#running" class="nav-dropdown-link" role="menuitem">Runner</a>
+        </div>
+      </div>
+      <div class="nav-projects">
+        <a href="projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors flex items-center gap-1">
+          Projects
+          <svg class="nav-projects-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 5,6 9,1"/></svg>
+        </a>
+        <div class="nav-dropdown" role="menu" aria-label="Projects submenu">
+          <a href="projects/running-analysis-app/" class="nav-dropdown-link" role="menuitem">Running Analysis</a>
+          <a href="https://statcast-rank-app.vercel.app/" class="nav-dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Statcast Rank</a>
+        </div>
+      </div>
       <a href="clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
       <button id="theme-toggle" aria-label="Switch to light mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
         <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -53,11 +71,22 @@
     <span id="mobile-toggle-label">Light</span>
   </button>
   <ul class="flex flex-col gap-8 mt-4">
-    <li><a href="#about"   class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a></li>
-    <li><a href="#web-dev" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Developer</a></li>
-    <li><a href="#analyst" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Analyst</a></li>
-    <li><a href="#running" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Runner</a></li>
-    <li><a href="projects/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a></li>
+    <li>
+      <a href="/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Home</a>
+      <div class="mobile-sub-nav">
+        <a href="#about">About</a>
+        <a href="#web-dev">Developer</a>
+        <a href="#analyst">Analyst</a>
+        <a href="#running">Runner</a>
+      </div>
+    </li>
+    <li>
+      <a href="projects/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
+      <div class="mobile-sub-nav">
+        <a href="projects/running-analysis-app/">Running Analysis</a>
+        <a href="https://statcast-rank-app.vercel.app/" target="_blank" rel="noopener noreferrer">Statcast Rank</a>
+      </div>
+    </li>
     <li><a href="clients/"  class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a></li>
     <li><a href="#contact" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Let's Connect</a></li>
   </ul>
@@ -353,14 +382,14 @@
       <!-- Pro -->
       <div data-reveal class="relative flex flex-col rounded-sm border p-8 h-full transition-all duration-300 hover:-translate-y-1 border-orange bg-orange/5 lg:scale-[1.04] lg:z-10 shadow-[0_0_40px_rgba(255,89,16,0.12)]">
         <span class="absolute -top-3 left-1/2 -translate-x-1/2 font-mono text-[0.6rem] tracking-widest uppercase px-4 py-1 bg-orange text-offwhite rounded-full whitespace-nowrap">Most Popular</span>
-        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Pro</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-orange">Starting at $1,199</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">The full package for businesses ready to grow their digital footprint.</p></div>
+        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Pro</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-orange">Starting at $2,075</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">The full package for businesses ready to grow their digital footprint.</p></div>
         <ul class="flex flex-col gap-3 mb-8 flex-1">
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Multi-page website (up to 6 pages)</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>CMS integration (WordPress or Squarespace)</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Performance &amp; speed optimization</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>SEO best practices</li>
-          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Google Analytics setup</li>
-          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>30-day post-launch support</li>
+          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Web analytics setup</li>
+          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Hosting services and post-launch support</li>
         </ul>
         <a href="#contact" class="block text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 rounded-sm bg-orange text-offwhite hover:bg-orange-dim hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)] transition-all duration-300">Get Started</a>
       </div>
@@ -392,7 +421,6 @@
       <p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] mt-4 mb-16 leading-[1.75]">Whether you need a new website, a data solution, or just want to talk shop about running — I'm always up for a good conversation.</p>
       <div class="flex flex-wrap gap-4 justify-center">
         <a href="mailto:calvin@calantdigital.com" class="inline-flex items-center px-7 py-3 bg-orange border-2 border-orange text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:bg-orange-dim hover:border-orange-dim hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)]">Send Me a Message</a>
-        <a href="https://calantdigital.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Visit Calant Digital</a>
       </div>
     </div>
   </div>
@@ -403,13 +431,23 @@
 <!-- ── FOOTER ─────────────────────────────────────────── -->
 <footer class="bg-warm-section dark:bg-navy-dark border-t border-navy-bg/10 dark:border-offwhite/10 py-8">
   <div class="w-[90%] max-w-[1240px] mx-auto">
-    <div class="flex flex-col items-center gap-2 text-center md:flex-row md:justify-between">
-      <a href="/" aria-label="Calvin Daniel Home" class="hover:opacity-80 transition-opacity">
+    <div class="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:items-center">
+      <a href="/" aria-label="Calvin Daniel Home" class="hover:opacity-80 transition-opacity flex-shrink-0">
         <img src="images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-8 w-auto" />
         <img src="images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-8 w-auto" />
       </a>
-      <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 · Developer · Analyst · Runner</span>
-      <a href="https://calantdigital.com" target="_blank" rel="noopener noreferrer" class="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-orange hover:opacity-75 transition-opacity">Calant Digital</a>
+      <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+        <a href="#about"    class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">About</a>
+        <a href="#web-dev"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Developer</a>
+        <a href="#analyst"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Analyst</a>
+        <a href="#running"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Runner</a>
+        <a href="projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Projects</a>
+        <a href="clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Clients</a>
+      </nav>
+      <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
+        <a href="#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
+        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 Calvin Daniel</span>
+      </div>
     </div>
   </div>
 </footer>
