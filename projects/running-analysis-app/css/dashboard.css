@@ -1,6 +1,6 @@
 /* ── Running Analysis Dashboard ──────────────────────────── */
 
-/* ── Layout spacing (pt-32/pb-12/pb-24 not compiled in ../../css/styles.css) ── */
+/* ── Layout spacing ── */
 main > section:first-child {
   padding-top: 128px;
   padding-bottom: 48px;
@@ -9,6 +9,7 @@ main > section:first-child {
   padding-bottom: 96px;
 }
 
+/* ── Summary bar ── */
 .summary-bar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -18,14 +19,21 @@ main > section:first-child {
   .summary-bar { grid-template-columns: repeat(4, 1fr); }
 }
 
+/* Light mode */
 .stat-chip {
-  background: rgba(0, 30, 80, 0.4);
-  border: 1px solid rgba(245, 247, 250, 0.08);
+  background: rgb(240, 237, 232);
+  border: 1px solid rgba(0, 26, 77, 0.12);
   border-radius: 0.25rem;
   padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+}
+
+/* Dark mode */
+.dark .stat-chip {
+  background: rgba(0, 20, 65, 0.7);
+  border-color: rgba(245, 247, 250, 0.1);
 }
 
 .stat-chip-value {
@@ -36,14 +44,21 @@ main > section:first-child {
   line-height: 1;
 }
 
+/* Light mode */
 .stat-chip-label {
   font-family: 'Space Mono', monospace;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(245, 247, 250, 0.45);
+  color: rgba(0, 26, 77, 0.55);
 }
 
+/* Dark mode */
+.dark .stat-chip-label {
+  color: rgba(245, 247, 250, 0.5);
+}
+
+/* ── Dashboard grid ── */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -53,25 +68,40 @@ main > section:first-child {
   .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Panels — light mode ── */
 .panel {
-  background: rgba(0, 30, 80, 0.4);
-  border: 1px solid rgba(245, 247, 250, 0.08);
+  background: rgb(240, 237, 232);
+  border: 1px solid rgba(0, 26, 77, 0.1);
   border-radius: 0.25rem;
   padding: 1.5rem;
 }
 
-.panel--wide  { grid-column: 1 / -1; }
+/* ── Panels — dark mode ── */
+.dark .panel {
+  background: rgba(0, 20, 65, 0.65);
+  border-color: rgba(245, 247, 250, 0.1);
+}
 
+.panel--wide { grid-column: 1 / -1; }
+
+/* Light mode hero accent */
 .panel--hero {
-  border-color: rgba(255, 89, 16, 0.35);
+  border-color: rgba(255, 89, 16, 0.4);
   border-width: 2px;
 }
 
+/* Dark mode hero accent — slightly brighter */
+.dark .panel--hero {
+  background: rgba(0, 20, 65, 0.8);
+  border-color: rgba(255, 89, 16, 0.5);
+}
+
+/* ── Panel text — light mode ── */
 .panel-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
-  color: #F5F0E8;
+  color: rgb(0, 26, 77);
   margin-bottom: 0.125rem;
 }
 
@@ -80,9 +110,19 @@ main > section:first-child {
   font-size: 0.65rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(245, 247, 250, 0.4);
+  color: rgba(0, 26, 77, 0.5);
   margin-bottom: 1rem;
 }
 
+/* ── Panel text — dark mode ── */
+.dark .panel-title {
+  color: rgb(245, 247, 250);
+}
+
+.dark .panel-subtitle {
+  color: rgba(245, 247, 250, 0.45);
+}
+
+/* ── Charts ── */
 .chart-wrap      { position: relative; height: 250px; }
 .chart-wrap--tall { height: 320px; }

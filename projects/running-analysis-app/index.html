@@ -103,6 +103,20 @@
     <p class="font-mono text-sm text-navy-bg/50 dark:text-offwhite/50 mt-2 tracking-wide">Sep 2024 – Present &nbsp;·&nbsp; Boston Marathon Trajectory</p>
   </section>
 
+  <!-- About -->
+  <section class="px-[5%] max-w-[1240px] mx-auto mb-10">
+    <div class="grid gap-8 md:grid-cols-2 border-b border-navy-bg/10 dark:border-offwhite/10 pb-10">
+      <div>
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange mb-3">What This Is</h2>
+        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.75]">This dashboard pulls live training data directly from Strava using a custom Python script and the Strava API. Every activity — easy runs, long runs, and races — is logged and processed into weekly and monthly aggregates, giving a real-time picture of where my fitness stands and where it's heading.</p>
+      </div>
+      <div>
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange mb-3">What It Answers</h2>
+        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.75]">Pace trends, heart rate efficiency, weekly mileage volume, and relative training effort are charted across the full dataset. But it all comes down to one question: based on my current trajectory in marathons and half marathons, when can I run a Boston Qualifier?</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Summary Bar -->
   <section class="px-[5%] max-w-[1240px] mx-auto mb-12">
     <div class="summary-bar">
@@ -156,6 +170,127 @@
       <h2 class="panel-title">Boston Qualifier Projection</h2>
       <p class="panel-subtitle">Current PR: 3:54:23 &nbsp;·&nbsp; BQ target: 3:05:00 (Males 40–44) &nbsp;·&nbsp; Target pace: 7:03/mi</p>
       <div class="chart-wrap chart-wrap--tall"><canvas id="chart-bq"></canvas></div>
+    </div>
+
+    <!-- Race History Table -->
+    <div class="panel panel--wide">
+      <h2 class="panel-title">Race History</h2>
+      <p class="panel-subtitle">Marathons and half marathons only — the data points used for BQ trajectory analysis</p>
+
+      <div class="mt-6 mb-8">
+        <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Marathons</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-navy-bg/10 dark:border-offwhite/10">
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2 pr-6">Date</th>
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2 pr-6">Finish Time</th>
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2 pr-6">Avg Pace</th>
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2">vs. Previous</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-navy-bg/5 dark:border-offwhite/5">
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Nov 3, 2024</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-navy-bg dark:text-offwhite">4:42:44</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/70 dark:text-offwhite/70">10:38 /mi</td>
+                <td class="py-3 font-mono text-[0.7rem] text-navy-bg/40 dark:text-offwhite/40">First Marathon</td>
+              </tr>
+              <tr class="border-b border-navy-bg/5 dark:border-offwhite/5">
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Apr 13, 2025</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-navy-bg dark:text-offwhite">4:11:12</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/70 dark:text-offwhite/70">9:32 /mi</td>
+                <td class="py-3 font-mono text-[0.75rem] text-green-600 dark:text-green-400">&minus;31:32</td>
+              </tr>
+              <tr class="border-b border-navy-bg/5 dark:border-offwhite/5">
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Nov 2, 2025</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-navy-bg dark:text-offwhite">4:16:58</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/70 dark:text-offwhite/70">9:39 /mi</td>
+                <td class="py-3 font-mono text-[0.75rem] text-navy-bg/40 dark:text-offwhite/40">+5:46 (NYC)</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Apr 19, 2026</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-orange">3:54:23</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-orange/80">8:49 /mi</td>
+                <td class="py-3 font-mono text-[0.75rem] text-green-600 dark:text-green-400">&minus;22:35 &nbsp;<span class="text-orange">PR</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Half Marathons — Best Times</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-navy-bg/10 dark:border-offwhite/10">
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2 pr-6">Date</th>
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2 pr-6">Finish Time</th>
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2 pr-6">Avg Pace</th>
+                <th class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 pb-2">Predicted Marathon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-navy-bg/5 dark:border-offwhite/5">
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Oct 19, 2024</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-navy-bg dark:text-offwhite">2:05:10</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/70 dark:text-offwhite/70">9:33 /mi</td>
+                <td class="py-3 font-mono text-[0.75rem] text-navy-bg/40 dark:text-offwhite/40">~4:22</td>
+              </tr>
+              <tr class="border-b border-navy-bg/5 dark:border-offwhite/5">
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Mar 30, 2025</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-navy-bg dark:text-offwhite">1:48:17</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/70 dark:text-offwhite/70">8:09 /mi</td>
+                <td class="py-3 font-mono text-[0.75rem] text-navy-bg/40 dark:text-offwhite/40">~3:47</td>
+              </tr>
+              <tr class="border-b border-navy-bg/5 dark:border-offwhite/5">
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Oct 18, 2025</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-navy-bg dark:text-offwhite">1:46:58</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/70 dark:text-offwhite/70">8:07 /mi</td>
+                <td class="py-3 font-mono text-[0.75rem] text-navy-bg/40 dark:text-offwhite/40">~3:45</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/50">Mar 15, 2026</td>
+                <td class="py-3 pr-6 font-display text-[1.1rem] text-orange">1:43:24</td>
+                <td class="py-3 pr-6 font-mono text-[0.75rem] text-orange/80">7:46 /mi</td>
+                <td class="py-3 font-mono text-[0.75rem] text-orange/80">~3:37 &nbsp;<span class="text-orange">PR</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- BQ Conclusion -->
+    <div class="panel panel--wide">
+      <h2 class="panel-title">BQ Analysis &amp; Projection</h2>
+      <p class="panel-subtitle">Based on marathon and half marathon race results — not average training pace</p>
+      <div class="mt-6 grid gap-8 md:grid-cols-3">
+        <div class="md:col-span-2 flex flex-col gap-4">
+          <p class="text-navy-bg/75 dark:text-offwhite/75 text-[0.95rem] leading-[1.8]">Four marathons in 17 months tells a clear story. From a 4:42 debut at NYC in November 2024 to a 3:54:23 PR at Delaware in April 2026, the overall improvement is <span class="font-mono text-orange">48 minutes and 21 seconds</span> — nearly a minute per month. The half marathon data reinforces it: a March 2026 PR of <span class="font-mono text-orange">1:43:24 (7:46/mi)</span> predicts a marathon of approximately <span class="font-mono text-orange">3:37</span> using standard race-equivalency models, suggesting the current PR of 3:54 still has significant room to fall as marathon-specific fitness catches up to aerobic capacity.</p>
+          <p class="text-navy-bg/75 dark:text-offwhite/75 text-[0.95rem] leading-[1.8]">The BQ standard for the 40–44 age group is <span class="font-mono text-orange">3:05:00</span> — a 7:03/mi pace for 26.2 miles. That's still 49 minutes below the current PR, but the trajectory says the gap is closing fast. If the improvement rate holds across the next two marathon cycles, a sub-3:35 is realistic by late 2026 or Spring 2027. From there, breaking 3:10 — and qualifying — becomes a matter of sustained volume and race execution rather than raw aerobic development.</p>
+          <p class="text-navy-bg/75 dark:text-offwhite/75 text-[0.95rem] leading-[1.8]">The honest projection: <span class="font-mono text-orange">2027–2028</span>. The half marathon fitness is already pointing there. The marathon just needs to catch up.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="bg-warm-section dark:bg-navy-dark/60 rounded-sm p-4 border border-navy-bg/8 dark:border-offwhite/8">
+            <div class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 mb-1">Current Marathon PR</div>
+            <div class="font-display text-[1.8rem] text-navy-bg dark:text-offwhite leading-none">3:54:23</div>
+          </div>
+          <div class="bg-warm-section dark:bg-navy-dark/60 rounded-sm p-4 border border-navy-bg/8 dark:border-offwhite/8">
+            <div class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 mb-1">HM-Predicted Marathon</div>
+            <div class="font-display text-[1.8rem] text-navy-bg dark:text-offwhite leading-none">~3:37</div>
+          </div>
+          <div class="bg-orange/10 border border-orange/25 rounded-sm p-4">
+            <div class="font-mono text-[0.6rem] tracking-widest uppercase text-orange/60 mb-1">BQ Target</div>
+            <div class="font-display text-[1.8rem] text-orange leading-none">3:05:00</div>
+          </div>
+          <div class="bg-warm-section dark:bg-navy-dark/60 rounded-sm p-4 border border-navy-bg/8 dark:border-offwhite/8">
+            <div class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 mb-1">Projected Window</div>
+            <div class="font-display text-[1.8rem] text-navy-bg dark:text-offwhite leading-none">2027–28</div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>

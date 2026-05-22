@@ -26,6 +26,16 @@
     return { labels: { color: lblColor(), font: { family: 'Space Mono', size: 10 } } };
   }
 
+  function baseTooltip() {
+    return {
+      backgroundColor: isDark() ? 'rgba(0,20,65,0.92)'      : 'rgba(250,248,245,0.97)',
+      titleColor:      isDark() ? '#F5F0E8'                  : 'rgb(0,26,77)',
+      bodyColor:       isDark() ? 'rgba(245,247,250,0.75)'   : 'rgba(0,26,77,0.65)',
+      borderColor:     isDark() ? 'rgba(245,247,250,0.12)'   : 'rgba(0,26,77,0.15)',
+      borderWidth: 1,
+    };
+  }
+
   /* ── Load all data ───────────────────────────────────── */
   const [activities, monthly, weekly, projections] = await Promise.all([
     fetch('./data/activities.json').then(r => r.json()),
@@ -88,7 +98,7 @@
       },
       plugins: {
         legend: baseLegend(),
-        tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${fmtPace(ctx.parsed.y)}/mi` } },
+        tooltip: { ...baseTooltip(), callbacks: { label: ctx => `${ctx.dataset.label}: ${fmtPace(ctx.parsed.y)}/mi` } },
       },
     },
   });
@@ -134,7 +144,7 @@
       },
       plugins: {
         legend: baseLegend(),
-        tooltip: { callbacks: { label: ctx => `Pace: ${fmtPace(ctx.parsed.x)}/mi  HR: ${ctx.parsed.y} bpm` } },
+        tooltip: { ...baseTooltip(), callbacks: { label: ctx => `Pace: ${fmtPace(ctx.parsed.x)}/mi  HR: ${ctx.parsed.y} bpm` } },
       },
     },
   });
@@ -163,7 +173,7 @@
       },
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: ctx => `${ctx.parsed.y} miles` } },
+        tooltip: { ...baseTooltip(), callbacks: { label: ctx => `${ctx.parsed.y} miles` } },
       },
     },
   });
@@ -203,7 +213,7 @@
       responsive: true,
       maintainAspectRatio: false,
       scales: { ...baseScales(), y: { ...baseScales().y, beginAtZero: true } },
-      plugins: { legend: baseLegend() },
+      plugins: { legend: baseLegend(), tooltip: { ...baseTooltip() } },
     },
   });
 
@@ -267,6 +277,7 @@
       plugins: {
         legend: baseLegend(),
         tooltip: {
+          ...baseTooltip(),
           callbacks: { label: ctx => `${ctx.dataset.label.split(' (')[0]}: ${fmtPace(ctx.parsed.y)}/mi` },
         },
       },
