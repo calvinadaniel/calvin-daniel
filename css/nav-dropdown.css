@@ -1,0 +1,71 @@
+/* ── Projects dropdown nav ──────────────────────────────── */
+
+.nav-projects { position: relative; }
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;                        /* no gap — hover stays continuous when moving to dropdown */
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 45, 114, 0.1);
+  border-radius: 4px;
+  padding: 8px 0;                   /* top padding is the visual gap */
+  min-width: 184px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+  z-index: 200;
+}
+.dark .nav-dropdown {
+  background: rgba(0, 8, 28, 0.97);
+  border-color: rgba(245, 247, 250, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+.nav-projects:hover .nav-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-link {
+  display: block;
+  padding: 8px 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 45, 114, 0.55);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.dark .nav-dropdown-link { color: rgba(245, 247, 250, 0.55); }
+.nav-dropdown-link:hover { color: #FF5910; }
+
+/* Chevron rotates on hover */
+.nav-projects-chevron { transition: transform 0.18s ease; }
+.nav-projects:hover .nav-projects-chevron { transform: rotate(180deg); }
+
+/* ── Mobile off-canvas sub-nav ──────────────────────────── */
+.mobile-sub-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  padding-left: 16px;
+}
+.mobile-sub-nav a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 45, 114, 0.4);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.dark .mobile-sub-nav a { color: rgba(245, 247, 250, 0.4); }
+.mobile-sub-nav a:hover { color: #FF5910; }

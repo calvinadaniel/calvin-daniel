@@ -78,7 +78,7 @@ def main():
     cleaned.sort(key=lambda x: x['date'])
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(cleaned, indent=2))
-    print(f'Saved {len(cleaned)} runs → {OUTPUT_PATH}')
+    print(f'Saved {len(cleaned)} runs -> {OUTPUT_PATH}')
 
 
 if __name__ == '__main__':

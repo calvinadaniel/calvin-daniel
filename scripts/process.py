@@ -62,8 +62,8 @@ def main():
     weekly     = compute_weekly_volume(activities)
     MONTHLY_PATH.write_text(json.dumps(monthly, indent=2))
     WEEKLY_PATH.write_text(json.dumps(weekly, indent=2))
-    print(f'Monthly: {len(monthly)} months → {MONTHLY_PATH}')
-    print(f'Weekly:  {len(weekly)} weeks  → {WEEKLY_PATH}')
+    print(f'Monthly: {len(monthly)} months -> {MONTHLY_PATH}')
+    print(f'Weekly:  {len(weekly)} weeks  -> {WEEKLY_PATH}')
 
 
 if __name__ == '__main__':

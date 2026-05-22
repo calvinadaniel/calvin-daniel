@@ -893,6 +893,7 @@ video {
 
 .max-w-\[1240px\] {
   max-width: 1240px;
+  padding:1%;
 }
 
 .max-w-\[200px\] {
