@@ -16,7 +16,7 @@
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
 
-<!-- -- HEADER ------------------------------------------- -->
+<!-- ── HEADER ─────────────────────────────────────────── -->
 <header id="site-header" class="fixed top-0 left-0 right-0 z-[100] h-[70px]">
   <div class="flex items-center justify-between h-full px-[5%] max-w-[1240px] mx-auto">
     <a href="../../index.html" aria-label="Calvin Daniel Home" class="hover:opacity-90 transition-opacity">
@@ -98,9 +98,9 @@
 
   <!-- Hero -->
   <section class="pt-32 pb-12 px-[5%] max-w-[1240px] mx-auto">
-    <a href="../../projects/" class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">? Back to Projects</a>
+    <a href="../../projects/" class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">← Back to Projects</a>
     <h1 class="font-display text-[clamp(3rem,10vw,6rem)] text-navy-bg dark:text-offwhite leading-none mt-4">Running Analysis</h1>
-    <p class="font-mono text-sm text-navy-bg/50 dark:text-offwhite/50 mt-2 tracking-wide">Sep 2024 � Present &nbsp;�&nbsp; Boston Marathon Trajectory</p>
+    <p class="font-mono text-sm text-navy-bg/50 dark:text-offwhite/50 mt-2 tracking-wide">Sep 2024 – Present &nbsp;·&nbsp; Boston Marathon Trajectory</p>
   </section>
 
   <!-- About -->
@@ -108,7 +108,7 @@
     <div class="grid gap-8 md:grid-cols-2 border-b border-navy-bg/10 dark:border-offwhite/10 pb-10">
       <div>
         <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange mb-3">What This Is</h2>
-        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.75]">This dashboard pulls live training data directly from Strava using a custom Python script and the Strava API. Every activity � easy runs, long runs, and races � is logged and processed into weekly and monthly aggregates, giving a real-time picture of where my fitness stands and where it's heading.</p>
+        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.75]">This dashboard pulls live training data directly from Strava using a custom Python script and the Strava API. Every activity — easy runs, long runs, and races — is logged and processed into weekly and monthly aggregates, giving a real-time picture of where my fitness stands and where it's heading.</p>
       </div>
       <div>
         <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange mb-3">What It Answers</h2>
@@ -121,19 +121,19 @@
   <section class="px-[5%] max-w-[1240px] mx-auto mb-12">
     <div class="summary-bar">
       <div class="stat-chip">
-        <span id="stat-runs"  class="stat-chip-value">�</span>
+        <span id="stat-runs"  class="stat-chip-value">—</span>
         <span class="stat-chip-label">Total Runs</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-miles" class="stat-chip-value">�</span>
+        <span id="stat-miles" class="stat-chip-value">—</span>
         <span class="stat-chip-label">Total Miles</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-time"  class="stat-chip-value">�</span>
+        <span id="stat-time"  class="stat-chip-value">—</span>
         <span class="stat-chip-label">Total Hours</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-pace"  class="stat-chip-value">�</span>
+        <span id="stat-pace"  class="stat-chip-value">—</span>
         <span class="stat-chip-label">Current Avg Pace</span>
       </div>
     </div>
@@ -150,7 +150,7 @@
 
     <div class="panel">
       <h2 class="panel-title">Heart Rate Efficiency</h2>
-      <p class="panel-subtitle">Pace vs. HR � newer runs should appear lower-right</p>
+      <p class="panel-subtitle">Pace vs. HR — newer runs should appear lower-right</p>
       <div class="chart-wrap"><canvas id="chart-hr"></canvas></div>
     </div>
 
@@ -168,14 +168,14 @@
 
     <div class="panel panel--wide panel--hero">
       <h2 class="panel-title">Boston Qualifier Projection</h2>
-      <p class="panel-subtitle">Current PR: 3:54:23 &nbsp;�&nbsp; BQ target: 3:05:00 (Males 40�44) &nbsp;�&nbsp; Target pace: 7:03/mi</p>
+      <p class="panel-subtitle">Current PR: 3:54:23 &nbsp;·&nbsp; BQ target: 3:05:00 (Males 40–44) &nbsp;·&nbsp; Target pace: 7:03/mi</p>
       <div class="chart-wrap chart-wrap--tall"><canvas id="chart-bq"></canvas></div>
     </div>
 
     <!-- Race History Table -->
     <div class="panel panel--wide">
       <h2 class="panel-title">Race History</h2>
-      <p class="panel-subtitle">Marathons and half marathons only � the data points used for BQ trajectory analysis</p>
+      <p class="panel-subtitle">Marathons and half marathons only — the data points used for BQ trajectory analysis</p>
 
       <div class="mt-6 mb-8">
         <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Marathons</h3>
@@ -220,7 +220,7 @@
       </div>
 
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Half Marathons � Best Times</h3>
+        <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Half Marathons — Best Times</h3>
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
@@ -265,12 +265,12 @@
     <!-- BQ Conclusion -->
     <div class="panel panel--wide">
       <h2 class="panel-title">BQ Analysis &amp; Projection</h2>
-      <p class="panel-subtitle">Based on marathon and half marathon race results � not average training pace</p>
+      <p class="panel-subtitle">Based on marathon and half marathon race results — not average training pace</p>
       <div class="mt-6 grid gap-8 md:grid-cols-3">
         <div class="md:col-span-2 flex flex-col gap-4">
-          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">Four marathons in 17 months tells a clear story. From a 4:42 debut at NYC in November 2024 to a 3:54:23 PR at Delaware in April 2026, the overall improvement is <span class="font-mono text-orange">48 minutes and 21 seconds</span> � nearly a minute per month. The half marathon data reinforces it: a March 2026 PR of <span class="font-mono text-orange">1:43:24 (7:46/mi)</span> predicts a marathon of approximately <span class="font-mono text-orange">3:37</span> using standard race-equivalency models, suggesting the current PR of 3:54 still has significant room to fall as marathon-specific fitness catches up to aerobic capacity.</p>
-          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The BQ standard for the 40�44 age group is <span class="font-mono text-orange">3:05:00</span> � a 7:03/mi pace for 26.2 miles. That's still 49 minutes below the current PR, but the trajectory says the gap is closing fast. If the improvement rate holds across the next two marathon cycles, a sub-3:35 is realistic by late 2026 or Spring 2027. From there, breaking 3:10 � and qualifying � becomes a matter of sustained volume and race execution rather than raw aerobic development.</p>
-          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The honest projection: <span class="font-mono text-orange">2027�2028</span>. The half marathon fitness is already pointing there. The marathon just needs to catch up.</p>
+          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">Four marathons in 17 months tells a clear story. From a 4:42 debut at NYC in November 2024 to a 3:54:23 PR at Delaware in April 2026, the overall improvement is <span class="font-mono text-orange">48 minutes and 21 seconds</span> — nearly a minute per month. The half marathon data reinforces it: a March 2026 PR of <span class="font-mono text-orange">1:43:24 (7:46/mi)</span> predicts a marathon of approximately <span class="font-mono text-orange">3:37</span> using standard race-equivalency models, suggesting the current PR of 3:54 still has significant room to fall as marathon-specific fitness catches up to aerobic capacity.</p>
+          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The BQ standard for the 40–44 age group is <span class="font-mono text-orange">3:05:00</span> — a 7:03/mi pace for 26.2 miles. That's still 49 minutes below the current PR, but the trajectory says the gap is closing fast. If the improvement rate holds across the next two marathon cycles, a sub-3:35 is realistic by late 2026 or Spring 2027. From there, breaking 3:10 — and qualifying — becomes a matter of sustained volume and race execution rather than raw aerobic development.</p>
+          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The honest projection: <span class="font-mono text-orange">2027–2028</span>. The half marathon fitness is already pointing there. The marathon just needs to catch up.</p>
         </div>
         <div class="flex flex-col gap-3">
           <div class="bg-warm-section dark:bg-navy-dark/50 rounded-sm p-4 border border-navy-bg/10 dark:border-offwhite/10">
@@ -287,7 +287,7 @@
           </div>
           <div class="bg-warm-section dark:bg-navy-dark/50 rounded-sm p-4 border border-navy-bg/10 dark:border-offwhite/10">
             <div class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 mb-1">Projected Window</div>
-            <div class="font-display text-[1.8rem] text-navy-bg dark:text-offwhite leading-none">2027�28</div>
+            <div class="font-display text-[1.8rem] text-navy-bg dark:text-offwhite leading-none">2027–28</div>
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@
 
 </main>
 
-<!-- -- FOOTER ------------------------------------------- -->
+<!-- ── FOOTER ─────────────────────────────────────────── -->
 <footer class="bg-warm-section dark:bg-navy-dark border-t border-navy-bg/10 dark:border-offwhite/10 py-8">
   <div class="w-[90%] max-w-[1240px] mx-auto">
     <div class="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:items-center">
@@ -305,24 +305,27 @@
         <img src="../../images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-12 w-auto" />
         <img src="../../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-12 w-auto" />
       </a>
-      <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+      <div class="flex flex-col items-center gap-3">
+        <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
         <a href="../../"          class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Home</a>
         <a href="../../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Projects</a>
         <a href="../../clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Clients</a>
-      </nav>
-      <div class="flex justify-center gap-5 mt-1">
-        <a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/calvin-daniel-6229054/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@calvindaniel06" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-        </a>
-      </div>      <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
+        </nav>
+        <div class="flex justify-center gap-5">
+          <a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/calvin-daniel-6229054/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@calvindaniel06" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
         <a href="../../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
-        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">� 2026 Calvin Daniel</span>
+        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 Calvin Daniel</span>
       </div>
     </div>
   </div>
