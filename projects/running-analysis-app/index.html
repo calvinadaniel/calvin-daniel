@@ -16,7 +16,7 @@
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
 
-<!-- ── HEADER ─────────────────────────────────────────── -->
+<!-- -- HEADER ------------------------------------------- -->
 <header id="site-header" class="fixed top-0 left-0 right-0 z-[100] h-[70px]">
   <div class="flex items-center justify-between h-full px-[5%] max-w-[1240px] mx-auto">
     <a href="../../index.html" aria-label="Calvin Daniel Home" class="hover:opacity-90 transition-opacity">
@@ -43,7 +43,7 @@
         </a>
         <div class="nav-dropdown" role="menu" aria-label="Projects submenu">
           <a href="../../projects/running-analysis-app/" class="nav-dropdown-link" role="menuitem">Running Analysis</a>
-          <a href="../../projects/elitehitter/" class="nav-dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">EliteHitter+</a>
+          <a href="../../projects/elitehitter/" class="nav-dropdown-link" role="menuitem">EliteHitter+</a>
         </div>
       </div>
       <a href="../../clients/"           class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
@@ -86,7 +86,7 @@
       <a href="../../projects/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
       <div class="mobile-sub-nav">
         <a href="../../projects/running-analysis-app/">Running Analysis</a>
-        <a href="../../projects/elitehitter/"">EliteHitter+</a>
+        <a href="../../projects/elitehitter/">EliteHitter+</a>
       </div>
     </li>
     <li><a href="../../clients/"           class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a></li>
@@ -98,9 +98,9 @@
 
   <!-- Hero -->
   <section class="pt-32 pb-12 px-[5%] max-w-[1240px] mx-auto">
-    <a href="../../projects/" class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">← Back to Projects</a>
+    <a href="../../projects/" class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">? Back to Projects</a>
     <h1 class="font-display text-[clamp(3rem,10vw,6rem)] text-navy-bg dark:text-offwhite leading-none mt-4">Running Analysis</h1>
-    <p class="font-mono text-sm text-navy-bg/50 dark:text-offwhite/50 mt-2 tracking-wide">Sep 2024 – Present &nbsp;·&nbsp; Boston Marathon Trajectory</p>
+    <p class="font-mono text-sm text-navy-bg/50 dark:text-offwhite/50 mt-2 tracking-wide">Sep 2024 � Present &nbsp;�&nbsp; Boston Marathon Trajectory</p>
   </section>
 
   <!-- About -->
@@ -108,7 +108,7 @@
     <div class="grid gap-8 md:grid-cols-2 border-b border-navy-bg/10 dark:border-offwhite/10 pb-10">
       <div>
         <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange mb-3">What This Is</h2>
-        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.75]">This dashboard pulls live training data directly from Strava using a custom Python script and the Strava API. Every activity — easy runs, long runs, and races — is logged and processed into weekly and monthly aggregates, giving a real-time picture of where my fitness stands and where it's heading.</p>
+        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.75]">This dashboard pulls live training data directly from Strava using a custom Python script and the Strava API. Every activity � easy runs, long runs, and races � is logged and processed into weekly and monthly aggregates, giving a real-time picture of where my fitness stands and where it's heading.</p>
       </div>
       <div>
         <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange mb-3">What It Answers</h2>
@@ -121,19 +121,19 @@
   <section class="px-[5%] max-w-[1240px] mx-auto mb-12">
     <div class="summary-bar">
       <div class="stat-chip">
-        <span id="stat-runs"  class="stat-chip-value">—</span>
+        <span id="stat-runs"  class="stat-chip-value">�</span>
         <span class="stat-chip-label">Total Runs</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-miles" class="stat-chip-value">—</span>
+        <span id="stat-miles" class="stat-chip-value">�</span>
         <span class="stat-chip-label">Total Miles</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-time"  class="stat-chip-value">—</span>
+        <span id="stat-time"  class="stat-chip-value">�</span>
         <span class="stat-chip-label">Total Hours</span>
       </div>
       <div class="stat-chip">
-        <span id="stat-pace"  class="stat-chip-value">—</span>
+        <span id="stat-pace"  class="stat-chip-value">�</span>
         <span class="stat-chip-label">Current Avg Pace</span>
       </div>
     </div>
@@ -150,7 +150,7 @@
 
     <div class="panel">
       <h2 class="panel-title">Heart Rate Efficiency</h2>
-      <p class="panel-subtitle">Pace vs. HR — newer runs should appear lower-right</p>
+      <p class="panel-subtitle">Pace vs. HR � newer runs should appear lower-right</p>
       <div class="chart-wrap"><canvas id="chart-hr"></canvas></div>
     </div>
 
@@ -168,14 +168,14 @@
 
     <div class="panel panel--wide panel--hero">
       <h2 class="panel-title">Boston Qualifier Projection</h2>
-      <p class="panel-subtitle">Current PR: 3:54:23 &nbsp;·&nbsp; BQ target: 3:05:00 (Males 40–44) &nbsp;·&nbsp; Target pace: 7:03/mi</p>
+      <p class="panel-subtitle">Current PR: 3:54:23 &nbsp;�&nbsp; BQ target: 3:05:00 (Males 40�44) &nbsp;�&nbsp; Target pace: 7:03/mi</p>
       <div class="chart-wrap chart-wrap--tall"><canvas id="chart-bq"></canvas></div>
     </div>
 
     <!-- Race History Table -->
     <div class="panel panel--wide">
       <h2 class="panel-title">Race History</h2>
-      <p class="panel-subtitle">Marathons and half marathons only — the data points used for BQ trajectory analysis</p>
+      <p class="panel-subtitle">Marathons and half marathons only � the data points used for BQ trajectory analysis</p>
 
       <div class="mt-6 mb-8">
         <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Marathons</h3>
@@ -220,7 +220,7 @@
       </div>
 
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Half Marathons — Best Times</h3>
+        <h3 class="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-orange mb-3">Half Marathons � Best Times</h3>
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
@@ -265,12 +265,12 @@
     <!-- BQ Conclusion -->
     <div class="panel panel--wide">
       <h2 class="panel-title">BQ Analysis &amp; Projection</h2>
-      <p class="panel-subtitle">Based on marathon and half marathon race results — not average training pace</p>
+      <p class="panel-subtitle">Based on marathon and half marathon race results � not average training pace</p>
       <div class="mt-6 grid gap-8 md:grid-cols-3">
         <div class="md:col-span-2 flex flex-col gap-4">
-          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">Four marathons in 17 months tells a clear story. From a 4:42 debut at NYC in November 2024 to a 3:54:23 PR at Delaware in April 2026, the overall improvement is <span class="font-mono text-orange">48 minutes and 21 seconds</span> — nearly a minute per month. The half marathon data reinforces it: a March 2026 PR of <span class="font-mono text-orange">1:43:24 (7:46/mi)</span> predicts a marathon of approximately <span class="font-mono text-orange">3:37</span> using standard race-equivalency models, suggesting the current PR of 3:54 still has significant room to fall as marathon-specific fitness catches up to aerobic capacity.</p>
-          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The BQ standard for the 40–44 age group is <span class="font-mono text-orange">3:05:00</span> — a 7:03/mi pace for 26.2 miles. That's still 49 minutes below the current PR, but the trajectory says the gap is closing fast. If the improvement rate holds across the next two marathon cycles, a sub-3:35 is realistic by late 2026 or Spring 2027. From there, breaking 3:10 — and qualifying — becomes a matter of sustained volume and race execution rather than raw aerobic development.</p>
-          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The honest projection: <span class="font-mono text-orange">2027–2028</span>. The half marathon fitness is already pointing there. The marathon just needs to catch up.</p>
+          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">Four marathons in 17 months tells a clear story. From a 4:42 debut at NYC in November 2024 to a 3:54:23 PR at Delaware in April 2026, the overall improvement is <span class="font-mono text-orange">48 minutes and 21 seconds</span> � nearly a minute per month. The half marathon data reinforces it: a March 2026 PR of <span class="font-mono text-orange">1:43:24 (7:46/mi)</span> predicts a marathon of approximately <span class="font-mono text-orange">3:37</span> using standard race-equivalency models, suggesting the current PR of 3:54 still has significant room to fall as marathon-specific fitness catches up to aerobic capacity.</p>
+          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The BQ standard for the 40�44 age group is <span class="font-mono text-orange">3:05:00</span> � a 7:03/mi pace for 26.2 miles. That's still 49 minutes below the current PR, but the trajectory says the gap is closing fast. If the improvement rate holds across the next two marathon cycles, a sub-3:35 is realistic by late 2026 or Spring 2027. From there, breaking 3:10 � and qualifying � becomes a matter of sustained volume and race execution rather than raw aerobic development.</p>
+          <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.8]">The honest projection: <span class="font-mono text-orange">2027�2028</span>. The half marathon fitness is already pointing there. The marathon just needs to catch up.</p>
         </div>
         <div class="flex flex-col gap-3">
           <div class="bg-warm-section dark:bg-navy-dark/50 rounded-sm p-4 border border-navy-bg/10 dark:border-offwhite/10">
@@ -287,7 +287,7 @@
           </div>
           <div class="bg-warm-section dark:bg-navy-dark/50 rounded-sm p-4 border border-navy-bg/10 dark:border-offwhite/10">
             <div class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40 mb-1">Projected Window</div>
-            <div class="font-display text-[1.8rem] text-navy-bg dark:text-offwhite leading-none">2027–28</div>
+            <div class="font-display text-[1.8rem] text-navy-bg dark:text-offwhite leading-none">2027�28</div>
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@
 
 </main>
 
-<!-- ── FOOTER ─────────────────────────────────────────── -->
+<!-- -- FOOTER ------------------------------------------- -->
 <footer class="bg-warm-section dark:bg-navy-dark border-t border-navy-bg/10 dark:border-offwhite/10 py-8">
   <div class="w-[90%] max-w-[1240px] mx-auto">
     <div class="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:items-center">
@@ -312,7 +312,7 @@
       </nav>
       <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
         <a href="../../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
-        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 Calvin Daniel</span>
+        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">� 2026 Calvin Daniel</span>
       </div>
     </div>
   </div>
