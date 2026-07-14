@@ -1,0 +1,166 @@
+/* ── Contact form ──────────────────────────────────────────
+   Hand-written component styles (BEM). Colors mirror the site's
+   compiled Tailwind palette. Dark mode keys off `html.dark`,
+   the mechanism set in js/main.js. Mobile-first: single column,
+   two-up rows unlock at the sm breakpoint. */
+
+.contact-form {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.contact-form__label {
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgb(0 26 77 / 0.6);
+}
+
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+  width: 100%;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: rgb(0 26 77);
+  background-color: rgb(250 248 245);
+  border: 1px solid rgb(0 26 77 / 0.15);
+  border-radius: 0.125rem;
+  padding: 0.7rem 0.85rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  appearance: none;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 7.5rem;
+}
+
+.contact-form__select {
+  /* room for the custom chevron */
+  padding-right: 2.25rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF5910' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: rgb(0 26 77 / 0.4);
+}
+
+.contact-form__input:focus,
+.contact-form__select:focus,
+.contact-form__textarea:focus {
+  outline: none;
+  border-color: rgb(255 89 16);
+  box-shadow: 0 0 0 3px rgb(255 89 16 / 0.18);
+}
+
+.contact-form__counter {
+  align-self: flex-end;
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: rgb(0 26 77 / 0.5);
+  margin-top: 0.15rem;
+}
+
+.contact-form__submit {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(245 247 250);
+  background-color: rgb(255 89 16);
+  border: 2px solid rgb(255 89 16);
+  border-radius: 0.125rem;
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form__submit:hover:not(:disabled) {
+  background-color: rgb(204 67 10);
+  border-color: rgb(204 67 10);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgb(255 89 16 / 0.4);
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.contact-form__status {
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  min-height: 1.2rem;
+  margin: 0;
+}
+
+.contact-form__status--ok {
+  color: rgb(255 89 16);
+}
+
+.contact-form__status--error {
+  color: #c0392b;
+}
+
+/* Two-up rows on wider screens */
+@media (min-width: 640px) {
+  .contact-form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Dark mode ─────────────────────────────────────────── */
+html.dark .contact-form__label {
+  color: rgb(245 247 250 / 0.6);
+}
+
+html.dark .contact-form__input,
+html.dark .contact-form__select,
+html.dark .contact-form__textarea {
+  color: rgb(245 247 250);
+  background-color: rgb(0 30 80 / 0.4);
+  border-color: rgb(245 247 250 / 0.15);
+}
+
+html.dark .contact-form__input::placeholder,
+html.dark .contact-form__textarea::placeholder {
+  color: rgb(245 247 250 / 0.4);
+}
+
+html.dark .contact-form__counter {
+  color: rgb(245 247 250 / 0.5);
+}
+
+html.dark .contact-form__status--error {
+  color: #ff8a7a;
+}

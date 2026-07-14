@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/nav-dropdown.css" />
+  <link rel="stylesheet" href="css/contact-form.css" />
   <link rel="icon" type="image/png" href="images/favicon-social-logo.png" />
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
@@ -153,8 +154,7 @@
     <div class="w-px h-10 bg-navy-bg/10 dark:bg-offwhite/10 flex-shrink-0" aria-hidden="true"></div>
     <div class="flex flex-col gap-1 mb-[5%]">
       <span class="flex items-baseline gap-0.5 leading-none">
-        <span class="font-display text-[clamp(2rem,5vw,3rem)] text-orange">3:</span>
-        <span class="font-display text-[clamp(2rem,5vw,3rem)] text-orange" data-countup data-target="54" data-duration="1200" data-pad="2">00</span>
+        <span class="font-display text-[clamp(2rem,5vw,3rem)] text-orange">3:54<span class="text-[0.5em] opacity-60">:23</span></span>
       </span>
       <span class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-navy-bg/60 dark:text-offwhite/60">Marathon PR</span>
     </div>
@@ -288,10 +288,10 @@
 </section>
 
 <!-- ── RUNNING ─────────────────────────────────────────── -->
-<section id="running" class="relative bg-warm-bg dark:bg-navy-bg py-24 overflow-hidden scroll-mt-[70px]">
+<section id="running" class="relative bg-warm-bg dark:bg-navy-bg py-16 overflow-hidden scroll-mt-[70px]">
   <span aria-hidden="true" class="absolute -right-[0.05em] -bottom-[0.1em] font-display text-[clamp(10rem,28vw,22rem)] text-transparent leading-none pointer-events-none select-none" style="-webkit-text-stroke:1px rgba(255,89,16,0.08)">RUN</span>
   <div class="w-[90%] max-w-[1240px] mx-auto">
-    <div data-reveal class="text-center mb-16">
+    <div data-reveal class="text-center mb-12">
       <p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">Mile After Mile</p>
       <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Marathon Runner</h2>
       <p class="max-w-[600px] mx-auto mt-4 text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-relaxed">Three years in. Nine races finished. The same discipline that builds great software and clean dashboards is what gets you to mile 20 when your legs are begging you to stop.</p>
@@ -313,14 +313,14 @@
       </div>
     </div>
     <!-- Stat grid -->
-    <div data-reveal class="grid grid-cols-2 md:grid-cols-4 gap-px bg-navy-bg/10 dark:bg-offwhite/10 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden mb-16">
+    <div data-reveal class="grid grid-cols-2 md:grid-cols-4 gap-px bg-navy-bg/10 dark:bg-offwhite/10 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden mb-12">
       <div class="bg-warm-section dark:bg-[rgba(0,30,80,0.4)] hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.6)] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-navy-bg dark:text-offwhite">4</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">Marathons</span></div>
       <div class="bg-orange/12 hover:bg-orange/[.20] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-orange">3×</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">NYC Marathon</span></div>
       <div class="bg-warm-section dark:bg-[rgba(0,30,80,0.4)] hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.6)] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-navy-bg dark:text-offwhite">5</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">Half Marathons</span></div>
       <div class="bg-warm-section dark:bg-[rgba(0,30,80,0.4)] hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.6)] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-navy-bg dark:text-offwhite">3</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">Years Running</span></div>
     </div>
     <!-- PRs + Goals + Photo -->
-    <div class="grid gap-10 lg:grid-cols-2 lg:items-start mb-16">
+    <div class="grid gap-10 lg:grid-cols-2 lg:items-start mb-12">
       <div class="flex flex-col gap-6">
         <div>
           <h3 class="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-5">Personal Records</h3>
@@ -355,8 +355,8 @@
       </div>
     </div>
     <!-- Abbott Majors -->
-    <div data-reveal class="border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-10 bg-warm-section/60 dark:bg-[rgba(0,15,50,0.4)]">
-      <div class="mb-10">
+    <div data-reveal class="border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-8 bg-warm-section/60 dark:bg-[rgba(0,15,50,0.4)]">
+      <div class="mb-8">
         <h3 class="font-display text-[clamp(1.5rem,4vw,2.5rem)] text-navy-bg dark:text-offwhite tracking-wide mb-2">Abbott World Marathon Majors</h3>
         <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.95rem]">Six of the world's most prestigious marathons. One 6-Star medal for those who conquer them all. The hunt is on.</p>
       </div>
@@ -379,50 +379,84 @@
     <div data-reveal class="text-center mb-16">
       <p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">Investment</p>
       <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Pricing</h2>
-      <p class="max-w-[600px] mx-auto mt-4 text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-relaxed">Straightforward tiers to fit your project. Every engagement starts with a conversation.</p>
+      <p class="max-w-[600px] mx-auto mt-4 text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-relaxed">Straightforward tiers for web and data work &mdash; every engagement starts with a conversation.</p>
     </div>
     <div class="grid gap-6 lg:grid-cols-3 lg:items-start">
       <!-- Starter -->
       <div data-reveal class="relative flex flex-col rounded-sm border p-8 h-full transition-all duration-300 hover:-translate-y-1 border-navy-bg/10 dark:border-offwhite/10 bg-warm-bg dark:bg-navy-dark/30">
-        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Starter</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-navy-bg dark:text-offwhite">Starting at $499</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">For individuals and small businesses ready to establish their online presence.</p></div>
+        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Starter</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-navy-bg dark:text-offwhite">Starting at $499</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">For individuals and small businesses ready to launch a focused website or a first data project.</p></div>
         <ul class="flex flex-col gap-3 mb-8 flex-1">
-          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Single landing page</li>
+          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Landing page or single-view dashboard</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Mobile responsive design</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Basic SEO setup</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Contact form</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Up to 3 revisions</li>
         </ul>
-        <a href="#contact" class="block text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 rounded-sm border border-navy-bg/25 dark:border-offwhite/30 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-all duration-300">Get Started</a>
+        <a href="#contact" data-plan="Starter" class="block text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 rounded-sm border border-navy-bg/25 dark:border-offwhite/30 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-all duration-300">Get Started</a>
       </div>
       <!-- Pro -->
       <div data-reveal class="relative flex flex-col rounded-sm border p-8 h-full transition-all duration-300 hover:-translate-y-1 border-orange bg-orange/5 lg:scale-[1.04] lg:z-10 shadow-[0_0_40px_rgba(255,89,16,0.12)]">
         <span class="absolute -top-3 left-1/2 -translate-x-1/2 font-mono text-[0.6rem] tracking-widest uppercase px-4 py-1 bg-orange text-offwhite rounded-full whitespace-nowrap">Most Popular</span>
-        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Pro</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-orange">Starting at $2,075</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">The full package for businesses ready to grow their digital footprint.</p></div>
+        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Pro</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-orange">Starting at $1,999</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">A full website or an interactive, data-driven dashboard &mdash; built to grow with you.</p></div>
         <ul class="flex flex-col gap-3 mb-8 flex-1">
-          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Multi-page website (up to 6 pages)</li>
+          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Multi-page site (up to 6 pages) or analytics dashboard</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>CMS integration (WordPress or Squarespace)</li>
+          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Live data connection &amp; automated reporting</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Performance &amp; speed optimization</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>SEO best practices</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Web analytics setup</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Hosting services and post-launch support</li>
         </ul>
-        <a href="#contact" class="block text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 rounded-sm bg-orange text-offwhite hover:bg-orange-dim hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)] transition-all duration-300">Get Started</a>
+        <a href="#contact" data-plan="Pro" class="block text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 rounded-sm bg-orange text-offwhite hover:bg-orange-dim hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)] transition-all duration-300">Get Started</a>
       </div>
       <!-- Custom -->
       <div data-reveal class="relative flex flex-col rounded-sm border p-8 h-full transition-all duration-300 hover:-translate-y-1 border-navy-bg/10 dark:border-offwhite/10 bg-warm-bg dark:bg-navy-dark/30">
-        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Custom</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-navy-bg dark:text-offwhite">Let's Talk</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">Complex builds, e-commerce, and ongoing partnerships tailored to your goals.</p></div>
+        <div class="mb-6"><h3 class="font-display text-[2rem] text-navy-bg dark:text-offwhite tracking-wide mb-1">Custom</h3><p class="font-display text-[clamp(1.4rem,3vw,1.9rem)] leading-none mb-3 text-navy-bg dark:text-offwhite">Let's Talk</p><p class="text-navy-bg/50 dark:text-offwhite/50 text-[0.9rem] leading-relaxed">Complex web builds, e-commerce, and end-to-end data &amp; analytics partnerships.</p></div>
         <ul class="flex flex-col gap-3 mb-8 flex-1">
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Full brand build</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>E-commerce or advanced functionality</li>
-          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Custom integrations</li>
+          <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Custom data pipelines &amp; integrations</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Ongoing retainer available</li>
           <li class="flex items-start gap-3 text-navy-bg/70 dark:text-offwhite/70 text-[0.9rem]"><span class="text-orange mt-0.5 flex-shrink-0 font-bold">✓</span>Priority support</li>
         </ul>
-        <a href="#contact" class="block text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 rounded-sm border border-navy-bg/25 dark:border-offwhite/30 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-all duration-300">Get In Touch</a>
+        <a href="#contact" data-plan="Custom" class="block text-center font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 rounded-sm border border-navy-bg/25 dark:border-offwhite/30 text-navy-bg/70 dark:text-offwhite/70 hover:border-orange hover:text-orange transition-all duration-300">Get In Touch</a>
       </div>
     </div>
     <div data-reveal class="mt-10 text-center">
       <p class="font-mono text-[0.7rem] tracking-[0.1em] text-navy-bg/40 dark:text-offwhite/40">All pricing is project-specific — these are starting points. Get in touch for a tailored quote.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ─────────────────────────────────────────── -->
+<section id="process" class="relative bg-warm-bg dark:bg-navy-bg py-24 scroll-mt-[70px] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-navy-light/20 dark:before:via-navy-light before:to-transparent">
+  <div class="w-[90%] max-w-[1240px] mx-auto">
+    <div data-reveal class="text-center mb-16">
+      <p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">How I Work</p>
+      <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">From idea to launch</h2>
+      <p class="max-w-[600px] mx-auto mt-4 text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-relaxed">A simple, transparent process &mdash; no surprises, no jargon, just steady progress from the first call to the final handoff.</p>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+      <div data-reveal class="relative bg-warm-section dark:bg-[rgba(0,30,80,0.4)] border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
+        <span class="font-display text-[clamp(3rem,8vw,5rem)] leading-none text-orange">01</span>
+        <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mt-2 mb-2">Discovery</h3>
+        <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">We start with a conversation. I learn your goals, your audience, and what success actually looks like &mdash; so the work solves the right problem.</p>
+      </div>
+      <div data-reveal class="relative bg-warm-section dark:bg-[rgba(0,30,80,0.4)] border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
+        <span class="font-display text-[clamp(3rem,8vw,5rem)] leading-none text-orange">02</span>
+        <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mt-2 mb-2">Plan &amp; Design</h3>
+        <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">I map the structure and design the look, then share it early. You'll know exactly what you're getting before a line of code is written.</p>
+      </div>
+      <div data-reveal class="relative bg-warm-section dark:bg-[rgba(0,30,80,0.4)] border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
+        <span class="font-display text-[clamp(3rem,8vw,5rem)] leading-none text-orange">03</span>
+        <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mt-2 mb-2">Build</h3>
+        <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">I build it clean, fast, and responsive &mdash; tested across devices and browsers, with the small details that make it feel finished.</p>
+      </div>
+      <div data-reveal class="relative bg-warm-section dark:bg-[rgba(0,30,80,0.4)] border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
+        <span class="font-display text-[clamp(3rem,8vw,5rem)] leading-none text-orange">04</span>
+        <h3 class="font-display text-[1.3rem] text-navy-bg dark:text-offwhite tracking-wide mt-2 mb-2">Launch &amp; Support</h3>
+        <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">We ship it live and I make sure everything runs smoothly. Questions after launch? I'm still around &mdash; you won't be left on your own.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -434,9 +468,59 @@
       <p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">Let's Work Together</p>
       <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Ready to build<br />something great?</h2>
       <p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] mt-4 mb-16 leading-[1.75]">Whether you need a new website, a data solution, or just want to talk shop about running — I'm always up for a good conversation.</p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="mailto:calvin@calantdigital.com" class="inline-flex items-center px-7 py-3 bg-orange border-2 border-orange text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:bg-orange-dim hover:border-orange-dim hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)]">Send Me a Message</a>
-      </div>
+      <!-- Formspree: without JS the form posts to Formspree directly; js/home.js upgrades it to submit without a page reload. -->
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/xojgvdjq" method="POST" novalidate>
+        <input type="hidden" name="plan" id="cf-plan" />
+        <div class="contact-form__row">
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-name">Name</label>
+            <input class="contact-form__input" id="cf-name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-email">Email</label>
+            <input class="contact-form__input" id="cf-email" name="email" type="email" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="contact-form__row">
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-type">Project Type</label>
+            <select class="contact-form__select" id="cf-type" name="project_type" required>
+              <option value="" disabled selected>Select&hellip;</option>
+              <option>Web Development</option>
+              <option>Data Dashboard</option>
+              <option>Custom</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-budget">Estimated Budget</label>
+            <select class="contact-form__select" id="cf-budget" name="budget" required>
+              <option value="" disabled selected>Select&hellip;</option>
+              <option>Under $1K</option>
+              <option>$1K&ndash;$3K</option>
+              <option>$3K&ndash;$10K</option>
+              <option>Let's Talk</option>
+            </select>
+          </div>
+        </div>
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="cf-timeline">Timeline</label>
+          <select class="contact-form__select" id="cf-timeline" name="timeline" required>
+            <option value="" disabled selected>Select&hellip;</option>
+            <option>ASAP</option>
+            <option>1&ndash;2 months</option>
+            <option>3+ months</option>
+            <option>Just Exploring</option>
+          </select>
+        </div>
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="cf-message">Project Description</label>
+          <textarea class="contact-form__textarea" id="cf-message" name="message" maxlength="500" rows="5" placeholder="Tell me a little about what you're building&hellip;"></textarea>
+          <span class="contact-form__counter"><span id="cf-count">0</span>/500</span>
+        </div>
+        <button type="submit" class="contact-form__submit" id="cf-submit">Send Message</button>
+        <p class="contact-form__status" id="cf-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </section>
