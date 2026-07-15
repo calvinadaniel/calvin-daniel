@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calvin Daniel — Developer. Analyst. Runner.</title>
-  <meta name="description" content="Calvin Daniel — developer, analyst, and runner. Portfolio of web development projects, client work, and technical builds." />
+  <title>Calvin Daniel — Full-Stack Engineer</title>
+  <meta name="description" content="Calvin Daniel — full-stack engineer combining web development and data analytics. Portfolio of client work, technical builds, and a marathon running journey." />
   <link rel="canonical" href="https://calvindaniel.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Calvin Daniel" />
-  <meta property="og:title" content="Calvin Daniel — Developer. Analyst. Runner." />
-  <meta property="og:description" content="Calvin Daniel — developer, analyst, and runner. Portfolio of web development projects, client work, and technical builds." />
+  <meta property="og:title" content="Calvin Daniel — Full-Stack Engineer" />
+  <meta property="og:description" content="Calvin Daniel — full-stack engineer combining web development and data analytics. Portfolio of client work, technical builds, and a marathon running journey." />
   <meta property="og:url" content="https://calvindaniel.com/" />
   <meta property="og:image" content="https://calvindaniel.com/images/favicon-social-logo.png" />
   <meta property="og:image:width" content="195" />
   <meta property="og:image:height" content="178" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Calvin Daniel — Developer. Analyst. Runner." />
-  <meta name="twitter:description" content="Calvin Daniel — developer, analyst, and runner. Portfolio of web development projects, client work, and technical builds." />
+  <meta name="twitter:title" content="Calvin Daniel — Full-Stack Engineer" />
+  <meta name="twitter:description" content="Calvin Daniel — full-stack engineer combining web development and data analytics. Portfolio of client work, technical builds, and a marathon running journey." />
   <meta name="twitter:image" content="https://calvindaniel.com/images/favicon-social-logo.png" />
   <script>(function(){if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');}());</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,18 +37,8 @@
       <img src="images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-10 w-auto" />
     </a>
     <nav class="hidden lg:flex gap-6 items-center" aria-label="Main navigation">
-      <div class="nav-projects">
-        <a href="/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors flex items-center gap-1">
-          Home
-          <svg class="nav-projects-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 5,6 9,1"/></svg>
-        </a>
-        <div class="nav-dropdown" role="menu" aria-label="Home sections">
-          <a href="#about"   class="nav-dropdown-link" role="menuitem">About</a>
-          <a href="#web-dev" class="nav-dropdown-link" role="menuitem">Developer</a>
-          <a href="#analyst" class="nav-dropdown-link" role="menuitem">Analyst</a>
-          <a href="#running" class="nav-dropdown-link" role="menuitem">Runner</a>
-        </div>
-      </div>
+      <a href="/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border-b-2 border-orange pb-0.5">Home</a>
+      <a href="running/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Running</a>
       <div class="nav-projects">
         <a href="projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors flex items-center gap-1">
           Projects
@@ -87,15 +77,8 @@
     <span id="mobile-toggle-label">Light</span>
   </button>
   <ul class="flex flex-col gap-8 mt-4">
-    <li>
-      <a href="/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Home</a>
-      <div class="mobile-sub-nav">
-        <a href="#about">About</a>
-        <a href="#web-dev">Developer</a>
-        <a href="#analyst">Analyst</a>
-        <a href="#running">Runner</a>
-      </div>
-    </li>
+    <li><a href="/" class="font-display text-[2rem] text-orange tracking-wide">Home</a></li>
+    <li><a href="running/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Running</a></li>
     <li>
       <a href="projects/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
       <div class="mobile-sub-nav">
@@ -127,18 +110,19 @@
     </p>
 
     <h1 class="hero-headline font-display leading-[0.92] mb-8">
-      <span class="block text-[clamp(3.5rem,13vw,9rem)] text-navy-bg dark:text-offwhite">Developer.</span>
-      <span class="block text-[clamp(3.5rem,13vw,9rem)] text-orange">Analyst.</span>
+      <span class="block text-[clamp(3.5rem,13vw,9rem)] text-navy-bg dark:text-offwhite">Full-Stack</span>
+      <span class="block text-[clamp(3.5rem,13vw,9rem)] text-orange">Engineer.</span>
       <span id="runner-line" class="block text-[clamp(3.5rem,13vw,9rem)] text-transparent">Runner.</span>
     </h1>
 
     <p class="text-[clamp(0.95rem,2.5vw,1.15rem)] text-navy-bg/60 dark:text-offwhite/60 max-w-[520px] mb-8 leading-[1.7]">
-      I build web experiences, translate data into decisions,<br />
-      and chase finish lines — all at full stride.
+      I build the front end, wire up the data behind it, and ship<br />
+      experiences that hold together end to end.
     </p>
 
     <div class="flex flex-wrap gap-4">
-      <a href="#web-dev" class="inline-flex items-center px-7 py-3 bg-orange border-2 border-orange text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:bg-orange-dim hover:border-orange-dim hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)]">See My Work</a>
+      <a href="projects/" class="inline-flex items-center px-7 py-3 bg-orange border-2 border-orange text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:bg-orange-dim hover:border-orange-dim hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)]">See My Work</a>
+      <a href="#pricing" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Pricing</a>
       <a href="#contact" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Get In Touch</a>
     </div>
   </div>
@@ -183,49 +167,44 @@
       </div>
       <div class="flex flex-col justify-center">
         <div data-reveal><p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">Who I Am</p></div>
-        <div data-reveal><h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Three disciplines.<br />One relentless pursuit.</h2></div>
-        <div data-reveal><p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.8] mt-4">I'm Calvin Daniel — a Commercial Operations Specialist by day, a freelance web developer building real digital experiences for real businesses, and a long-distance runner who believes the same mindset that gets you to mile 20 gets you to the best possible solution.</p></div>
-        <div data-reveal><p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.8] mt-4">Whether I'm designing a client's brand from scratch, architecting a Power BI dashboard that cuts through noise, or training for my next World Marathon Major — I bring precision, endurance, and hunger to every endeavor.</p></div>
+        <div data-reveal><h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">One discipline.<br />Built to last the distance.</h2></div>
+        <div data-reveal><p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.8] mt-4">I'm Calvin Daniel — a full-stack engineer who builds the whole path from raw data to a finished product: the SQL and dashboards that surface what matters, and the web experiences that put it in front of real people.</p></div>
+        <div data-reveal>
+          <p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.8] mt-4">Whether I'm designing a client's brand from scratch or architecting a Power BI dashboard that cuts through noise, I bring the same precision and endurance to every build — the same mindset that gets me to mile 20 on race day.</p>
+          <a href="running/" class="inline-flex items-center gap-2 font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 mt-10 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">See the Running Log &rarr;</a>
+        </div>
         <div data-reveal class="flex gap-8 mt-16 flex-wrap">
           <div class="flex flex-col items-center gap-2"><span class="text-[1.5rem] text-orange">&lt;/&gt;</span><span class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60">Web Dev</span></div>
           <div class="flex flex-col items-center gap-2"><span class="text-[1.5rem] text-orange">▲</span><span class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60">Analytics</span></div>
-          <div class="flex flex-col items-center gap-2"><span class="text-[1.5rem] text-orange">●</span><span class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60">Running</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── WEB DEV ─────────────────────────────────────────── -->
-<section id="web-dev" class="bg-warm-bg dark:bg-navy-bg py-24 scroll-mt-[70px]">
+﻿<!-- ── FULL-STACK ──────────────────────────────────────── -->
+<section id="full-stack" class="bg-warm-bg dark:bg-navy-bg py-24 scroll-mt-[70px]">
   <div class="w-[90%] max-w-[1240px] mx-auto">
     <div data-reveal class="text-center mb-16">
       <p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">What I Build</p>
-      <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Web Developer</h2>
-      <p class="max-w-[600px] mx-auto mt-4 text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-relaxed">From custom-coded landing pages to full brand builds, I craft lightweight, responsive digital experiences — no bloated frameworks, just clean architecture and intentional design.</p>
+      <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Full-Stack Engineer</h2>
+      <p class="max-w-[600px] mx-auto mt-4 text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-relaxed">From custom-coded front ends to the SQL and dashboards behind the scenes, I build the whole path from raw data to a finished product — no bloated frameworks, just clean architecture and decisions backed by real numbers.</p>
     </div>
-    <div class="grid gap-px bg-navy-bg/10 dark:bg-offwhite/10 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden md:grid-cols-2 lg:grid-cols-3">
-      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">01</div><h3 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">HTML / CSS / JavaScript</h3><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Semantic, accessible markup paired with custom CSS architecture and vanilla JS — built to perform and maintain without dependencies.</p></div>
-      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">02</div><h3 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">Responsive Design</h3><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Mobile-first layouts with CSS Grid, Flexbox, and fluid typography. Your site looks sharp and intentional on every screen.</p></div>
-      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">03</div><h3 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">WordPress Builds</h3><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Custom WordPress development on Hostinger — lean, fast, and fully managed for small businesses that need real results.</p></div>
-      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">04</div><h3 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">Custom Frameworks</h3><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">No Bootstrap, no bloat. Bespoke component systems built to each client's brand and performance requirements.</p></div>
-      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">05</div><h3 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">SEO &amp; Performance</h3><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Schema markup, Open Graph metadata, and page speed optimization — building for both people and search engines.</p></div>
-      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">06</div><h3 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">CMS Integration</h3><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Squarespace, WordPress, and headless CMS setups — giving clients full control of their content without touching code.</p></div>
-    </div>
-    <div data-reveal class="mt-16 border-l-[3px] border-orange pl-8">
-      <blockquote class="font-display text-[clamp(1.4rem,3.5vw,2rem)] leading-[1.3] text-navy-bg/60 dark:text-offwhite/60 tracking-wide">"The best websites are the ones no one notices — because they just work, look right, and get out of the way."</blockquote>
-    </div>
-  </div>
-</section>
 
-<!-- ── ANALYST ─────────────────────────────────────────── -->
-<section id="analyst" class="bg-warm-section dark:bg-navy-section py-24 scroll-mt-[70px]">
-  <div class="w-[90%] max-w-[1240px] mx-auto">
+    <h3 class="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-8">Development</h3>
+    <div class="grid gap-px bg-navy-bg/10 dark:bg-offwhite/10 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden md:grid-cols-2 lg:grid-cols-3">
+      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">01</div><h4 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">HTML / CSS / JavaScript</h4><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Semantic, accessible markup paired with custom CSS architecture and vanilla JS — built to perform and maintain without dependencies.</p></div>
+      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">02</div><h4 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">Responsive Design</h4><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Mobile-first layouts with CSS Grid, Flexbox, and fluid typography. Your site looks sharp and intentional on every screen.</p></div>
+      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">03</div><h4 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">WordPress Builds</h4><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Custom WordPress development on Hostinger — lean, fast, and fully managed for small businesses that need real results.</p></div>
+      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">04</div><h4 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">Custom Frameworks</h4><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">No Bootstrap, no bloat. Bespoke component systems built to each client's brand and performance requirements.</p></div>
+      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">05</div><h4 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">SEO &amp; Performance</h4><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Schema markup, Open Graph metadata, and page speed optimization — building for both people and search engines.</p></div>
+      <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.5)] p-8 hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.7)] transition-colors h-full"><div class="font-mono text-[0.65rem] text-orange tracking-[0.1em] mb-4">06</div><h4 class="font-display text-[1.4rem] tracking-wide text-navy-bg dark:text-offwhite mb-2">CMS Integration</h4><p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.9rem] leading-[1.7]">Squarespace, WordPress, and headless CMS setups — giving clients full control of their content without touching code.</p></div>
+    </div>
+
+    <h3 class="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-16 mb-8">Data &amp; Analytics</h3>
     <div class="grid gap-16 md:grid-cols-2 md:items-start">
       <div>
-        <div data-reveal><p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">What I Measure</p></div>
-        <div data-reveal><h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Data Analyst</h2></div>
-        <div data-reveal><p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.8] mt-4">As a Commercial Operations Specialist, I live in data. From SQL scripting to Power BI dashboard design, I turn raw numbers into visual stories that drive real business decisions.</p></div>
+        <div data-reveal><p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.8]">As a Commercial Operations Specialist, I live in data. From SQL scripting to Power BI dashboard design, I turn raw numbers into visual stories that drive real business decisions.</p></div>
         <div data-reveal><p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.8] mt-4">I'm actively deepening my Python expertise — building automation scripts that eliminate repetitive weekly, monthly, and quarterly tasks so teams can focus on work that actually matters.</p></div>
         <div data-reveal class="mt-16 flex flex-col gap-8">
           <div><div class="flex justify-between items-baseline mb-2"><span class="font-mono text-[0.75rem] tracking-[0.08em] uppercase text-navy-bg dark:text-offwhite">Power BI</span><span class="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-orange">Expert</span></div><div class="h-[3px] bg-navy-bg/10 dark:bg-offwhite/10 rounded-sm overflow-hidden"><div class="skill-bar-fill" data-width="92"></div></div></div>
@@ -235,7 +214,7 @@
         </div>
       </div>
       <div data-reveal data-dir="right" class="flex flex-col gap-4">
-        <div class="bg-warm-bg dark:bg-[rgba(0,15,50,0.7)] border border-navy-bg/10 dark:border-offwhite/10 rounded p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
+        <div class="bg-warm-section dark:bg-[rgba(0,15,50,0.7)] border border-navy-bg/10 dark:border-offwhite/10 rounded p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
           <div class="flex justify-between items-center mb-4"><span class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60">Weekly Reports</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60 border border-navy-bg/10 dark:border-offwhite/10 px-2 py-0.5 rounded-sm">SQL</span></div>
           <div class="font-display text-[2.5rem] text-navy-bg dark:text-offwhite leading-none">40<span class="text-[1.4rem] opacity-60">+</span></div>
           <div class="font-mono text-[0.65rem] tracking-widest text-navy-bg/60 dark:text-offwhite/60 mt-1">queries executed per week</div>
@@ -249,7 +228,7 @@
             <span class="flex-1 rounded-sm bg-orange"    style="height:100%"></span>
           </div>
         </div>
-        <div class="bg-warm-bg dark:bg-[rgba(0,15,50,0.7)] border border-navy-bg/10 dark:border-offwhite/10 rounded p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
+        <div class="bg-warm-section dark:bg-[rgba(0,15,50,0.7)] border border-navy-bg/10 dark:border-offwhite/10 rounded p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
           <div class="flex justify-between items-center mb-4"><span class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60">Dashboard Platform</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-orange border border-orange px-2 py-0.5 rounded-sm">Power BI</span></div>
           <div class="relative flex flex-col items-center">
             <svg class="w-full max-w-[200px]" viewBox="0 0 120 70" fill="none">
@@ -260,7 +239,7 @@
             <span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60 mt-2">efficiency gain</span>
           </div>
         </div>
-        <div class="bg-warm-bg dark:bg-[rgba(0,15,50,0.7)] border border-navy-bg/10 dark:border-offwhite/10 rounded p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
+        <div class="bg-warm-section dark:bg-[rgba(0,15,50,0.7)] border border-navy-bg/10 dark:border-offwhite/10 rounded p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
           <div class="flex justify-between items-center mb-4"><span class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60">Automation Goal</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60 border border-navy-bg/10 dark:border-offwhite/10 px-2 py-0.5 rounded-sm">Python</span></div>
           <div class="flex flex-wrap gap-2 mb-2">
             <span class="font-mono text-[0.65rem] tracking-[0.08em] uppercase bg-orange/15 text-orange border border-orange/30 px-2.5 py-0.5 rounded-sm">Weekly</span>
@@ -271,6 +250,7 @@
         </div>
       </div>
     </div>
+
     <div data-reveal class="mt-16 pt-16 border-t border-navy-bg/10 dark:border-offwhite/10">
       <h3 class="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-8">Areas of Focus</h3>
       <div class="flex flex-wrap gap-2">
@@ -284,91 +264,9 @@
         <span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase border border-navy-bg/20 dark:border-offwhite/20 text-navy-bg/60 dark:text-offwhite/60 px-4 py-1.5 rounded-sm hover:border-orange hover:text-orange transition-all duration-200 cursor-default">Commercial Operations</span>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ── RUNNING ─────────────────────────────────────────── -->
-<section id="running" class="relative bg-warm-bg dark:bg-navy-bg py-16 overflow-hidden scroll-mt-[70px]">
-  <span aria-hidden="true" class="absolute -right-[0.05em] -bottom-[0.1em] font-display text-[clamp(10rem,28vw,22rem)] text-transparent leading-none pointer-events-none select-none" style="-webkit-text-stroke:1px rgba(255,89,16,0.08)">RUN</span>
-  <div class="w-[90%] max-w-[1240px] mx-auto">
-    <div data-reveal class="text-center mb-12">
-      <p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">Mile After Mile</p>
-      <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Marathon Runner</h2>
-      <p class="max-w-[600px] mx-auto mt-4 text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-relaxed">Three years in. Nine races finished. The same discipline that builds great software and clean dashboards is what gets you to mile 20 when your legs are begging you to stop.</p>
-    </div>
-    <!-- Last Race -->
-    <div data-reveal class="mb-12">
-      <div class="border-l-4 border-orange bg-warm-section dark:bg-navy-dark/50 rounded-sm p-6 md:p-8">
-        <p class="font-mono text-[0.65rem] tracking-[0.2em] uppercase text-orange mb-4">Last Race</p>
-        <div class="flex items-start justify-between gap-6 flex-wrap">
-          <div>
-            <h3 class="font-display text-[clamp(1.8rem,4vw,2.8rem)] text-navy-bg dark:text-offwhite leading-tight">Delaware Running Festival Marathon</h3>
-            <p class="font-mono text-[0.75rem] text-navy-bg/60 dark:text-offwhite/60 mt-1">April 19, 2026 · Delaware</p>
-          </div>
-          <div class="flex flex-col items-center justify-center bg-orange/10 border border-orange/30 px-6 py-4 rounded-sm flex-shrink-0">
-            <span class="font-display text-[clamp(1.4rem,3vw,2rem)] text-orange leading-tight tracking-wide text-center">NEW PERSONAL RECORD!</span>
-          </div>
-        </div>
-        <div class="mt-4"><span class="inline-flex items-center gap-2 bg-orange/10 border border-orange/20 px-3 py-1 rounded-full font-mono text-[0.65rem] tracking-widest uppercase text-orange">26.2 mi</span></div>
-      </div>
-    </div>
-    <!-- Stat grid -->
-    <div data-reveal class="grid grid-cols-2 md:grid-cols-4 gap-px bg-navy-bg/10 dark:bg-offwhite/10 border border-navy-bg/10 dark:border-offwhite/10 rounded-sm overflow-hidden mb-12">
-      <div class="bg-warm-section dark:bg-[rgba(0,30,80,0.4)] hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.6)] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-navy-bg dark:text-offwhite">4</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">Marathons</span></div>
-      <div class="bg-orange/12 hover:bg-orange/[.20] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-orange">3×</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">NYC Marathon</span></div>
-      <div class="bg-warm-section dark:bg-[rgba(0,30,80,0.4)] hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.6)] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-navy-bg dark:text-offwhite">5</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">Half Marathons</span></div>
-      <div class="bg-warm-section dark:bg-[rgba(0,30,80,0.4)] hover:bg-warm-bg dark:hover:bg-[rgba(0,45,114,0.6)] py-6 px-4 text-center transition-colors"><span class="block font-display text-[clamp(3rem,8vw,5rem)] leading-none text-navy-bg dark:text-offwhite">3</span><span class="block font-mono text-[0.65rem] tracking-[0.12em] uppercase text-navy-bg/60 dark:text-offwhite/60 mt-1">Years Running</span></div>
-    </div>
-    <!-- PRs + Goals + Photo -->
-    <div class="grid gap-10 lg:grid-cols-2 lg:items-start mb-12">
-      <div class="flex flex-col gap-6">
-        <div>
-          <h3 class="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-5">Personal Records</h3>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div data-reveal class="bg-warm-section dark:bg-[rgba(0,30,80,0.4)] border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-6 hover:border-navy-bg/25 dark:hover:border-offwhite/25 hover:-translate-y-0.5 transition-all duration-300">
-              <div class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-2">Half Marathon</div>
-              <div class="font-display text-[clamp(2.5rem,8vw,4rem)] text-navy-bg dark:text-offwhite leading-none">1:43<span class="text-[0.5em] opacity-60">:45</span></div>
-              <div class="font-mono text-[0.65rem] tracking-widest text-navy-bg/60 dark:text-offwhite/60 mt-2">~7:55 / mile</div>
-            </div>
-            <div data-reveal class="relative bg-orange/10 border border-orange/40 rounded-sm p-6 hover:border-orange hover:-translate-y-0.5 transition-all duration-300">
-              <span class="absolute top-4 right-4 text-orange text-[1.2rem]">★</span>
-              <div class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-2">Full Marathon</div>
-              <div class="font-display text-[clamp(2.5rem,8vw,4rem)] text-orange leading-none">3:54<span class="text-[0.5em] opacity-60">:23</span></div>
-              <div class="font-mono text-[0.65rem] tracking-widest text-navy-bg/60 dark:text-offwhite/60 mt-2">~8:57 / mile</div>
-              <div class="mt-3 inline-flex items-center gap-1.5 bg-orange text-offwhite px-3 py-1 rounded-full font-mono text-[0.6rem] tracking-widest uppercase"><span>✓</span> Sub-4 Achieved</div>
-            </div>
-          </div>
-        </div>
-        <div data-reveal>
-          <h3 class="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-navy-bg/60 dark:text-offwhite/60 mb-4">Current Goals</h3>
-          <div class="flex flex-wrap gap-3">
-            <span class="inline-flex items-center gap-2 border border-orange bg-orange text-offwhite px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span>✓</span> Sub-4:00 Marathon</span>
-            <span class="inline-flex items-center gap-2 border border-orange/40 text-orange bg-orange/8 px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span aria-hidden="true">▶</span> Run Boston Marathon</span>
-            <span class="inline-flex items-center gap-2 border border-orange/40 text-orange bg-orange/8 px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span aria-hidden="true">▶</span> Complete Chicago Major</span>
-            <span class="inline-flex items-center gap-2 border border-orange/40 text-orange bg-orange/8 px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span aria-hidden="true">▶</span> 1,000 miles in 2026</span>
-          </div>
-        </div>
-      </div>
-      <div class="hidden lg:block relative overflow-hidden rounded-sm aspect-[4/5] group">
-        <img src="images/IMG_1547.jpg" alt="Calvin Daniel running a marathon" loading="lazy" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
-        <div class="absolute inset-0 bg-gradient-to-t from-warm-section/30 dark:from-navy-dark/50 to-transparent"></div>
-      </div>
-    </div>
-    <!-- Abbott Majors -->
-    <div data-reveal class="border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-8 bg-warm-section/60 dark:bg-[rgba(0,15,50,0.4)]">
-      <div class="mb-8">
-        <h3 class="font-display text-[clamp(1.5rem,4vw,2.5rem)] text-navy-bg dark:text-offwhite tracking-wide mb-2">Abbott World Marathon Majors</h3>
-        <p class="text-navy-bg/60 dark:text-offwhite/60 text-[0.95rem]">Six of the world's most prestigious marathons. One 6-Star medal for those who conquer them all. The hunt is on.</p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-        <div class="flex flex-col gap-1 p-4 rounded-sm border bg-orange/12 border-orange/40 hover:border-orange transition-all duration-300 hover:-translate-y-0.5"><span class="text-orange text-[1rem]">★</span><span class="font-display text-[1.1rem] text-navy-bg dark:text-offwhite tracking-wide">New York City</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-orange">3× Finisher</span></div>
-        <div class="flex flex-col gap-1 p-4 rounded-sm border border-navy-bg/10 dark:border-offwhite/10 hover:border-navy-bg/20 dark:hover:border-offwhite/20 transition-all duration-300 hover:-translate-y-0.5"><span class="text-orange text-[1rem]">○</span><span class="font-display text-[1.1rem] text-navy-bg dark:text-offwhite tracking-wide">Chicago</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60">Next Target</span></div>
-        <div class="flex flex-col gap-1 p-4 rounded-sm border border-navy-bg/10 dark:border-offwhite/10 hover:border-navy-bg/20 dark:hover:border-offwhite/20 transition-all duration-300 hover:-translate-y-0.5"><span class="text-navy-bg/40 dark:text-offwhite/40 text-[1rem]">○</span><span class="font-display text-[1.1rem] text-navy-bg dark:text-offwhite tracking-wide">Boston</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60">Next Target</span></div>
-        <div class="flex flex-col gap-1 p-4 rounded-sm border border-navy-bg/10 dark:border-offwhite/10 hover:border-navy-bg/20 dark:hover:border-offwhite/20 transition-all duration-300 hover:-translate-y-0.5"><span class="text-navy-bg/40 dark:text-offwhite/40 text-[1rem]">○</span><span class="font-display text-[1.1rem] text-navy-bg dark:text-offwhite tracking-wide">London</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60">On the list</span></div>
-        <div class="flex flex-col gap-1 p-4 rounded-sm border border-navy-bg/10 dark:border-offwhite/10 hover:border-navy-bg/20 dark:hover:border-offwhite/20 transition-all duration-300 hover:-translate-y-0.5"><span class="text-navy-bg/40 dark:text-offwhite/40 text-[1rem]">○</span><span class="font-display text-[1.1rem] text-navy-bg dark:text-offwhite tracking-wide">Berlin</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60">On the list</span></div>
-        <div class="flex flex-col gap-1 p-4 rounded-sm border border-navy-bg/10 dark:border-offwhite/10 hover:border-navy-bg/20 dark:hover:border-offwhite/20 transition-all duration-300 hover:-translate-y-0.5"><span class="text-navy-bg/40 dark:text-offwhite/40 text-[1rem]">○</span><span class="font-display text-[1.1rem] text-navy-bg dark:text-offwhite tracking-wide">Tokyo</span><span class="font-mono text-[0.6rem] tracking-widests uppercase text-navy-bg/60 dark:text-offwhite/60">On the list</span></div>
-      </div>
-      <p class="mt-8 font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange text-center">1 star earned. 5 to go. The 6-Star medal awaits.</p>
+    <div data-reveal class="mt-16 border-l-[3px] border-orange pl-8">
+      <blockquote class="font-display text-[clamp(1.4rem,3.5vw,2rem)] leading-[1.3] text-navy-bg/60 dark:text-offwhite/60 tracking-wide">"The best websites are the ones no one notices — because they just work, look right, and get out of the way."</blockquote>
     </div>
   </div>
 </section>
@@ -538,6 +436,7 @@
       <div class="flex flex-col items-center gap-3">
         <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
         <a href="/"         class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Home</a>
+        <a href="running/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Running</a>
         <a href="projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Projects</a>
         <a href="clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Clients</a>
         </nav>
