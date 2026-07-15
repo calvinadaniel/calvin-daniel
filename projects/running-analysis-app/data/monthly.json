@@ -201,12 +201,32 @@
   },
   {
     "month": "2026-05",
-    "avg_pace_sec": 585.6,
-    "avg_pace_display": "9:45",
-    "avg_hr": 157.5,
+    "avg_pace_sec": 581.8,
+    "avg_pace_display": "9:41",
+    "avg_hr": 158.0,
+    "total_miles": 53.9,
+    "total_suffer": 799.0,
+    "hr_efficiency": 0.2716,
+    "run_count": 9
+  },
+  {
+    "month": "2026-06",
+    "avg_pace_sec": 567.1,
+    "avg_pace_display": "9:27",
+    "avg_hr": 157.2,
+    "total_miles": 39.8,
+    "total_suffer": 567.0,
+    "hr_efficiency": 0.2771,
+    "run_count": 5
+  },
+  {
+    "month": "2026-07",
+    "avg_pace_sec": 560.2,
+    "avg_pace_display": "9:20",
+    "avg_hr": 157.6,
     "total_miles": 25.2,
-    "total_suffer": 375.0,
-    "hr_efficiency": 0.269,
-    "run_count": 4
+    "total_suffer": 377.0,
+    "hr_efficiency": 0.2813,
+    "run_count": 3
   }
 ]

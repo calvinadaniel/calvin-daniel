@@ -334,5 +334,33 @@
   {
     "week_start": "2026-05-11",
     "miles": 13.1
+  },
+  {
+    "week_start": "2026-05-18",
+    "miles": 10.9
+  },
+  {
+    "week_start": "2026-05-25",
+    "miles": 17.7
+  },
+  {
+    "week_start": "2026-06-01",
+    "miles": 6.2
+  },
+  {
+    "week_start": "2026-06-15",
+    "miles": 7.0
+  },
+  {
+    "week_start": "2026-06-22",
+    "miles": 26.5
+  },
+  {
+    "week_start": "2026-06-29",
+    "miles": 11.1
+  },
+  {
+    "week_start": "2026-07-06",
+    "miles": 14.1
   }
 ]
