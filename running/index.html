@@ -155,7 +155,15 @@
               <span class="inline-flex items-center gap-2 border border-orange bg-orange text-offwhite px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span>✓</span> Sub-4:00 Marathon</span>
               <span class="inline-flex items-center gap-2 border border-orange/40 text-orange bg-orange/8 px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span aria-hidden="true">▶</span> Run Boston Marathon</span>
               <span class="inline-flex items-center gap-2 border border-orange/40 text-orange bg-orange/8 px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span aria-hidden="true">▶</span> Complete Chicago Major</span>
-              <span class="inline-flex items-center gap-2 border border-orange/40 text-orange bg-orange/8 px-4 py-2 rounded-full font-mono text-[0.7rem] tracking-[0.05em]"><span aria-hidden="true">▶</span> 1,000 miles in 2026</span>
+            </div>
+          </div>
+          <div data-reveal>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-navy-bg/60 dark:text-offwhite/60">2026 Mileage Goal</h3>
+              <span id="mileage-label" class="font-mono text-[0.7rem] tracking-[0.05em] text-orange">&hellip; / 1,000 mi</span>
+            </div>
+            <div class="w-full h-2.5 bg-navy-bg/10 dark:bg-offwhite/10 rounded-full overflow-hidden">
+              <div id="mileage-bar" class="h-full bg-orange rounded-full transition-[width] duration-700" style="width:0%"></div>
             </div>
           </div>
         </div>
@@ -179,6 +187,18 @@
           <div class="flex flex-col gap-1 p-4 rounded-sm border border-navy-bg/10 dark:border-offwhite/10 hover:border-navy-bg/20 dark:hover:border-offwhite/20 transition-all duration-300 hover:-translate-y-0.5"><span class="text-navy-bg/40 dark:text-offwhite/40 text-[1rem]">○</span><span class="font-display text-[1.1rem] text-navy-bg dark:text-offwhite tracking-wide">Tokyo</span><span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/60 dark:text-offwhite/60">On the list</span></div>
         </div>
         <p class="mt-8 font-mono text-[0.7rem] tracking-[0.15em] uppercase text-orange text-center">1 star earned. 5 to go. The 6-Star medal awaits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RUNNING ANALYSIS APP CTA ──────────────────────────── -->
+  <section class="bg-warm-section dark:bg-navy-section py-16">
+    <div class="w-[90%] max-w-[1240px] mx-auto">
+      <div data-reveal class="border border-navy-bg/10 dark:border-offwhite/10 rounded-sm p-8 md:p-10 bg-warm-bg dark:bg-navy-bg">
+        <p class="font-mono text-[0.65rem] tracking-[0.2em] uppercase text-orange mb-3">Where Running Meets Data</p>
+        <h2 class="font-display text-[clamp(1.8rem,4vw,2.8rem)] text-navy-bg dark:text-offwhite tracking-wide mb-4">Built a Tool to Chase Boston</h2>
+        <p class="max-w-[700px] text-navy-bg/60 dark:text-offwhite/60 text-[1rem] leading-[1.8] mb-6">Qualifying for the Boston Marathon is the goal that's been driving my training for the past year. Somewhere between spreadsheets of splits and a growing Strava history, my two obsessions collided &mdash; so I built a dashboard that pulls my run data, tracks pace trends over time, and forecasts the race where my qualifying time actually lands. It's the same instinct behind everything I build: turn raw data into a plan you can act on.</p>
+        <a href="../projects/running-analysis-app/" class="inline-flex items-center gap-2 font-mono text-[0.75rem] tracking-[0.1em] uppercase px-6 py-3 bg-orange text-offwhite hover:bg-orange-dim transition-colors rounded-sm">See the Running Analysis App &rarr;</a>
       </div>
     </div>
   </section>
@@ -221,5 +241,21 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script>
+  const MILEAGE_GOAL = 1000;
+  fetch('../projects/running-analysis-app/data/monthly.json')
+    .then((res) => res.json())
+    .then((months) => {
+      const ytdMiles = months
+        .filter((m) => m.month.startsWith('2026'))
+        .reduce((sum, m) => sum + m.total_miles, 0);
+      const pct = Math.min((ytdMiles / MILEAGE_GOAL) * 100, 100);
+      document.getElementById('mileage-label').textContent = `${Math.round(ytdMiles)} / ${MILEAGE_GOAL} mi`;
+      document.getElementById('mileage-bar').style.width = `${pct}%`;
+    })
+    .catch(() => {
+      document.getElementById('mileage-label').textContent = '1,000 mi goal';
+    });
+</script>
 </body>
 </html>
