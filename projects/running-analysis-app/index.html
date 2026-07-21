@@ -38,35 +38,13 @@
       <img src="../../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-10 w-auto" />
     </a>
     <nav class="hidden lg:flex gap-6 items-center" aria-label="Main navigation">
-      <div class="nav-projects">
-        <a href="../../" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors flex items-center gap-1">
-          Home
-          <svg class="nav-projects-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 5,6 9,1"/></svg>
-        </a>
-        <div class="nav-dropdown" role="menu" aria-label="Home sections">
-          <a href="../../#about"   class="nav-dropdown-link" role="menuitem">About</a>
-          <a href="../../#web-dev" class="nav-dropdown-link" role="menuitem">Developer</a>
-          <a href="../../#analyst" class="nav-dropdown-link" role="menuitem">Analyst</a>
-          <a href="../../#running" class="nav-dropdown-link" role="menuitem">Runner</a>
-        </div>
-      </div>
-      <div class="nav-projects">
-        <a href="../../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors flex items-center gap-1">
-          Projects
-          <svg class="nav-projects-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1,1 5,6 9,1"/></svg>
-        </a>
-        <div class="nav-dropdown" role="menu" aria-label="Projects submenu">
-          <a href="../../projects/running-analysis-app/" class="nav-dropdown-link" role="menuitem">Running Analysis</a>
-          <a href="../../projects/elitehitter/" class="nav-dropdown-link" role="menuitem">EliteHitter+</a>
-          <a href="https://tbg-invitational-league.vercel.app/" target="_blank" rel="noopener noreferrer" class="nav-dropdown-link" role="menuitem">TBG Invitational</a>
-        </div>
-      </div>
-      <a href="../../clients/"           class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a>
+      <a href="../../clients/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Case Studies</a>
+      <a href="../../#framework" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">My Framework</a>
       <button id="theme-toggle" aria-label="Switch to light mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
         <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg id="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <a href="../../index.html#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
+      <a href="../../index.html#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase bg-orange text-navy-bg px-4 py-[0.5rem] rounded-sm hover:bg-orange-dim transition-all">Book an AI Audit</a>
     </nav>
     <button id="menu-open" class="lg:hidden flex flex-col justify-center gap-[5px] w-9 h-9 p-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="off-canvas-nav">
       <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
@@ -88,26 +66,16 @@
     <span id="mobile-toggle-label">Light</span>
   </button>
   <ul class="flex flex-col gap-8 mt-4">
-    <li>
-      <a href="../../" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Home</a>
-      <div class="mobile-sub-nav">
-        <a href="../../#about">About</a>
-        <a href="../../#web-dev">Developer</a>
-        <a href="../../#analyst">Analyst</a>
-        <a href="../../#running">Runner</a>
-      </div>
-    </li>
-    <li>
-      <a href="../../projects/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Projects</a>
-      <div class="mobile-sub-nav">
-        <a href="../../projects/running-analysis-app/">Running Analysis</a>
-        <a href="../../projects/elitehitter/">EliteHitter+</a>
-        <a href="https://tbg-invitational-league.vercel.app/" target="_blank" rel="noopener noreferrer">TBG Invitational</a>
-      </div>
-    </li>
-    <li><a href="../../clients/"           class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Clients</a></li>
-    <li><a href="../../index.html#contact" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Let's Connect</a></li>
+    <li><a href="../../clients/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Case Studies</a></li>
+    <li><a href="../../#framework" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">My Framework</a></li>
+    <li><a href="../../index.html#contact" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Book an AI Audit</a></li>
   </ul>
+  <div class="mt-auto pt-8 border-t border-navy-bg/10 dark:border-offwhite/10 flex flex-col gap-4">
+    <span class="font-mono text-[0.6rem] tracking-widest uppercase text-navy-bg/40 dark:text-offwhite/40">More</span>
+    <a href="../../" class="font-mono text-[0.8rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Home</a>
+    <a href="../../running/" class="font-mono text-[0.8rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">Running</a>
+    <a href="../../projects/" class="font-mono text-[0.8rem] tracking-[0.1em] uppercase text-orange">Projects</a>
+  </div>
 </nav>
 
 <main>
@@ -325,7 +293,7 @@
         <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
         <a href="../../"          class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Home</a>
         <a href="../../projects/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Projects</a>
-        <a href="../../clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Clients</a>
+        <a href="../../clients/"  class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Case Studies</a>
         </nav>
         <div class="flex flex-wrap justify-center gap-6">
           <a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
@@ -340,7 +308,7 @@
         </div>
       </div>
       <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
-        <a href="../../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
+        <a href="../../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Book an AI Audit</a>
         <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">© 2026 Calvin Daniel</span>
       </div>
     </div>
