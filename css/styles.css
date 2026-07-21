@@ -1831,7 +1831,7 @@ video {
   opacity: 0.08;
 }
 
-.shadow-\[0_0_40px_rgba\(255\2c 89\2c 16\2c 0\.12\)\] {
+.shadow-\[0_0_40px_rgba\(255\2c 89\2c 16\2c 0.12\)\] {
   --tw-shadow: 0 0 40px rgba(255,89,16,0.12);
   --tw-shadow-colored: 0 0 40px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -2103,7 +2103,7 @@ video {
   opacity: 0.9;
 }
 
-.hover\:shadow-\[0_6px_24px_rgba\(255\2c 89\2c 16\2c 0\.4\)\]:hover {
+.hover\:shadow-\[0_6px_24px_rgba\(255\2c 89\2c 16\2c 0.4\)\]:hover {
   --tw-shadow: 0 6px 24px rgba(255,89,16,0.4);
   --tw-shadow-colored: 0 6px 24px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -2138,23 +2138,23 @@ video {
 }
 
 .dark\:bg-\[rgba\(0\2c 10\2c 35\2c 0\.95\)\]:is(.dark *) {
-  background-color: rgba(0,10,35,0.95);
+  background-color: rgba(0,16,48,0.95);
 }
 
 .dark\:bg-\[rgba\(0\2c 15\2c 50\2c 0\.4\)\]:is(.dark *) {
-  background-color: rgba(0,15,50,0.4);
+  background-color: rgba(0,36,94,0.4);
 }
 
 .dark\:bg-\[rgba\(0\2c 15\2c 50\2c 0\.7\)\]:is(.dark *) {
-  background-color: rgba(0,15,50,0.7);
+  background-color: rgba(0,36,94,0.7);
 }
 
 .dark\:bg-\[rgba\(0\2c 30\2c 80\2c 0\.4\)\]:is(.dark *) {
-  background-color: rgba(0,30,80,0.4);
+  background-color: rgba(0,26,77,0.4);
 }
 
 .dark\:bg-\[rgba\(0\2c 30\2c 80\2c 0\.5\)\]:is(.dark *) {
-  background-color: rgba(0,30,80,0.5);
+  background-color: rgba(0,26,77,0.5);
 }
 
 .dark\:bg-navy-bg:is(.dark *) {
@@ -2272,11 +2272,11 @@ video {
 }
 
 .dark\:hover\:bg-\[rgba\(0\2c 45\2c 114\2c 0\.6\)\]:hover:is(.dark *) {
-  background-color: rgba(0,45,114,0.6);
+  background-color: rgba(0,63,165,0.6);
 }
 
 .dark\:hover\:bg-\[rgba\(0\2c 45\2c 114\2c 0\.7\)\]:hover:is(.dark *) {
-  background-color: rgba(0,45,114,0.7);
+  background-color: rgba(0,63,165,0.7);
 }
 
 .dark\:hover\:text-offwhite:hover:is(.dark *) {
@@ -2423,12 +2423,12 @@ video {
   box-shadow: 0 2px 20px rgba(0,0,0,0.12);
 }
 .dark #site-header.scrolled {
-  background: rgba(0,10,35,0.95);
+  background: rgba(0,16,48,0.95);
   box-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 /* ── Runner text stroke ────────────────────────────────── */
-#runner-line { -webkit-text-stroke: 2px rgba(13,27,62,0.25); }
+#runner-line { -webkit-text-stroke: 2px rgba(0,26,77,0.25); }
 .dark #runner-line { -webkit-text-stroke: 2px rgba(245,247,250,0.35); }
 
 /* ── Theme icons ───────────────────────────────────────── */
@@ -2449,7 +2449,7 @@ video {
 }
 
 /* ── Logo theme switching ──────────────────────────────── */
-.logo-light { display: block; height:150px;}
+.logo-light { display: block; }
 .logo-dark  { display: none;  }
 .dark .logo-light { display: none;  }
-.dark .logo-dark  { display: block; height:150px;}
+.dark .logo-dark  { display: block; }
