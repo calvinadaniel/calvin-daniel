@@ -146,9 +146,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var ctx    = canvas.getContext('2d');
     var isDark = document.documentElement.classList.contains('dark');
     var COLORS = isDark
-      ? ['rgba(255,255,255,0.6)', 'rgba(244,180,26,0.55)', 'rgba(246,196,74,0.5)']
-      : ['rgba(31,58,96,0.45)',   'rgba(244,180,26,0.45)', 'rgba(44,79,124,0.35)'];
-    var CC     = isDark ? '255,255,255' : '31,58,96';
+      ? ['rgba(255,255,255,0.6)', 'rgba(255,89,16,0.55)', 'rgba(246,196,74,0.5)']
+      : ['rgba(0,26,77,0.45)',   'rgba(255,89,16,0.45)', 'rgba(0,63,165,0.35)'];
+    var CC     = isDark ? '255,255,255' : '0,26,77';
     var DIST   = 120;
     var COUNT  = 55;
     var pts    = [];

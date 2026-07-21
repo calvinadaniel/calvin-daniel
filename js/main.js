@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var bar = document.createElement('div');
   bar.setAttribute('aria-hidden', 'true');
   bar.style.cssText = 'position:fixed;top:0;left:0;width:3px;height:0%;' +
-    'background:linear-gradient(to bottom,#F4B41A,rgba(244,180,26,0.35));' +
+    'background:linear-gradient(to bottom,#FF5910,rgba(255,89,16,0.35));' +
     'z-index:9999;border-radius:0 0 2px 0;pointer-events:none;transition:height 0.06s linear;';
   document.body.appendChild(bar);
   window.addEventListener('scroll', function () {
