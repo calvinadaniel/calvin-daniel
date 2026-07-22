@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ── Typewriter eyebrow ────────────────────────────────── */
   var eyebrowEl = document.getElementById('eyebrow-text');
   var cursorEl  = document.getElementById('eyebrow-cursor');
-  var TEXT      = 'Based in Delaware | Available for freelance work';
+  var TEXT      = 'AI Workflow Architect';
   if (eyebrowEl) {
     var i = 0;
     setTimeout(function () {

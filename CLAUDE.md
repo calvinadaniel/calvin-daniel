@@ -16,7 +16,7 @@ Work through these in sequence. Mark each done when complete.
 3. [x] Replace Unsplash stock photos on /projects/ with real screenshots of each project
 4. [x] Replace mailto: contact link with embedded contact form (see spec below)
 5. [x] Rewrite client descriptions to include outcomes, not just features
-6. [x] Add Process section to index.html between Pricing and Contact
+6. [x] Add Process section to index.html before Contact
 7. [x] Remove BigQuery from skills list on /projects/ page
 8. [x] Link GitHub buttons to specific repos (not profile) or remove if repos are private
 9. [x] Compress running section — it should not exceed 20% of homepage scroll depth
@@ -25,7 +25,7 @@ Work through these in sequence. Mark each done when complete.
 Replace the mailto: link with an embedded HTML form. Required fields:
 - Name (text)
 - Email (email)
-- Project Type (select: Web Development / Data Dashboard / Custom / Other)
+- Project Type (select: AI Workflow Audit / Automation Build / Data Dashboard / Other)
 - Estimated Budget (select: Under $1K / $1K–$3K / $3K–$10K / Let's Talk)
 - Timeline (select: ASAP / 1–2 months / 3+ months / Just Exploring)
 - Project Description (textarea, 500 char max)
