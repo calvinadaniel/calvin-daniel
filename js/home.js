@@ -115,92 +115,133 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ── Pricing tier → prefill contact form ──────────────── */
-  if (cForm) {
-    var planBudget = { Starter: 'Under $1K', Pro: '$1K–$3K', Custom: "Let's Talk" };
-    var cPlan   = document.getElementById('cf-plan');
-    var cBudget = document.getElementById('cf-budget');
-    document.querySelectorAll('[data-plan]').forEach(function (link) {
-      link.addEventListener('click', function () {
-        var plan = link.dataset.plan;
-        if (cPlan) cPlan.value = plan;
-        if (cBudget && planBudget[plan]) cBudget.value = planBudget[plan];
-        if (cMsg && !cMsg.value.trim()) {
-          cMsg.value = "I'm interested in the " + plan + " plan. ";
-          if (cCount) cCount.textContent = cMsg.value.length;
-        }
-      });
-    });
-  }
-
-  /* ── Particle canvas ───────────────────────────────────── */
+  /* ── Hero diagram canvas: messy data → structured workflow ── */
   function initCanvas() {
     var hero   = document.getElementById('hero');
     var canvas = document.getElementById('hero-canvas');
     if (!hero || !canvas) return;
+    var box = canvas.parentElement;
 
     if (canvas._raf)      { cancelAnimationFrame(canvas._raf); canvas._raf = null; }
     if (canvas._resObs)   { canvas._resObs.disconnect(); }
     if (canvas._visObs)   { canvas._visObs.disconnect(); }
 
-    var ctx    = canvas.getContext('2d');
-    var isDark = document.documentElement.classList.contains('dark');
-    var COLORS = isDark
-      ? ['rgba(255,255,255,0.6)', 'rgba(255,89,16,0.55)', 'rgba(100,160,255,0.5)']
-      : ['rgba(13,27,62,0.45)',   'rgba(255,89,16,0.45)', 'rgba(0,45,114,0.35)'];
-    var CC     = isDark ? '255,255,255' : '13,27,62';
-    var DIST   = 120;
-    var COUNT  = 55;
-    var pts    = [];
-    var raf    = null;
+    var ctx        = canvas.getContext('2d');
+    var isDark     = document.documentElement.classList.contains('dark');
+    var MESSY_COLOR = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(13,27,62,0.4)';
+    var GRID_COLOR  = isDark ? 'rgba(255,255,255,0.75)' : 'rgba(13,27,62,0.55)';
+    var LINE_CC     = isDark ? '255,255,255' : '13,27,62';
+    var FLOW_COLOR  = '#FF5910';
+    var DIST        = 90;
+    var GRID_COLS   = 4;
+    var GRID_ROWS   = 5;
+    var messy = [];
+    var grid  = [];
+    var flows = [];
+    var raf   = null;
 
     function rand(a, b) { return Math.random() * (b - a) + a; }
 
     function resize() {
-      canvas.width  = hero.offsetWidth;
-      canvas.height = hero.offsetHeight;
+      canvas.width  = box.offsetWidth;
+      canvas.height = box.offsetHeight;
+    }
+
+    function spawnFlow() {
+      var from = messy[Math.floor(rand(0, messy.length))];
+      var to   = grid[Math.floor(rand(0, grid.length))];
+      return { from: from, to: to, p: rand(0, 1), speed: rand(0.004, 0.008) };
     }
 
     function spawn() {
-      pts = Array.from({ length: COUNT }, function () {
+      var w = canvas.width, h = canvas.height;
+      var leftMax = w * 0.4;
+      var rightX  = w * 0.62;
+      var rightW  = w - rightX;
+
+      messy = Array.from({ length: 16 }, function () {
         return {
-          x: rand(0, canvas.width), y: rand(0, canvas.height),
-          vx: rand(-0.18, 0.18),   vy: rand(-0.18, 0.18),
-          r: rand(1.2, 2.5),
-          color: COLORS[Math.floor(rand(0, COLORS.length))],
-          alpha: rand(0.4, 0.9)
+          x: rand(w * 0.05, leftMax), y: rand(h * 0.08, h * 0.92),
+          vx: rand(-0.15, 0.15), vy: rand(-0.15, 0.15),
+          r: rand(1.6, 3)
         };
       });
+
+      grid = [];
+      for (var col = 0; col < GRID_COLS; col++) {
+        for (var row = 0; row < GRID_ROWS; row++) {
+          grid.push({
+            x: rightX + (col + 0.5) * (rightW / GRID_COLS) + rand(-3, 3),
+            y: h * 0.08 + (row + 0.5) * (h * 0.84 / GRID_ROWS) + rand(-3, 3),
+            r: 2.4
+          });
+        }
+      }
+
+      flows = Array.from({ length: 6 }, spawnFlow);
     }
 
     function tick() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (var i = 0; i < pts.length; i++) {
-        for (var j = i + 1; j < pts.length; j++) {
-          var d = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y);
+
+      /* messy web — chaotic, loosely connected */
+      for (var i = 0; i < messy.length; i++) {
+        for (var j = i + 1; j < messy.length; j++) {
+          var d = Math.hypot(messy[i].x - messy[j].x, messy[i].y - messy[j].y);
           if (d < DIST) {
             ctx.beginPath();
-            ctx.moveTo(pts[i].x, pts[i].y);
-            ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = 'rgba(' + CC + ',' + ((1 - d / DIST) * 0.15) + ')';
+            ctx.moveTo(messy[i].x, messy[i].y);
+            ctx.lineTo(messy[j].x, messy[j].y);
+            ctx.strokeStyle = 'rgba(' + LINE_CC + ',' + ((1 - d / DIST) * 0.18) + ')';
             ctx.lineWidth = 0.7;
             ctx.stroke();
           }
         }
       }
-      pts.forEach(function (p) {
+      var leftMax = canvas.width * 0.4;
+      messy.forEach(function (p) {
         p.x += p.vx; p.y += p.vy;
-        if (p.x < -10)               p.x = canvas.width  + 10;
-        if (p.x > canvas.width  + 10) p.x = -10;
-        if (p.y < -10)               p.y = canvas.height + 10;
-        if (p.y > canvas.height + 10) p.y = -10;
+        if (p.x < 0) p.x = leftMax;
+        if (p.x > leftMax) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.globalAlpha = p.alpha;
-        ctx.fillStyle   = p.color;
+        ctx.fillStyle = MESSY_COLOR;
         ctx.fill();
-        ctx.globalAlpha = 1;
       });
+
+      /* clean grid mesh — fixed, structured */
+      grid.forEach(function (p, idx) {
+        var right = grid[idx + GRID_ROWS];
+        var down  = ((idx % GRID_ROWS) < GRID_ROWS - 1) ? grid[idx + 1] : null;
+        [right, down].forEach(function (n) {
+          if (!n) return;
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(n.x, n.y);
+          ctx.strokeStyle = 'rgba(' + LINE_CC + ',0.14)';
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        });
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = GRID_COLOR;
+        ctx.fill();
+      });
+
+      /* flowing particles — data moving from messy into the workflow */
+      flows.forEach(function (f, idx) {
+        f.p += f.speed;
+        if (f.p >= 1) { flows[idx] = spawnFlow(); return; }
+        var x = f.from.x + (f.to.x - f.from.x) * f.p;
+        var y = f.from.y + (f.to.y - f.from.y) * f.p;
+        ctx.beginPath();
+        ctx.arc(x, y, 2.6, 0, Math.PI * 2);
+        ctx.fillStyle = FLOW_COLOR;
+        ctx.fill();
+      });
+
       raf = requestAnimationFrame(tick);
       canvas._raf = raf;
     }
@@ -213,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
     canvas._visObs = visObs;
 
     var resObs = new ResizeObserver(function () { resize(); spawn(); });
-    resObs.observe(hero);
+    resObs.observe(box);
     canvas._resObs = resObs;
 
     resize(); spawn(); tick();

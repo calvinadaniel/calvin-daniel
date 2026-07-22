@@ -807,6 +807,10 @@ video {
   height: 2.5rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -849,6 +853,10 @@ video {
 
 .max-h-\[500px\] {
   max-height: 500px;
+}
+
+.min-h-\[280px\] {
+  min-height: 280px;
 }
 
 .min-h-screen {
@@ -2341,6 +2349,10 @@ video {
   .md\:p-8 {
     padding: 2rem;
   }
+
+  .md\:h-full {
+    height: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2449,7 +2461,79 @@ video {
 }
 
 /* ── Logo theme switching ──────────────────────────────── */
-.logo-light { display: block; height:150px;}
+.logo-light { display: block; }
 .logo-dark  { display: none;  }
 .dark .logo-light { display: none;  }
-.dark .logo-dark  { display: block; height:150px;}
+.dark .logo-dark  { display: block; }
+
+/* ── BQ Projection chart (running page) ─────────────────── */
+.bq-chart__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 140px;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background: #D4CFC9;
+}
+.dark .bq-chart__slider { background: #2A3545; }
+.bq-chart__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #FEFCF9;
+  background: #2E5EAA;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.dark .bq-chart__slider::-webkit-slider-thumb { border-color: #141A22; background: #5B8FD9; }
+.bq-chart__slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #FEFCF9;
+  background: #2E5EAA;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.dark .bq-chart__slider::-moz-range-thumb { border-color: #141A22; background: #5B8FD9; }
+
+.bq-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 400;
+}
+.bq-modal--open { display: flex; }
+.bq-modal__card {
+  background: #FEFCF9;
+  border: 1px solid #E0DBD5;
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 360px;
+  width: 90%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+.dark .bq-modal__card { background: #1A222C; border-color: #2A3545; }
+
+.bq-legend__swatch { display: inline-block; }
+.bq-legend__swatch--actual { width: 10px; height: 10px; border-radius: 50%; background: #E8734A; }
+.bq-legend__swatch--target { width: 18px; height: 0; border-top: 2px dashed #E8734A; }
+.bq-legend__swatch--current { width: 18px; height: 0; border-top: 2.5px solid #1B2838; }
+.bq-legend__swatch--consistent { width: 18px; height: 0; border-top: 2.5px solid #2E5EAA; }
+.bq-legend__swatch--peak { width: 18px; height: 0; border-top: 2.5px solid #1A9E78; }
+.dark .bq-legend__swatch--actual { background: #F09060; }
+.dark .bq-legend__swatch--target { border-top-color: #F09060; }
+.dark .bq-legend__swatch--current { border-top-color: #7A8A9A; }
+.dark .bq-legend__swatch--consistent { border-top-color: #5B8FD9; }
+.dark .bq-legend__swatch--peak { border-top-color: #3DD9A8; }
+
+/* Tailwind utilities used by the BQ section but absent from the compiled build */
+.mt-5 { margin-top: 1.25rem; }
+.cursor-crosshair { cursor: crosshair; }

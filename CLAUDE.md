@@ -15,12 +15,11 @@ Work through these in sequence. Mark each done when complete.
 2. [x] Fix hero PR display — currently shows "3: 00", should show "3:54:23"
 3. [x] Replace Unsplash stock photos on /projects/ with real screenshots of each project
 4. [x] Replace mailto: contact link with embedded contact form (see spec below)
-5. [ ] Add testimonials section to /clients/ page (one quote per client, 5 total)
-6. [x] Rewrite client descriptions to include outcomes, not just features
-7. [x] Add Process section to index.html between Pricing and Contact
-8. [x] Remove BigQuery from skills list on /projects/ page
-9. [x] Link GitHub buttons to specific repos (not profile) or remove if repos are private
-10. [x] Compress running section — it should not exceed 20% of homepage scroll depth
+5. [x] Rewrite client descriptions to include outcomes, not just features
+6. [x] Add Process section to index.html between Pricing and Contact
+7. [x] Remove BigQuery from skills list on /projects/ page
+8. [x] Link GitHub buttons to specific repos (not profile) or remove if repos are private
+9. [x] Compress running section — it should not exceed 20% of homepage scroll depth
 
 ## Contact Form Spec
 Replace the mailto: link with an embedded HTML form. Required fields:
