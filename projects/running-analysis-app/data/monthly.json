@@ -228,5 +228,15 @@
     "total_suffer": 1153.0,
     "hr_efficiency": 0.2747,
     "run_count": 12
+  },
+  {
+    "month": "2026-08",
+    "avg_pace_sec": 537.2,
+    "avg_pace_display": "8:57",
+    "avg_hr": 153.0,
+    "total_miles": 7.3,
+    "total_suffer": 84.0,
+    "hr_efficiency": 0.2848,
+    "run_count": 1
   }
 ]
