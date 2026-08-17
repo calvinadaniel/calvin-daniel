@@ -2548,5 +2548,55 @@
     "avg_hr": 153.0,
     "max_hr": 171.0,
     "suffer_score": 84.0
+  },
+  {
+    "id": 19681258613,
+    "date": "2026-08-10",
+    "distance_miles": 10.13,
+    "moving_time_sec": 5533,
+    "pace_sec_per_mile": 546.4,
+    "avg_hr": 156.6,
+    "max_hr": 173.0,
+    "suffer_score": 133.0
+  },
+  {
+    "id": 19695552202,
+    "date": "2026-08-11",
+    "distance_miles": 4.47,
+    "moving_time_sec": 2281,
+    "pace_sec_per_mile": 510.5,
+    "avg_hr": 155.4,
+    "max_hr": 178.0,
+    "suffer_score": 52.0
+  },
+  {
+    "id": 19695753807,
+    "date": "2026-08-11",
+    "distance_miles": 1.03,
+    "moving_time_sec": 672,
+    "pace_sec_per_mile": 653.9,
+    "avg_hr": 151.2,
+    "max_hr": 176.0,
+    "suffer_score": 12.0
+  },
+  {
+    "id": 19732699232,
+    "date": "2026-08-13",
+    "distance_miles": 9.03,
+    "moving_time_sec": 4977,
+    "pace_sec_per_mile": 551.2,
+    "avg_hr": 163.2,
+    "max_hr": 179.0,
+    "suffer_score": 155.0
+  },
+  {
+    "id": 19773272427,
+    "date": "2026-08-16",
+    "distance_miles": 15.1,
+    "moving_time_sec": 8599,
+    "pace_sec_per_mile": 569.4,
+    "avg_hr": 153.8,
+    "max_hr": 169.0,
+    "suffer_score": 194.0
   }
 ]
