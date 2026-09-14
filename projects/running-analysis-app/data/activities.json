@@ -2598,5 +2598,95 @@
     "avg_hr": 153.8,
     "max_hr": 169.0,
     "suffer_score": 194.0
+  },
+  {
+    "id": 19836264333,
+    "date": "2026-08-21",
+    "distance_miles": 6.06,
+    "moving_time_sec": 3631,
+    "pace_sec_per_mile": 599.7,
+    "avg_hr": 156.2,
+    "max_hr": 167.0,
+    "suffer_score": 91.0
+  },
+  {
+    "id": 19911781723,
+    "date": "2026-08-24",
+    "distance_miles": 3.87,
+    "moving_time_sec": 2889,
+    "pace_sec_per_mile": 747.2,
+    "avg_hr": 128.8,
+    "max_hr": 171.0,
+    "suffer_score": 14.0
+  },
+  {
+    "id": 19998045273,
+    "date": "2026-09-01",
+    "distance_miles": 7.13,
+    "moving_time_sec": 4157,
+    "pace_sec_per_mile": 583.0,
+    "avg_hr": 157.7,
+    "max_hr": 174.0,
+    "suffer_score": 103.0
+  },
+  {
+    "id": 20019458412,
+    "date": "2026-09-03",
+    "distance_miles": 8.1,
+    "moving_time_sec": 4558,
+    "pace_sec_per_mile": 562.5,
+    "avg_hr": 161.0,
+    "max_hr": 177.0,
+    "suffer_score": 130.0
+  },
+  {
+    "id": 20067068192,
+    "date": "2026-09-06",
+    "distance_miles": 12.04,
+    "moving_time_sec": 6906,
+    "pace_sec_per_mile": 573.8,
+    "avg_hr": 152.3,
+    "max_hr": 165.0,
+    "suffer_score": 140.0
+  },
+  {
+    "id": 20087622634,
+    "date": "2026-09-08",
+    "distance_miles": 6.05,
+    "moving_time_sec": 3622,
+    "pace_sec_per_mile": 598.9,
+    "avg_hr": 159.3,
+    "max_hr": 176.0,
+    "suffer_score": 98.0
+  },
+  {
+    "id": 20116805733,
+    "date": "2026-09-10",
+    "distance_miles": 8.24,
+    "moving_time_sec": 4768,
+    "pace_sec_per_mile": 578.5,
+    "avg_hr": 156.4,
+    "max_hr": 177.0,
+    "suffer_score": 115.0
+  },
+  {
+    "id": 20150623964,
+    "date": "2026-09-12",
+    "distance_miles": 8.03,
+    "moving_time_sec": 4518,
+    "pace_sec_per_mile": 562.9,
+    "avg_hr": 157.6,
+    "max_hr": 185.0,
+    "suffer_score": 116.0
+  },
+  {
+    "id": 20158444938,
+    "date": "2026-09-13",
+    "distance_miles": 10.31,
+    "moving_time_sec": 6072,
+    "pace_sec_per_mile": 589.1,
+    "avg_hr": 153.0,
+    "max_hr": 165.0,
+    "suffer_score": 131.0
   }
 ]
