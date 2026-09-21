@@ -2688,5 +2688,35 @@
     "avg_hr": 153.0,
     "max_hr": 165.0,
     "suffer_score": 131.0
+  },
+  {
+    "id": 20184896496,
+    "date": "2026-09-15",
+    "distance_miles": 6.0,
+    "moving_time_sec": 3397,
+    "pace_sec_per_mile": 566.1,
+    "avg_hr": 160.8,
+    "max_hr": 171.0,
+    "suffer_score": 99.0
+  },
+  {
+    "id": 20213920456,
+    "date": "2026-09-17",
+    "distance_miles": 8.5,
+    "moving_time_sec": 4803,
+    "pace_sec_per_mile": 565.2,
+    "avg_hr": 156.8,
+    "max_hr": 178.0,
+    "suffer_score": 121.0
+  },
+  {
+    "id": 20227254633,
+    "date": "2026-09-18",
+    "distance_miles": 7.31,
+    "moving_time_sec": 4215,
+    "pace_sec_per_mile": 576.3,
+    "avg_hr": 158.3,
+    "max_hr": 178.0,
+    "suffer_score": 110.0
   }
 ]

@@ -241,12 +241,12 @@
   },
   {
     "month": "2026-09",
-    "avg_pace_sec": 578.4,
-    "avg_pace_display": "9:38",
-    "avg_hr": 156.8,
-    "total_miles": 59.9,
-    "total_suffer": 833.0,
-    "hr_efficiency": 0.271,
-    "run_count": 7
+    "avg_pace_sec": 575.6,
+    "avg_pace_display": "9:35",
+    "avg_hr": 157.3,
+    "total_miles": 81.7,
+    "total_suffer": 1163.0,
+    "hr_efficiency": 0.2733,
+    "run_count": 10
   }
 ]
