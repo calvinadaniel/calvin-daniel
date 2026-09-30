@@ -59,8 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ── Scroll reveals ────────────────────────────────────── */
   var revealObs = new IntersectionObserver(function (entries) {
+    let batchIndex = 0;
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = Math.min(batchIndex++, 5) * 90 + 'ms';
         entry.target.classList.add('revealed');
         entry.target.querySelectorAll('.skill-bar-fill[data-width]').forEach(function (b) {
           b.style.width = b.dataset.width + '%';

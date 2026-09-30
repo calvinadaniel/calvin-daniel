@@ -5,6 +5,7 @@ dist
 .DS_Store
 .claude/
 .playwright-mcp/
+deploy-backups/
 scripts/.env
 scripts/__pycache__/
 scripts/tests/__pycache__/

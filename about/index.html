@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/nav-dropdown.css" />
+  <link rel="stylesheet" href="../css/page-strip.css" />
   <link rel="icon" type="image/png" href="../images/favicon-social-logo.png?v=2" />
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
@@ -69,13 +70,26 @@
 
 <main>
 
-  <section class="bg-warm-bg dark:bg-navy-bg pt-[100px] pb-14">
+  <!-- Page header -->
+  <section class="page-strip bg-warm-section dark:bg-navy-section border-b border-navy-bg/10 dark:border-offwhite/10">
+    <div class="page-strip__map" aria-hidden="true"></div>
+    <svg class="page-strip__route" aria-hidden="true">
+      <path class="page-strip__line page-strip__line--first" d="M407 111 H259 V185" />
+      <path class="page-strip__line page-strip__line--second" d="M111 185 H259" />
+      <circle class="page-strip__ring" cx="259" cy="185" r="13" />
+      <circle class="page-strip__home" cx="259" cy="185" r="11" />
+      <circle class="page-strip__pin page-strip__pin--first" cx="407" cy="111" r="7" />
+      <circle class="page-strip__pin page-strip__pin--second" cx="111" cy="185" r="7" />
+      <g class="page-strip__tag"><rect x="376" y="81" width="62" height="22" rx="2" /><text x="407" y="96" text-anchor="middle">BOOKED</text></g>
+    </svg>
+    <div data-reveal class="relative z-10 w-[90%] max-w-[1240px] mx-auto text-center">
+      <h1 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">About</h1>
+    </div>
+  </section>
+
+  <section class="bg-warm-bg dark:bg-navy-bg py-16">
     <div class="w-[90%] max-w-[1240px] mx-auto">
-      <div data-reveal>
-        <a href="../" class="inline-flex items-center gap-1 font-mono text-[0.65rem] tracking-[0.15em] uppercase text-navy-bg/45 dark:text-offwhite/45 hover:text-orange transition-colors mb-6">&larr; Home</a>
-        <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none text-navy-bg dark:text-offwhite">About</h1>
-      </div>
-      <div class="grid gap-10 lg:grid-cols-2 lg:items-start mt-8">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div data-reveal data-dir="right" class="about__photo relative overflow-hidden border border-navy-bg/10 dark:border-offwhite/10 bg-warm-section dark:bg-navy-section">
           <img src="../images/about-headshot-calvin-daniel.webp" alt="Calvin Daniel smiling in a green suit" width="800" height="1030" class="w-full" />
         </div>

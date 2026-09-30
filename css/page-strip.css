@@ -1,0 +1,109 @@
+/* ── Page title strip: matches the in-page section header bands, plus room for the fixed header,
+   with the street-map motif from the homepage hero contained to the strip ── */
+.page-strip {
+  position: relative;
+  overflow: hidden;
+  padding: 134px 0 64px;
+}
+
+/* Street grid: 222px tiles (three 74px blocks, one major street), anchored to the right edge so
+   it lines up with the route overlay; faded behind the centered title */
+.page-strip__map,
+.page-strip__route {
+  position: absolute;
+  pointer-events: none;
+}
+.page-strip__map {
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='222' height='222'%3E%3Cg fill='none' stroke='%23001A4D'%3E%3Cpath d='M111 0V222M185 0V222M0 111H222M0 185H222' stroke-opacity='.13' stroke-width='1.5'/%3E%3Cpath d='M37 0V222M0 37H222' stroke-opacity='.2' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: right top;
+  -webkit-mask-image: linear-gradient(90deg, #000, rgb(0 0 0 / .3) 50%, #000);
+          mask-image: linear-gradient(90deg, #000, rgb(0 0 0 / .3) 50%, #000);
+  animation: page-strip-fade 1.2s ease-out both;
+}
+html.dark .page-strip__map {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='222' height='222'%3E%3Cg fill='none' stroke='%23F5F7FA'%3E%3Cpath d='M111 0V222M185 0V222M0 111H222M0 185H222' stroke-opacity='.13' stroke-width='1.5'/%3E%3Cpath d='M37 0V222M0 37H222' stroke-opacity='.2' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Two tiles wide, pinned right; coordinates are px, and the strip's height clips it */
+.page-strip__route {
+  top: 0;
+  right: 0;
+  width: 444px;
+  height: 100%;
+  /* on narrow screens the route runs behind the title, so keep it faint */
+  -webkit-mask-image: linear-gradient(180deg, rgb(0 0 0 / .2), rgb(0 0 0 / .3));
+          mask-image: linear-gradient(180deg, rgb(0 0 0 / .2), rgb(0 0 0 / .3));
+}
+
+/* --len is each route's path length; pins drop, routes draw, pins book */
+.page-strip__pin--first   { --delay: .5s; }
+.page-strip__line--first  { --delay: .9s; --len: 222; }
+.page-strip__pin--second  { --delay: 1.1s; }
+.page-strip__line--second { --delay: 1.5s; --len: 148; }
+
+.page-strip__line {
+  fill: none;
+  stroke: #FF5910;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+  animation: page-strip-draw 1s cubic-bezier(.4, 0, .2, 1) var(--delay) forwards;
+}
+
+.page-strip__pin {
+  fill: #001A4D;
+  stroke: #FAF8F5;
+  stroke-width: 3;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation:
+    page-strip-drop .45s cubic-bezier(.34, 1.56, .64, 1) var(--delay) both,
+    page-strip-book .3s ease-out calc(var(--delay) + 1.4s) forwards;
+}
+html.dark .page-strip__pin { fill: #F5F7FA; stroke: #001A4D; }
+
+.page-strip__home {
+  fill: #FF5910;
+  stroke: #FAF8F5;
+  stroke-width: 4;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: page-strip-drop .7s cubic-bezier(.34, 1.56, .64, 1) .2s both;
+}
+html.dark .page-strip__home { stroke: #001A4D; }
+
+.page-strip__ring {
+  fill: none;
+  stroke: #FF5910;
+  stroke-width: 3;
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: page-strip-pulse 2.2s ease-out 1s infinite;
+}
+
+.page-strip__tag { display: none; opacity: 0; animation: page-strip-fade .3s ease-out 1.9s forwards; }
+.page-strip__tag rect { fill: #FF5910; }
+.page-strip__tag text { font-family: "Space Mono", monospace; font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #F5F7FA; }
+
+@keyframes page-strip-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes page-strip-draw { to { stroke-dashoffset: 0; } }
+@keyframes page-strip-drop { from { opacity: 0; transform: translateY(-26px); } to { opacity: 1; transform: none; } }
+@keyframes page-strip-book { to { fill: #FF5910; } }
+@keyframes page-strip-pulse { 0% { opacity: .9; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
+
+/* wide enough that the route sits clear of the title */
+@media (min-width: 1024px) {
+  .page-strip__route { -webkit-mask-image: none; mask-image: none; }
+  .page-strip__tag { display: inline; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-strip__map, .page-strip__pin, .page-strip__home, .page-strip__tag { animation: none; opacity: 1; }
+  .page-strip__line { animation: none; stroke-dashoffset: 0; }
+  .page-strip__pin { fill: #FF5910; }
+  .page-strip__ring { animation: none; }
+}
