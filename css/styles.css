@@ -2465,6 +2465,8 @@ video {
 .logo-dark  { display: none;  }
 .dark .logo-light { display: none;  }
 .dark .logo-dark  { display: block; }
+#site-header .logo-light, #site-header .logo-dark { height: 2.625rem; }
+footer .logo-light, footer .logo-dark { height: 3.15rem; }
 
 /* ── BQ Projection chart (running page) ─────────────────── */
 .bq-chart__slider {
