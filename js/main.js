@@ -88,16 +88,19 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay && overlay.classList.add('opacity-100', 'pointer-events-auto');
     document.body.style.overflow = 'hidden';
     btnOpen && btnOpen.setAttribute('aria-expanded', 'true');
+    btnClose && btnClose.focus();
   }
 
   function closeMenu() {
     if (!offCanvas) return;
+    const wasOpen = btnOpen && btnOpen.getAttribute('aria-expanded') === 'true';
     offCanvas.classList.add('translate-x-full');
     offCanvas.classList.remove('translate-x-0');
     overlay && overlay.classList.add('opacity-0', 'pointer-events-none');
     overlay && overlay.classList.remove('opacity-100', 'pointer-events-auto');
     document.body.style.overflow = '';
     btnOpen && btnOpen.setAttribute('aria-expanded', 'false');
+    if (wasOpen) btnOpen.focus();
   }
 
   btnOpen  && btnOpen.addEventListener('click', openMenu);
