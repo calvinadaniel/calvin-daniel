@@ -42,7 +42,7 @@ Form action: use Formspree or Netlify Forms — do not use PHP
 - Off-canvas nav structure and hamburger animation
 - Dark/light mode toggle mechanism
 - Existing CSS custom property (variable) names
-- The particle canvas in the hero — if it exists, preserve it
+- The hero street-map animation (`#hero-town` SVG, `css/hero-town.css`, `js/hero-town.js`) — it replaced the old particle canvas; preserve it
 
 ## Testing Checklist Before Any Commit
 - [ ] Test on mobile (375px viewport minimum)

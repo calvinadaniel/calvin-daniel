@@ -1,0 +1,48 @@
+/* ── Hero town map: streets draw out from "Your business", visitors route in and get booked ── */
+.hero-town {
+  --town-ink: #001A4D;
+  --town-ink-rgb: 0 26 77;
+  --town-bg: #FAF8F5;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, rgb(0 0 0 / .18) 15%, rgb(0 0 0 / .3) 50%, rgb(0 0 0 / .7) 100%);
+          mask-image: linear-gradient(180deg, rgb(0 0 0 / .18) 15%, rgb(0 0 0 / .3) 50%, rgb(0 0 0 / .7) 100%);
+}
+html.dark .hero-town {
+  --town-ink: #F5F7FA;
+  --town-ink-rgb: 245 247 250;
+  --town-bg: #001A4D;
+}
+
+.hero-town__street { stroke: rgb(var(--town-ink-rgb) / .13); stroke-width: 1.5; fill: none; stroke-linecap: round; }
+.hero-town__street--major { stroke: rgb(var(--town-ink-rgb) / .2); stroke-width: 4; }
+.hero-town__avenue { stroke: rgb(var(--town-ink-rgb) / .22); stroke-width: 6; fill: none; stroke-linecap: round; }
+.hero-town__river { stroke: rgb(13 79 168 / .14); stroke-width: 38; fill: none; stroke-linecap: round; }
+html.dark .hero-town__river { stroke: rgb(13 79 168 / .45); }
+.hero-town__park { fill: rgb(13 79 168 / .08); }
+html.dark .hero-town__park { fill: rgb(13 79 168 / .3); }
+
+.hero-town__route { stroke: #FF5910; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.hero-town__pin { fill: var(--town-ink); stroke: var(--town-bg); stroke-width: 3; transform-box: fill-box; transform-origin: center; }
+.hero-town__pin--booked { fill: #FF5910; }
+.hero-town__ring { fill: none; stroke: #FF5910; stroke-width: 3; transform-box: fill-box; transform-origin: center; }
+.hero-town__home { fill: #FF5910; stroke: var(--town-bg); stroke-width: 4; }
+
+.hero-town__tag rect { fill: #FF5910; }
+.hero-town__tag text { font-family: "Space Mono", monospace; font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #F5F7FA; text-transform: uppercase; }
+.hero-town__tag--home rect { fill: var(--town-ink); }
+.hero-town__tag--home text { font-weight: 400; letter-spacing: .1em; fill: var(--town-bg); text-transform: none; }
+
+/* Empty right-column cell that positions the business pin on desktop; on mobile the map sits behind the copy */
+.hero-town__spot { display: none; }
+
+@media (min-width: 768px) {
+  .hero-town {
+    -webkit-mask-image: linear-gradient(90deg, rgb(0 0 0 / .1) 22%, #000 58%);
+            mask-image: linear-gradient(90deg, rgb(0 0 0 / .1) 22%, #000 58%);
+  }
+  .hero-town__spot { display: block; align-self: stretch; }
+}

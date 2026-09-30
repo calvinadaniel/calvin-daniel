@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/nav-dropdown.css" />
   <link rel="stylesheet" href="css/contact-form.css" />
+  <link rel="stylesheet" href="css/hero-town.css" />
   <link rel="icon" type="image/png" href="images/favicon-social-logo.png?v=2" />
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
@@ -75,11 +76,7 @@
 
 <!-- ── HERO ───────────────────────────────────────────── -->
 <section id="hero" class="relative min-h-svh flex flex-col justify-center pt-[70px] px-[5%] overflow-hidden bg-gradient-to-br from-warm-bg to-warm-section dark:from-navy-bg dark:to-navy-dark scroll-mt-[70px]">
-  <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-    <div class="absolute w-[600px] h-[600px] rounded-full bg-navy-light blur-[80px] opacity-[0.08] dark:opacity-18 -top-[200px] -right-[100px] animate-float1"></div>
-    <div class="absolute w-[400px] h-[400px] rounded-full bg-orange  blur-[80px] opacity-[0.06] dark:opacity-12 -bottom-[100px] -left-[50px] animate-float2"></div>
-    <div class="absolute w-[300px] h-[300px] rounded-full bg-navy-mid blur-[80px] opacity-[0.08] dark:opacity-18 top-[40%] left-[40%] animate-float3"></div>
-  </div>
+  <svg id="hero-town" class="hero-town" aria-hidden="true"></svg>
 
   <div class="relative z-10 max-w-[1240px] mx-auto w-full grid gap-16 md:grid-cols-2 md:items-center">
     <div>
@@ -118,9 +115,7 @@
       </div>
     </div>
 
-    <div data-reveal data-dir="right" class="relative overflow-hidden aspect-[4/5] md:aspect-auto md:h-full">
-      <canvas id="hero-canvas" aria-hidden="true" class="absolute inset-0 w-full h-full pointer-events-none opacity-0 transition-opacity duration-[1400ms]"></canvas>
-    </div>
+    <div id="hero-town-spot" class="hero-town__spot" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -403,6 +398,7 @@
 
 <script src="js/main.js"></script>
 <script src="js/home.js"></script>
+<script src="js/hero-town.js"></script>
 <script src="js/bq-projection.js"></script>
 </body>
 </html>
