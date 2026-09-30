@@ -2534,6 +2534,9 @@ video {
 .dark .bq-legend__swatch--consistent { border-top-color: #5B8FD9; }
 .dark .bq-legend__swatch--peak { border-top-color: #3DD9A8; }
 
+/* ── About page headshot ───────────────────────────────── */
+.about__photo { width: 100%; max-width: 420px; }
+
 /* Tailwind utilities used by the BQ section but absent from the compiled build */
 .mt-5 { margin-top: 1.25rem; }
 .cursor-crosshair { cursor: crosshair; }
