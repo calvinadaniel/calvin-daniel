@@ -9,8 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ── Typewriter eyebrow ────────────────────────────────── */
   var eyebrowEl = document.getElementById('eyebrow-text');
   var cursorEl  = document.getElementById('eyebrow-cursor');
-  var TEXT      = 'AI Workflow Architect';
-  if (eyebrowEl) {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (eyebrowEl && reduceMotion && cursorEl) cursorEl.style.display = 'none';
+  if (eyebrowEl && !reduceMotion) {
+    var TEXT = eyebrowEl.textContent;
+    eyebrowEl.textContent = '';
     var i = 0;
     setTimeout(function () {
       var iv = setInterval(function () {
