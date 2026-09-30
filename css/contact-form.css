@@ -35,6 +35,11 @@
   color: rgb(0 26 77 / 0.6);
 }
 
+.contact-form__optional {
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
 .contact-form__input,
 .contact-form__select,
 .contact-form__textarea {

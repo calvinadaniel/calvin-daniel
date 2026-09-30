@@ -266,8 +266,8 @@
   <div class="w-[90%] max-w-[1240px] mx-auto">
     <div data-reveal class="relative z-10 text-center max-w-[640px] mx-auto">
       <p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">Let's Work Together</p>
-      <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Ready to turn messy ops<br />into automated workflows?</h2>
-      <p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] mt-4 mb-16 leading-[1.75]">Tell me where the friction is. I'll map the bottlenecks and show you exactly where custom AI infrastructure can take over.</p>
+      <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Tell me where customers drop off.</h2>
+      <p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] mt-4 mb-16 leading-[1.75]">Tell me what you sell and how people reach you today. I will map where inquiries get lost and show you what I would build.</p>
       <!-- Formspree: without JS the form posts to Formspree directly; js/home.js upgrades it to submit without a page reload. -->
       <form class="contact-form" id="contact-form" action="https://formspree.io/f/xojgvdjq" method="POST" novalidate>
         <div class="contact-form__row">
@@ -285,9 +285,9 @@
             <label class="contact-form__label" for="cf-type">Project Type</label>
             <select class="contact-form__select" id="cf-type" name="project_type" required>
               <option value="" disabled selected>Select&hellip;</option>
-              <option>AI Workflow Audit</option>
-              <option>Automation Build</option>
-              <option>Data Dashboard</option>
+              <option>Website</option>
+              <option>Website plus automation</option>
+              <option>Reporting or dashboard</option>
               <option>Other</option>
             </select>
           </div>
@@ -299,18 +299,25 @@
               <option>$1K&ndash;$3K</option>
               <option>$3K&ndash;$10K</option>
               <option>Let's Talk</option>
+              <option>Not sure yet</option>
             </select>
           </div>
         </div>
-        <div class="contact-form__field">
-          <label class="contact-form__label" for="cf-timeline">Timeline</label>
-          <select class="contact-form__select" id="cf-timeline" name="timeline" required>
-            <option value="" disabled selected>Select&hellip;</option>
-            <option>ASAP</option>
-            <option>1&ndash;2 months</option>
-            <option>3+ months</option>
-            <option>Just Exploring</option>
-          </select>
+        <div class="contact-form__row">
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-timeline">Timeline</label>
+            <select class="contact-form__select" id="cf-timeline" name="timeline" required>
+              <option value="" disabled selected>Select&hellip;</option>
+              <option>ASAP</option>
+              <option>1&ndash;2 months</option>
+              <option>3+ months</option>
+              <option>Just Exploring</option>
+            </select>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="cf-industry">Your industry <span class="contact-form__optional">(optional)</span></label>
+            <input class="contact-form__input" id="cf-industry" name="industry" type="text" />
+          </div>
         </div>
         <div class="contact-form__field">
           <label class="contact-form__label" for="cf-message">Project Description</label>
@@ -320,6 +327,8 @@
         <button type="submit" class="contact-form__submit" id="cf-submit">Send Message</button>
         <p class="contact-form__status" id="cf-status" role="status" aria-live="polite"></p>
       </form>
+      <!-- TODO: Calvin to confirm reply time, e.g. "I reply within one business day." -->
+      <!-- TODO: Calvin to provide a contact email for a visible mailto link here (CLAUDE.md lists info@calvindaniel.com as the primary address; confirm before adding). -->
     </div>
   </div>
 </section>
