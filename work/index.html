@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work &ndash; Calvin Daniel</title>
+  <meta name="description" content="Client websites for local service businesses, plus the tools Calvin Daniel built for himself." />
+  <link rel="canonical" href="https://calvindaniel.com/work/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Calvin Daniel" />
+  <meta property="og:title" content="Work – Calvin Daniel" />
+  <meta property="og:description" content="Client websites for local service businesses, plus the tools Calvin Daniel built for himself." />
+  <meta property="og:url" content="https://calvindaniel.com/work/" />
+  <meta property="og:image" content="https://calvindaniel.com/images/favicon-social-logo.png" />
+  <meta property="og:image:width" content="195" />
+  <meta property="og:image:height" content="178" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Work – Calvin Daniel" />
+  <meta name="twitter:description" content="Client websites for local service businesses, plus the tools Calvin Daniel built for himself." />
+  <meta name="twitter:image" content="https://calvindaniel.com/images/favicon-social-logo.png" />
+  <script>(function(){if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');}());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/nav-dropdown.css" />
+  <link rel="icon" type="image/png" href="../images/favicon-social-logo.png?v=2" />
+</head>
+<body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
+
+<!-- ── HEADER ─────────────────────────────────────────────── -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-[100] h-[70px]">
+  <div class="flex items-center justify-between h-full px-[5%] max-w-[1240px] mx-auto">
+    <a href="../" aria-label="Calvin Daniel Home" class="hover:opacity-90 transition-opacity">
+      <img src="../images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-10 w-auto" />
+      <img src="../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-10 w-auto" />
+    </a>
+    <nav class="hidden lg:flex gap-6 items-center" aria-label="Main navigation">
+      <a href="../work/" aria-current="page" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border-b-2 border-orange pb-0.5">Work</a>
+      <a href="../running/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/50 dark:text-offwhite/60 hover:text-navy-bg dark:hover:text-offwhite transition-colors">About Me</a>
+      <button id="theme-toggle" aria-label="Switch to light mode" class="text-navy-bg/50 dark:text-offwhite/60 hover:text-orange dark:hover:text-orange transition-colors p-1">
+        <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Get a free 20-minute site review</a>
+    </nav>
+    <button id="menu-open" class="lg:hidden flex flex-col justify-center gap-[5px] w-9 h-9 p-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="off-canvas-nav">
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+      <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
+    </button>
+  </div>
+</header>
+
+<div id="menu-overlay" class="fixed inset-0 bg-black/65 z-[200] opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+<nav id="off-canvas-nav" aria-label="Mobile navigation" class="fixed top-0 right-0 h-full w-[min(320px,85vw)] bg-warm-section dark:bg-navy-dark z-[300] flex flex-col px-8 pt-16 pb-8 border-l border-navy-bg/10 dark:border-offwhite/10 translate-x-full transition-transform duration-500">
+  <button id="menu-close" class="absolute top-5 right-5 text-navy-bg/40 dark:text-offwhite/60 text-xl hover:text-navy-bg dark:hover:text-offwhite transition-colors" aria-label="Close navigation menu">&#10005;</button>
+  <button id="mobile-theme-toggle" class="absolute top-5 left-8 flex items-center gap-2 font-mono text-[0.65rem] tracking-widest uppercase text-navy-bg/50 dark:text-offwhite/50 hover:text-orange transition-colors">
+    <svg id="m-icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg id="m-icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span id="mobile-toggle-label">Light</span>
+  </button>
+  <ul class="flex flex-col gap-8 mt-4">
+    <li><a href="../work/" aria-current="page" class="font-display text-[2rem] text-orange tracking-wide">Work</a></li>
+    <li><a href="../running/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">About Me</a></li>
+    <li><a href="../#contact" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Get a free 20-minute site review</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- Page header -->
+  <section class="bg-warm-bg dark:bg-navy-bg pt-[100px] pb-14 border-b border-navy-bg/10 dark:border-offwhite/10">
+    <div class="w-[90%] max-w-[1240px] mx-auto">
+      <div data-reveal>
+        <a href="../" class="inline-flex items-center gap-1 font-mono text-[0.65rem] tracking-[0.15em] uppercase text-navy-bg/45 dark:text-offwhite/45 hover:text-orange transition-colors mb-6">&larr; Home</a>
+        <h1 class="font-display text-[clamp(3rem,8vw,6rem)] leading-none text-navy-bg dark:text-offwhite">Work</h1>
+        <p class="font-body text-[1.05rem] text-navy-bg/60 dark:text-offwhite/60 mt-3">The need behind each build, and what it took to solve it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLIENT WORK ──────────────────────────────────────── -->
+  <section id="client-work" aria-labelledby="client-work-heading" class="scroll-mt-[70px]">
+    <div class="bg-warm-section dark:bg-navy-section py-16 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div data-reveal class="w-[90%] max-w-[1240px] mx-auto text-center">
+        <h2 id="client-work-heading" class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Client work</h2>
+      </div>
+    </div>
+
+    <!-- Client 1: Bachata Bakery -->
+    <article class="bg-warm-bg dark:bg-navy-bg py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div data-reveal data-dir="left" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-section dark:bg-navy-section">
+            <img src="../images/place-an-order-bachata-bakery-screenshot.png" alt="Bachata Bakery order page" width="1920" height="953" loading="lazy" class="w-full" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Food &amp; Beverage</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom Code</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Demand Control: Bachata Bakery</h3></div>
+            <div data-reveal><p class="text-navy-bg dark:text-offwhite text-[1.1rem] leading-[1.7] mt-4">A presale window opens and closes ordering on a schedule, so a one-person kitchen sells only what it can fill.</p></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> A one-person kitchen kept getting buried by more orders than it could fill, with no way to pause demand without manually turning customers away.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Approach:</span> A fully custom-coded storefront (no templates) with a presale window that activates and deactivates ordering on a schedule, backed by dynamic order forms and deep SEO work.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> The kitchen controls demand instead of chasing it &mdash; orders land only when there's capacity to fill them.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="https://bachatabakery.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Client 2: MLJ Signature Contracting -->
+    <article class="bg-warm-section dark:bg-navy-dark/50 py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Construction / Contracting</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">WordPress</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Trust Before the First Call: MLJ Signature Contracting</h3></div>
+            <div data-reveal><p class="text-navy-bg dark:text-offwhite text-[1.1rem] leading-[1.7] mt-4">Licensing and lead-safe certification shown up front, with an inquiry form that routes each lead to the right person.</p></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> Homeowners needed to trust a contractor before they ever picked up the phone, in an industry where licensing and safety compliance are exactly what people worry about.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Approach:</span> A WordPress site surfacing licensing and EPA lead-safe certification across three jurisdictions alongside six core service lines, with a service-aware inquiry form routing leads to the right team member.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> Homeowners arrive pre-sold on credibility, and leads land with the right person on the first try.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="https://mljsignature.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Visit Site</a>
+            </div>
+          </div>
+          <div data-reveal data-dir="right" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-bg dark:bg-navy-section">
+            <img src="../images/client-mlj-signature-screenshot.png" alt="MLJ Signature Contracting website" width="1920" height="953" loading="lazy" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Client 3: Gurvis Miner Dispute Resolution -->
+    <article class="bg-warm-bg dark:bg-navy-bg py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div data-reveal data-dir="left" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-section dark:bg-navy-section">
+            <img src="../images/gurvis-miner-screenshot.png" alt="Gurvis Miner Dispute Resolution website" width="1920" height="953" loading="lazy" class="w-full" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Legal / Mediation</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">WordPress</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Independent Credibility: Gurvis Miner Dispute Resolution</h3></div>
+            <div data-reveal><p class="text-navy-bg dark:text-offwhite text-[1.1rem] leading-[1.7] mt-4">A solo mediator's site with a custom intake form, built to compete with larger firms.</p></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> An independent mediator needed to compete for cases against established firms without their staff or budget behind him.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Approach:</span> A WordPress build with a custom client-intake form, mobile-first responsive design, and optimized load times &mdash; all in on credibility signals up front.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> A polished web presence that gives a solo practitioner the same digital authority as a full firm, with an intake flow that turns visitors into qualified leads.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="https://minerdisputeresolution.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Client 4: Raquel Ariana -->
+    <article class="bg-warm-section dark:bg-navy-dark/50 py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Beauty / Makeup Artist</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Custom Code</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Booked Appointments: Raquel Ariana</h3></div>
+            <div data-reveal><p class="text-navy-bg dark:text-offwhite text-[1.1rem] leading-[1.7] mt-4">A mobile-first booking-inquiry site for a makeup artist serving four states.</p></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> A freelance makeup artist serving a four-state region was losing phone-browsing visitors before they ever reached out.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Approach:</span> A single-page site with services and pricing in a clean scrollable layout, integrated booking-inquiry forms, and a custom visual identity built to earn trust before the first message.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> A mobile-first site that turns casual browsing into booked sessions, with a brand presence strong enough to compete for higher-end bridal and event work.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="https://raquelariana.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Visit Site</a>
+            </div>
+          </div>
+          <div data-reveal data-dir="right" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-bg dark:bg-navy-section">
+            <img src="../images/raquel-ariana-homepage-screenshot.png" alt="Raquel Ariana website" width="1920" height="953" loading="lazy" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Client 5: Gregory Duane -->
+    <article class="bg-warm-bg dark:bg-navy-bg py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div data-reveal data-dir="left" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-section dark:bg-navy-section">
+            <img src="../images/client-gregory-duane.png" alt="Gregory Duane website" width="1853" height="955" loading="lazy" class="w-full" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Fashion / Bridal</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Squarespace</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Bespoke Online, Bespoke In Person: Gregory Duane</h3></div>
+            <div data-reveal><p class="text-navy-bg dark:text-offwhite text-[1.1rem] leading-[1.7] mt-4">Secure checkout plus fitting appointments for a custom suit and bridal boutique.</p></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> A custom suit and bridal boutique needed to sell online without the site feeling like a generic e-commerce template.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Approach:</span> A full custom design overhaul on Squarespace's commerce platform, layering secure checkout with appointment booking for tailored fittings and consultations.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> An elevated, bespoke-feeling storefront that sells online and books consultations without diluting the boutique's handcrafted brand.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="https://gregoryduane.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- TODO: Calvin to supply a Kool Energy Technology entry (deployed client site) and one client quote per project. Add a numbers line per study only where Calvin has real figures. -->
+  </section>
+
+  <!-- ── BUILT FOR MYSELF ─────────────────────────────────── -->
+  <section id="built-for-myself" aria-labelledby="built-for-myself-heading" class="scroll-mt-[70px]">
+    <div class="bg-warm-section dark:bg-navy-section py-16 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div data-reveal class="w-[90%] max-w-[1240px] mx-auto text-center">
+        <h2 id="built-for-myself-heading" class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Built for myself</h2>
+        <p class="text-navy-bg/60 dark:text-offwhite/60 text-[1.05rem] leading-[1.75] max-w-[640px] mx-auto mt-4">Tools I made to solve my own problems. They show what I can build; the client work above shows who I have built it for.</p>
+      </div>
+    </div>
+
+    <!-- Build 1: Boston Marathon Forecast Engine -->
+    <article class="bg-warm-bg dark:bg-navy-bg py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div data-reveal data-dir="left" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-section dark:bg-navy-section">
+            <img src="../images/running-analysis-forecaster.png" alt="Boston Marathon Qualifying Forecast app dashboard" width="1055" height="441" loading="lazy" class="w-full" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">AI-Assisted Workflow</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Data Modeling</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Predictive Analytics: The Boston Marathon Forecast Engine</h3></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> Taking complex, multi-variable athletic training data (pace decay, weekly volume, historical benchmarks) and projecting accurate qualification probabilities.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Architecture:</span> Built using AI Agents as an engineering co-pilot to eliminate boilerplate friction, allowing 100% of the cognitive focus to remain on mathematical logic and UI execution.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> A production-ready forecasting web application conceptualized, built, and deployed in hours instead of weeks.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="../projects/running-analysis-app/" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">View the App &amp; Full Breakdown</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Build 2: Diamond+ -->
+    <article class="bg-warm-section dark:bg-navy-dark/50 py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Data Pipeline</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Dashboard UI</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Data Aggregation: Diamond+ Sports Analytics</h3></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> Consolidating massive amounts of fragmented baseball performance data into a clean, actionable interface for rapid decision-making.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Architecture:</span> A custom EH+ composite score&mdash;weighting hard contact, whiffs, launch angle, exit velocity, and chase rate&mdash;computed across seven seasons of Statcast data and rendered in a fast, fully filterable leaderboard.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> A deployed analytics platform with hitter and pitcher leaderboards, side-by-side player comparison, position and plate-appearance filters, and a full stat glossary&mdash;high-signal metrics with zero noise.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="https://elitehitter-plus.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Explore Diamond+</a>
+            </div>
+          </div>
+          <div data-reveal data-dir="right" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-bg dark:bg-navy-section">
+            <img src="../images/project-diamond.webp" alt="Diamond+ MLB Statcast leaderboard UI" width="800" height="450" loading="lazy" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Build 3: TruePace -->
+    <article class="bg-warm-bg dark:bg-navy-bg py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div data-reveal data-dir="left" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-section dark:bg-navy-section">
+            <img src="../images/project-truepace.webp" alt="TruePace race goal forecaster landing page" width="800" height="450" loading="lazy" class="w-full" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Predictive Modeling</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Training Plans</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Goal Forecasting: TruePace Race Planner</h3></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> Expanding the Boston forecast engine into a goal-first product&mdash;runners needed more than a projection; they needed to know whether a race goal was realistic and what training would get them there.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Architecture:</span> Goal time + recent race baseline feed a verdict model (On track / At risk / Unlikely), intensity what-ifs, and an auto-generated training plan built from the same performance inputs.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> TruePace&mdash;a deployed web app that turns race ambition into an honest forecast and a followable plan before you commit to the block.</p>
+            </div>
+            <div data-reveal class="mt-10">
+              <a href="https://race-goal-forecaster.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">Explore TruePace</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Build 4: Middletown Market & Pipeline Demo -->
+    <article class="bg-warm-section dark:bg-navy-dark/50 py-24 border-b border-navy-bg/10 dark:border-offwhite/10">
+      <div class="w-[90%] max-w-[1240px] mx-auto">
+        <div class="grid gap-16 md:grid-cols-2 md:items-center">
+          <div class="flex flex-col justify-center">
+            <div data-reveal class="flex flex-wrap gap-2 mb-4">
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Dashboard UI</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">AI Narrative</span>
+              <span class="font-mono text-[0.6rem] tracking-widest uppercase px-2 py-1 bg-orange/10 text-orange border border-orange/20 rounded-sm">Real Estate Ops</span>
+            </div>
+            <div data-reveal><h3 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Middletown Market &amp; Pipeline Demo</h3></div>
+            <div data-reveal class="mt-8 flex flex-col gap-4">
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Challenge:</span> Real estate team leads already see CRM boards and BI charts&mdash;but rarely one discovery-ready product that combines local market context, agent pipeline health, multi-agent performance, and a plain-language AI summary they can trust in a 20-minute call.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Architecture:</span> A two-view static dashboard&mdash;Market &amp; Pipeline plus Agent Performance&mdash;fed by JSON contracts: synthetic Middletown-area deals, an API-ready market snapshot with an interactive price trend, agent comparison metrics, and sample AI narrative panels written in business language. Vanilla HTML/CSS/JS keeps deploy friction near zero.</p>
+              <p class="text-navy-bg/70 dark:text-offwhite/70 text-[0.95rem] leading-[1.7]"><span class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-orange">The Result:</span> A shareable multi-board discovery demo that shows how custom dashboards + AI narrative sit on top of market, pipeline, and agent data&mdash;honestly labeled where data is sample vs. live-ready&mdash;built for consulting conversations, not as a full CRM replacement.</p>
+            </div>
+            <div data-reveal class="mt-10 flex flex-wrap gap-4">
+              <a href="https://middletown-re-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">View the Live Demo</a>
+              <a href="https://github.com/calvinadaniel/middletown-re-dashboard" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3 bg-transparent border-2 border-navy-bg/30 dark:border-offwhite/35 text-navy-bg dark:text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:border-navy-bg dark:hover:border-offwhite hover:-translate-y-0.5">View Repo</a>
+            </div>
+          </div>
+          <div data-reveal data-dir="right" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-bg dark:bg-navy-section">
+            <img src="../images/project-middletown.webp?v=2" alt="Middletown Market &amp; Pipeline dashboard with AI narrative, market snapshot, and Agent Performance nav" width="800" height="450" loading="lazy" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Bottom Conversion Block -->
+  <section class="bg-navy-bg py-24">
+    <div class="w-[90%] max-w-[1240px] mx-auto text-center">
+      <div data-reveal>
+        <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-offwhite tracking-[0.01em]">Have a business that needs to book more jobs?</h2>
+        <p class="text-offwhite opacity-70 text-[1.05rem] leading-[1.75] max-w-[640px] mx-auto mt-4 mb-12">Tell me what your customers do today and where they drop off. I will tell you what I would build.</p>
+        <a href="../#contact" class="inline-flex items-center px-7 py-3 bg-orange border-2 border-orange text-offwhite font-mono text-[0.8rem] tracking-[0.1em] uppercase rounded-sm transition-all duration-300 hover:bg-orange-dim hover:border-orange-dim hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(255,89,16,0.4)]">Get a free 20-minute site review</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-warm-section dark:bg-navy-dark border-t border-navy-bg/10 dark:border-offwhite/10 py-8">
+  <div class="w-[90%] max-w-[1240px] mx-auto">
+    <div class="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:items-center">
+      <a href="../" aria-label="Calvin Daniel Home" class="hover:opacity-80 transition-opacity flex-shrink-0">
+        <img src="../images/primary-logo.png"  alt="Calvin Daniel" class="logo-light h-12 w-auto" />
+        <img src="../images/dark-mode-logo.png" alt="Calvin Daniel" class="logo-dark  h-12 w-auto" />
+      </a>
+      <div class="flex flex-col items-center gap-3">
+        <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+        <a href="../" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Home</a>
+        <a href="../work/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">Work</a>
+        <a href="../running/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-navy-bg/60 dark:text-offwhite/60 hover:text-orange transition-colors">About Me</a>
+        </nav>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="https://github.com/calvinadaniel/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/calvin-daniel-6229054/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@calvindaniel06" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://cdwriting.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack" class="text-navy-bg/40 dark:text-offwhite/40 hover:text-orange transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
+        <a href="../#contact" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Let's Connect</a>
+        <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">&copy; 2026 Calvin Daniel</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
