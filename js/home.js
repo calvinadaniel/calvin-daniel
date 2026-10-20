@@ -117,4 +117,27 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  /* ── FAQ accordion (one open at a time) ────────────────── */
+  var faqRoot = document.querySelector('[data-faq-accordion]');
+  if (faqRoot) {
+    var faqItems = Array.prototype.slice.call(faqRoot.querySelectorAll('.faq-accordion__item'));
+
+    var setFaqOpen = function (item, open) {
+      var btn = item.querySelector('.faq-accordion__question');
+      item.classList.toggle('is-open', open);
+      if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    faqItems.forEach(function (item) {
+      var btn = item.querySelector('.faq-accordion__question');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var willOpen = !item.classList.contains('is-open');
+        faqItems.forEach(function (other) {
+          setFaqOpen(other, willOpen && other === item);
+        });
+      });
+    });
+  }
 });
