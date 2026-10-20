@@ -1,0 +1,18 @@
+name = "booking-api"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Custom domain (attach in Cloudflare dashboard or via wrangler):
+# api.calvindaniel.com
+
+[vars]
+# Non-secret defaults (override per-env if needed)
+EVENT_TITLE = "Free 20-minute site review"
+DURATION_MINUTES = "20"
+BUFFER_MINUTES = "10"
+WINDOW_DAYS = "14"
+DAILY_CAP = "4"
+TIMEZONE = "America/New_York"
+# JSON: weekdays 0=Sun..6=Sat, hours in 24h local time
+AVAILABILITY_JSON = "{\"days\":[2,3,4],\"startHour\":10,\"endHour\":16}"
+ALLOWED_ORIGINS = "https://calvindaniel.com,http://localhost:4173,http://localhost:5174,http://127.0.0.1:4173,http://127.0.0.1:8765"

@@ -28,7 +28,8 @@ Final quotes are confirmed during a free 20-minute site review.
 - [Home](https://calvindaniel.com/): Positioning, packages, FAQ, and contact
 - [Work](https://calvindaniel.com/work/): Client case studies (challenge, approach, result) and personal builds
 - [About](https://calvindaniel.com/about/): Background, credentials, and approach
-- [Contact](https://calvindaniel.com/contact/): Free 20-minute site review form
+- [Book](https://calvindaniel.com/book/): Schedule a free 20-minute site review
+- [Contact](https://calvindaniel.com/contact/): Project inquiry form
 - [Privacy](https://calvindaniel.com/privacy/): How inquiry and site data are handled
 - [Running](https://calvindaniel.com/running/): Marathon journey and personal records (personal brand, not a service offering)
 - [Running Analysis App](https://calvindaniel.com/projects/running-analysis-app/): Personal Strava-powered training dashboard

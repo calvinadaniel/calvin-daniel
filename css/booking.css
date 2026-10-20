@@ -1,0 +1,293 @@
+/* ── Booking UI ────────────────────────────────────────────
+   BEM. Dark mode via html.dark. Mobile-first. */
+
+.booking {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.booking__status {
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  min-height: 1.2rem;
+  margin: 0 0 1rem;
+  color: rgb(0 26 77 / 0.6);
+}
+
+.booking__status--error {
+  color: #c0392b;
+}
+
+.booking__status--ok {
+  color: rgb(255 89 16);
+}
+
+.booking__loading {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: rgb(0 26 77 / 0.6);
+  padding: 2rem 0;
+}
+
+.booking__step {
+  display: none;
+}
+
+.booking__step.is-active {
+  display: block;
+}
+
+.booking__step-label {
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgb(255 89 16);
+  margin: 0 0 0.75rem;
+}
+
+.booking__day-list,
+.booking__slot-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.booking__day-btn,
+.booking__slot-btn {
+  width: 100%;
+  text-align: left;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: rgb(0 26 77);
+  background-color: rgb(250 248 245);
+  border: 1px solid rgb(0 26 77 / 0.15);
+  border-radius: 0.125rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.booking__day-btn:hover,
+.booking__slot-btn:hover {
+  border-color: rgb(255 89 16);
+}
+
+.booking__day-btn:focus-visible,
+.booking__slot-btn:focus-visible {
+  outline: 2px solid rgb(255 89 16);
+  outline-offset: 2px;
+}
+
+.booking__day-btn.is-selected,
+.booking__slot-btn.is-selected {
+  border-color: rgb(255 89 16);
+  background-color: rgb(255 89 16 / 0.08);
+  box-shadow: 0 0 0 1px rgb(255 89 16 / 0.35);
+}
+
+.booking__day-meta {
+  display: block;
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(0 26 77 / 0.45);
+  margin-top: 0.25rem;
+}
+
+.booking__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(0 26 77 / 0.5);
+  transition: color 0.25s ease;
+}
+
+.booking__back:hover {
+  color: rgb(255 89 16);
+}
+
+.booking__selected {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: rgb(0 26 77 / 0.75);
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid rgb(255 89 16);
+  background: rgb(255 89 16 / 0.06);
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.booking__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.booking__label {
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgb(0 26 77 / 0.6);
+}
+
+.booking__optional {
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
+.booking__input,
+.booking__textarea {
+  width: 100%;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: rgb(0 26 77);
+  background-color: rgb(250 248 245);
+  border: 1px solid rgb(0 26 77 / 0.15);
+  border-radius: 0.125rem;
+  padding: 0.7rem 0.85rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking__textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.booking__input:focus,
+.booking__textarea:focus {
+  outline: none;
+  border-color: rgb(255 89 16);
+  box-shadow: 0 0 0 3px rgb(255 89 16 / 0.18);
+}
+
+.booking__submit {
+  align-self: flex-start;
+  font-family: 'Space Mono', ui-monospace, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(245 247 250);
+  background-color: rgb(255 89 16);
+  border: 2px solid rgb(255 89 16);
+  border-radius: 0.125rem;
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking__submit:hover:not(:disabled) {
+  background-color: rgb(204 67 10);
+  border-color: rgb(204 67 10);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgb(255 89 16 / 0.4);
+}
+
+.booking__submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.booking__success {
+  text-align: center;
+  padding: 1rem 0 2rem;
+}
+
+.booking__success h2 {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.02em;
+  color: rgb(0 26 77);
+  margin: 0 0 0.75rem;
+}
+
+.booking__success p {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgb(0 26 77 / 0.65);
+  margin: 0 0 0.5rem;
+}
+
+.booking__success-time {
+  color: rgb(255 89 16) !important;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .booking__slot-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+html.dark .booking__status {
+  color: rgb(245 247 250 / 0.6);
+}
+
+html.dark .booking__status--error {
+  color: #ff8a7a;
+}
+
+html.dark .booking__loading,
+html.dark .booking__day-meta {
+  color: rgb(245 247 250 / 0.5);
+}
+
+html.dark .booking__day-btn,
+html.dark .booking__slot-btn,
+html.dark .booking__input,
+html.dark .booking__textarea {
+  color: rgb(245 247 250);
+  background-color: rgb(0 30 80 / 0.4);
+  border-color: rgb(245 247 250 / 0.15);
+}
+
+html.dark .booking__day-btn.is-selected,
+html.dark .booking__slot-btn.is-selected {
+  background-color: rgb(255 89 16 / 0.15);
+}
+
+html.dark .booking__back {
+  color: rgb(245 247 250 / 0.5);
+}
+
+html.dark .booking__selected {
+  color: rgb(245 247 250 / 0.75);
+}
+
+html.dark .booking__label {
+  color: rgb(245 247 250 / 0.6);
+}
+
+html.dark .booking__success h2 {
+  color: rgb(245 247 250);
+}
+
+html.dark .booking__success p {
+  color: rgb(245 247 250 / 0.65);
+}

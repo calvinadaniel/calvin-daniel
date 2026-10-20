@@ -43,7 +43,7 @@
         <svg id="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg id="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <a href="../contact/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Get a free 20-minute site review</a>
+      <a href="../book/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Get a free 20-minute site review</a>
     </nav>
     <button id="menu-open" class="lg:hidden flex flex-col justify-center gap-[5px] w-9 h-9 p-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="off-canvas-nav">
       <span class="block w-full h-[2px] bg-navy-bg dark:bg-offwhite rounded-sm"></span>
@@ -65,7 +65,7 @@
     <li><a href="../work/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Work</a></li>
     <li><a href="../about/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">About</a></li>
     <li><a href="../contact/" class="font-display text-[2rem] text-navy-bg/50 dark:text-offwhite/60 tracking-wide hover:text-navy-bg dark:hover:text-offwhite transition-colors">Contact</a></li>
-    <li><a href="../contact/" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Get a free 20-minute site review</a></li>
+    <li><a href="../book/" class="font-display text-[2rem] text-orange tracking-wide hover:text-orange/80 transition-colors">Get a free 20-minute site review</a></li>
   </ul>
 </nav>
 
@@ -96,6 +96,7 @@
       <div data-reveal>
         <h2 class="font-display text-[1.6rem] text-navy-bg dark:text-offwhite tracking-wide mb-3">What I collect</h2>
         <p class="text-navy-bg/70 dark:text-offwhite/70 text-[1.05rem] leading-[1.8] mb-4">When you use the contact form or email me, I receive the details you choose to send. That typically includes your name, email address, project type, estimated budget, timeline, industry, and project description. I use Formspree to deliver form submissions to my inbox. Formspree&rsquo;s own privacy practices apply to that transmission.</p>
+        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[1.05rem] leading-[1.8] mb-4">When you book a free site review at <a href="../book/" class="text-orange hover:opacity-80">/book</a>, I receive your name, email, optional website URL, optional note, and the time you selected. That request is processed by a booking API I operate (Cloudflare Workers) and creates a calendar event in Google Calendar, which may email you a calendar invite. Google&rsquo;s privacy practices apply to Calendar.</p>
         <p class="text-navy-bg/70 dark:text-offwhite/70 text-[1.05rem] leading-[1.8]">Like most websites, hosting and CDN logs may record technical data such as IP address, browser type, and pages requested. I do not run advertising pixels or sell personal information.</p>
       </div>
       <div data-reveal>
@@ -108,7 +109,7 @@
       </div>
       <div data-reveal>
         <h2 class="font-display text-[1.6rem] text-navy-bg dark:text-offwhite tracking-wide mb-3">Third parties</h2>
-        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[1.05rem] leading-[1.8]">The site may load fonts from Google Fonts and may be hosted on GitHub Pages or a similar static host. Form submissions go through Formspree. Those providers process data under their own terms. I do not share your inquiry content with unrelated third parties for their marketing.</p>
+        <p class="text-navy-bg/70 dark:text-offwhite/70 text-[1.05rem] leading-[1.8]">The site may load fonts from Google Fonts and is hosted on a static host. Form submissions go through Formspree. Booking requests go through Cloudflare Workers and Google Calendar. Those providers process data under their own terms. I do not share your inquiry content with unrelated third parties for their marketing.</p>
       </div>
       <div data-reveal>
         <h2 class="font-display text-[1.6rem] text-navy-bg dark:text-offwhite tracking-wide mb-3">How long I keep it</h2>
@@ -155,7 +156,7 @@
         </div>
       </div>
       <div class="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
-        <a href="../contact/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Get a free 20-minute site review</a>
+        <a href="../book/" class="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-orange border border-orange px-4 py-[0.4rem] rounded-sm hover:bg-orange hover:text-offwhite transition-all">Get a free 20-minute site review</a>
         <span class="font-mono text-[0.65rem] tracking-[0.1em] text-navy-bg/60 dark:text-offwhite/60">&copy; 2026 Calvin Daniel</span>
       </div>
     </div>

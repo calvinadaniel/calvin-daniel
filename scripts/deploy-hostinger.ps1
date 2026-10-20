@@ -27,7 +27,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 # Tracked in the repo but never published
-$Exclude = @('.github', '.gitignore', 'CLAUDE.md', 'docs', 'scripts')
+$Exclude = @('.github', '.gitignore', 'CLAUDE.md', 'docs', 'scripts', 'workers')
 
 $repo = (git rev-parse --show-toplevel).Trim()
 Set-Location $repo
