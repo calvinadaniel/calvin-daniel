@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var root = document.querySelector('[data-booking]');
   if (!root) return;
 
-  var DEFAULT_API = 'https://api.calvindaniel.com';
+  var DEFAULT_API = 'https://booking-api.calvindaniel.workers.dev';
   var params = new URLSearchParams(window.location.search);
   var apiBase =
     params.get('api') ||
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var renderDays = function () {
     dayList.innerHTML = '';
     if (!state.days.length) {
-      setStatus('No open times in the next two weeks. Email info@calvindaniel.com and I will find a slot.', 'error');
+      setStatus('No open times in the next 30 days. Email info@calvindaniel.com and I will find a slot.', 'error');
       return;
     }
     state.days.forEach(function (day) {
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .finally(function () {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Confirm booking';
+            submitBtn.textContent = 'Request this time';
           }
         });
     });

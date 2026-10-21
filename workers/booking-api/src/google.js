@@ -44,11 +44,16 @@ export const fetchFreeBusy = async (accessToken, calendarId, timeMin, timeMax) =
   return Array.isArray(cal?.busy) ? cal.busy : [];
 };
 
-export const createEvent = async (accessToken, calendarId, event) => {
+export const createEvent = async (
+  accessToken,
+  calendarId,
+  event,
+  { sendUpdates = 'none' } = {}
+) => {
   const url = new URL(
     `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events`
   );
-  url.searchParams.set('sendUpdates', 'all');
+  url.searchParams.set('sendUpdates', sendUpdates);
 
   const res = await fetch(url.toString(), {
     method: 'POST',
@@ -63,5 +68,73 @@ export const createEvent = async (accessToken, calendarId, event) => {
   if (!res.ok) {
     throw new Error(data.error?.message || 'events.insert failed');
   }
+  return data;
+};
+
+export const updateEvent = async (
+  accessToken,
+  calendarId,
+  eventId,
+  patch,
+  { sendUpdates = 'all' } = {}
+) => {
+  const url = new URL(
+    `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events/${encodeURIComponent(eventId)}`
+  );
+  url.searchParams.set('sendUpdates', sendUpdates);
+  const res = await fetch(url.toString(), {
+    method: 'PATCH',
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(patch),
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error?.message || 'events.patch failed');
+  return data;
+};
+
+export const deleteEvent = async (accessToken, calendarId, eventId) => {
+  const url = new URL(
+    `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events/${encodeURIComponent(eventId)}`
+  );
+  url.searchParams.set('sendUpdates', 'none');
+  const res = await fetch(url.toString(), {
+    method: 'DELETE',
+    headers: { Authorization: `Bearer ${accessToken}` },
+  });
+  if (!res.ok && res.status !== 404) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error?.message || 'events.delete failed');
+  }
+};
+
+export const sendMail = async (accessToken, { to, subject, body }) => {
+  const from = 'me';
+  const raw = [
+    `To: ${to}`,
+    `Subject: ${subject}`,
+    'Content-Type: text/plain; charset=utf-8',
+    '',
+    body,
+  ].join('\r\n');
+  const encoded = btoa(unescape(encodeURIComponent(raw)))
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
+  const res = await fetch(
+    `https://gmail.googleapis.com/gmail/v1/users/${from}/messages/send`,
+    {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ raw: encoded }),
+    }
+  );
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error?.message || 'gmail.send failed');
   return data;
 };

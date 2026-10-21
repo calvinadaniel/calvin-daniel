@@ -1,18 +1,31 @@
 name = "booking-api"
 main = "src/index.js"
 compatibility_date = "2026-10-01"
+workers_dev = true
 
-# Custom domain (attach in Cloudflare dashboard or via wrangler):
-# api.calvindaniel.com
+[[kv_namespaces]]
+binding = "BOOKINGS"
+id = "c68efced9af34ceb9cdb6e44790c302c"
+
+[triggers]
+crons = ["0 * * * *"]
+
+# Live: https://booking-api.calvindaniel.workers.dev
+# Optional later: attach api.calvindaniel.com (requires the zone on Cloudflare)
 
 [vars]
 # Non-secret defaults (override per-env if needed)
 EVENT_TITLE = "Free 20-minute site review"
 DURATION_MINUTES = "20"
 BUFFER_MINUTES = "10"
-WINDOW_DAYS = "14"
+WINDOW_DAYS = "30"
 DAILY_CAP = "4"
 TIMEZONE = "America/New_York"
 # JSON: weekdays 0=Sun..6=Sat, hours in 24h local time
 AVAILABILITY_JSON = "{\"days\":[2,3,4],\"startHour\":10,\"endHour\":16}"
 ALLOWED_ORIGINS = "https://calvindaniel.com,http://localhost:4173,http://localhost:5174,http://127.0.0.1:4173,http://127.0.0.1:8765"
+# Same Formspree form as the contact page — delivers booking alerts to info@
+FORMSPREE_ENDPOINT = "https://formspree.io/f/xojgvdjq"
+HOLD_HOURS = "48"
+PUBLIC_API_BASE = "https://booking-api.calvindaniel.workers.dev"
+REVIEW_PAGE_URL = "https://calvindaniel.com/book/review/"

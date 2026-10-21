@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "auth": "node scripts/auth.mjs"
+    "auth": "node scripts/auth.mjs",
+    "test": "node --test src/tokens.test.js"
   },
   "devDependencies": {
     "wrangler": "^4.40.0"

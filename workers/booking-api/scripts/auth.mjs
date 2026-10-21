@@ -20,6 +20,7 @@ const REDIRECT = `http://127.0.0.1:${PORT}/`;
 const SCOPES = [
   'https://www.googleapis.com/auth/calendar.events',
   'https://www.googleapis.com/auth/calendar.freebusy',
+  'https://www.googleapis.com/auth/gmail.send',
 ].join(' ');
 
 if (!CLIENT_ID || !CLIENT_SECRET) {

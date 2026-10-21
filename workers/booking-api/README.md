@@ -29,9 +29,12 @@ npx wrangler secret put GOOGLE_CLIENT_ID
 npx wrangler secret put GOOGLE_CLIENT_SECRET
 npx wrangler secret put GOOGLE_REFRESH_TOKEN
 npx wrangler secret put BOOKING_CALENDAR_ID
+npx wrangler secret put BOOKING_REVIEW_SECRET
 ```
 
 Use `primary` for `BOOKING_CALENDAR_ID`, or a calendar ID from Google Calendar → Settings → Integrate calendar.
+
+`BOOKING_REVIEW_SECRET` signs review links for pending bookings (approval-hold flow). Generate a long random string; set locally in `.dev.vars` and on the Worker via `wrangler secret put`.
 
 ## Deploy
 
@@ -57,6 +60,29 @@ Point the book page at `http://127.0.0.1:8787` via `localStorage.setItem('bookin
 | POST | `/api/book` | Body: `{ start, name, email, website?, note? }` |
 | GET | `/api/health` | Liveness |
 
+After a successful book: Google Calendar invites the guest; Formspree emails the host (same form as the contact page).
+
 ## Product config
 
-Edit `[vars]` in `wrangler.toml` (hours, duration, buffer, daily cap, timezone).
+Edit `[vars]` in `wrangler.toml` (hours, duration, buffer, daily cap, timezone, hold window, public API base, review page URL).
+
+| Var | Purpose |
+|-----|---------|
+| `HOLD_HOURS` | Hours a pending booking is held before expiry (default `48`) |
+| `PUBLIC_API_BASE` | Public Worker URL (no trailing slash) for review links |
+| `REVIEW_PAGE_URL` | Site page where clients approve or decline a hold |
+| `FORMSPREE_ENDPOINT` | Formspree form for host notifications |
+
+KV binding `BOOKINGS` stores pending booking records. An hourly cron (`0 * * * *`) sweeps expired holds.
+
+## Ops checklist (approval-hold flow)
+
+- [ ] Enable **Gmail API** in the same Google Cloud project (decline/expiry emails to guests are sent via Gmail).
+- [ ] Re-run `npm run auth` (scopes must include Gmail send) and `npx wrangler secret put GOOGLE_REFRESH_TOKEN` with the new token.
+- [ ] `npx wrangler secret put BOOKING_REVIEW_SECRET` (also in `.dev.vars` for local dev).
+- [ ] `npm run deploy` -> `https://booking-api.calvindaniel.workers.dev`.
+- [ ] Smoke: `curl -4 .../api/health` and `.../api/availability`.
+- [ ] E2E: POST `/api/book` with a real slot and a test email -> `"status":"pending"`, tentative calendar event, host email with Approve/Decline/Review links.
+- [ ] Open Approve link -> "Approved", event confirmed, guest invited.
+- [ ] Second booking -> Decline link -> event removed, guest emailed, slot free again.
+- [ ] Review page: `https://calvindaniel.com/book/review/?key=SECRET` (after the site deploy).
