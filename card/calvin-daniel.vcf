@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Daniel;Calvin;;;
+FN:Calvin Daniel
+ORG:Calvin Daniel
+TITLE:Websites & automation for local service businesses
+TEL;TYPE=CELL,VOICE:+17186445621
+EMAIL;TYPE=INTERNET,PREF:info@calvindaniel.com
+URL:https://calvindaniel.com/
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/calvin-daniel-6229054/
+URL;TYPE=GitHub:https://github.com/calvinadaniel/
+NOTE:Scan calvindaniel.com/card or book at calvindaniel.com/book
+END:VCARD

@@ -1,0 +1,238 @@
+/* Digital card — QR landing (/card/) */
+
+.card-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-page__main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 5.5rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-page__main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 89, 16, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(255, 89, 16, 0.06), transparent 50%);
+  pointer-events: none;
+}
+
+.dark .card-page__main::before {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 89, 16, 0.18), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(255, 89, 16, 0.08), transparent 50%);
+}
+
+.card-page__shell {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 26rem;
+  margin: 0 auto;
+}
+
+.card-page__identity {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.card-page__photo {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 2px solid rgba(255, 89, 16, 0.45);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
+}
+
+.dark .card-page__photo {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.card-page__name {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2.25rem, 8vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.card-page__role {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0.65rem auto 0;
+  max-width: 18rem;
+  opacity: 0.65;
+}
+
+.card-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.card-links__item a,
+.card-links__item button {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+  min-height: 3.35rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.55);
+  color: inherit;
+  text-decoration: none;
+  text-align: left;
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dark .card-links__item a,
+.dark .card-links__item button {
+  border-color: rgba(247, 244, 239, 0.14);
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.card-links__item a:hover,
+.card-links__item a:focus-visible,
+.card-links__item button:hover,
+.card-links__item button:focus-visible {
+  border-color: #ff5910;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(255, 89, 16, 0.18);
+  outline: none;
+}
+
+.card-links__icon {
+  flex-shrink: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  color: #ff5910;
+}
+
+.card-links__icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: block;
+}
+
+.card-links__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.card-links__label {
+  line-height: 1.2;
+}
+
+.card-links__detail {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  opacity: 0.55;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-links__item--accent a {
+  background: #ff5910;
+  border-color: #ff5910;
+  color: #f7f4ef;
+}
+
+.card-links__item--accent .card-links__icon {
+  color: #f7f4ef;
+}
+
+.card-links__item--accent .card-links__detail {
+  opacity: 0.85;
+  color: #f7f4ef;
+}
+
+.card-links__item--accent a:hover,
+.card-links__item--accent a:focus-visible {
+  background: #e04e0e;
+  border-color: #e04e0e;
+  box-shadow: 0 8px 24px rgba(255, 89, 16, 0.35);
+}
+
+.card-page__save {
+  margin-top: 1rem;
+}
+
+.card-page__save a {
+  justify-content: center;
+  border-style: dashed;
+  background: transparent;
+}
+
+.card-page__foot {
+  text-align: center;
+  padding: 1.25rem 5% 2rem;
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.card-page__foot a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.card-page__foot a:hover,
+.card-page__foot a:focus-visible {
+  color: #ff5910;
+  opacity: 1;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .card-page__shell {
+    max-width: 28rem;
+  }
+
+  .card-page__photo {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  .card-links__item a,
+  .card-links__item button {
+    min-height: 3.6rem;
+    padding: 0.85rem 1.15rem;
+  }
+}
