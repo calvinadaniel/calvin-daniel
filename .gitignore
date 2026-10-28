@@ -9,3 +9,4 @@ deploy-backups/
 scripts/.env
 scripts/__pycache__/
 scripts/tests/__pycache__/
+.worktrees/
