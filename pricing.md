@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-28
 
-Starting prices for custom websites and light automation for local service businesses. Final quotes are confirmed after a free 20-minute site review.
+Starting prices for custom websites, light automation, and social media profiles for small businesses. Final quotes are confirmed after a free 20-minute site or profile review.
 
 ## Site That Books
 
