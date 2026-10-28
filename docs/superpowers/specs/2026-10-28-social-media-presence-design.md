@@ -25,12 +25,17 @@ Launch Instagram, Facebook, and TikTok accounts that:
 
 ## 1. Account setup and positioning
 
-**Handles:** `@calvindaniel` on all platforms if available; otherwise `@calvindaniel06` everywhere (matches the existing TikTok linked from the site).
+**Handle:** `@calvindaniel06` on all three platforms (matches the existing TikTok linked from the site). Facebook Page username is also `calvindaniel06`.
 
-**Name field:** `Calvin Daniel | Social & Websites for Small Biz`
+**Name field:**
+- Instagram and Facebook: `Calvin Daniel | Social & Websites for Small Biz`
+- TikTok (30-character limit): `Calvin Daniel | Social + Web`
 
-**Bio (all platforms):**
-> I make small business profiles that get booked. Social content, profile makeovers, and websites. DM "MAKEOVER" for a free profile review.
+**Bio:**
+- Instagram and Facebook:
+  > I make small business profiles that get booked. Social content, profile makeovers, and websites. DM "MAKEOVER" for a free profile review.
+- TikTok (80-character limit):
+  > Profile makeovers + websites for small biz. DM MAKEOVER for a free review
 
 **Link:** single link to a new page, `calvindaniel.com/social/`, that explains the service, shows makeover case studies, and ends in the free 20-minute review form. No Linktree.
 
@@ -46,7 +51,7 @@ Launch Instagram, Facebook, and TikTok accounts that:
 - **Content & Posting:** monthly retainer for content creation plus scheduling.
 - **Website + Social Bundle: $1,995.** Site That Books ($1,750) plus Profile Makeover at a discount.
 
-The Content & Posting price is an open decision for Calvin and must be set before the `/social/` page goes live. Market reference: Philadelphia agencies charge $750–$1,550/month; newer US freelancers $800–$2,200/month.
+The Content & Posting price is not published: the page shows "Quoted after your free review." Market reference for quoting: Philadelphia agencies charge $750–$1,550/month; newer US freelancers $800–$2,200/month.
 
 **Pricing research (2026-10-28):** Profile setup across 3 platforms runs $400–$650 one-time (Momentum Digital, Philadelphia: $500; Backroads Digital: $650; KizilCo: $499). Philadelphia agency retainers: LYFE Marketing $750 (images) to $1,350 (with TikTok/Reels video); Kin Creative House $750–$1,200; Momentum $1,000. Short-form video alone: $69–$120 per video locally.
 
