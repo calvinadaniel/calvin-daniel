@@ -607,16 +607,14 @@ git commit -m "Announce social media service on homepage, pricing, llms.txt, and
 ### Task 3: Create and brand the three accounts (Calvin, manual)
 
 **Interfaces:**
-- Consumes: live `https://calvindaniel.com/social/` (Tasks 1–2 pushed to `master`).
+- Consumes: Tasks 1–2 committed on branch `social-media-presence` (not yet deployed).
 - Produces: live profiles at the three URLs in Global Constraints. Task 4 depends on these resolving.
 
-- [ ] **Step 1: Push Tasks 1–2 so the bio link works**
+The `/social/` page tells visitors to DM `@calvindaniel06` on all three platforms, so the accounts must exist before the page deploys. Create them first with the website field blank, then deploy, then add the link.
 
-```powershell
-git push origin master
-```
+- [ ] **Step 1: Do not deploy yet**
 
-Wait for the GitHub Pages deploy, then open `https://calvindaniel.com/social/` on your phone.
+Leave the website/link field empty in Steps 2–4. Step 6 merges and deploys the page and adds the link.
 
 - [ ] **Step 2: Facebook Page**
 
@@ -624,11 +622,11 @@ Create a Page (from your personal profile: Pages → Create). Name: `Calvin Dani
 
 > I make small business profiles that get booked. Social content, profile makeovers, and websites. DM "MAKEOVER" for a free profile review.
 
-Website: `https://calvindaniel.com/social/`. Email: `info@calvindaniel.com`. Action button: Send Message. Profile photo: `images/about-headshot-calvin-daniel.webp`.
+Website: leave blank until Step 6. Email: `info@calvindaniel.com`. Action button: Send Message. Profile photo: `images/about-headshot-calvin-daniel.webp`.
 
 - [ ] **Step 3: Instagram**
 
-Create `@calvindaniel06` (or rename an existing account), switch to Professional → Business. Name field and bio: same text as the Facebook Page. Link: `https://calvindaniel.com/social/`. Same profile photo. Connect it to the Facebook Page in Meta Business Suite (Settings → Accounts → Instagram accounts).
+Create `@calvindaniel06` (or rename an existing account), switch to Professional → Business. Name field and bio: same text as the Facebook Page. Link: leave blank until Step 6. Same profile photo. Connect it to the Facebook Page in Meta Business Suite (Settings → Accounts → Instagram accounts).
 
 - [ ] **Step 4: TikTok**
 
@@ -636,7 +634,7 @@ On `@calvindaniel06`: Settings → Account → Switch to Business Account. Name:
 
 > Profile makeovers + websites for small biz. DM MAKEOVER for a free review
 
-Website: `https://calvindaniel.com/social/`. Archive or set to private any existing videos that don't fit the business.
+Website: leave blank until Step 6. Archive or set to private any existing videos that don't fit the business.
 
 - [ ] **Step 5: Templates**
 
@@ -646,7 +644,21 @@ In Canva, create two templates with the site colors (navy `#001A4D`, off-white `
 
 Add the highlight covers to Instagram once each highlight has at least one Story.
 
-- [ ] **Step 6: Verify**
+- [ ] **Step 6: Merge, deploy, and add the link**
+
+From the main checkout:
+
+```powershell
+git switch master
+git merge --ff-only social-media-presence
+git push origin master
+```
+
+If `--ff-only` refuses because `master` gained commits since the branch was created, run `git merge social-media-presence` instead.
+
+Wait for the GitHub Pages deploy and open `https://calvindaniel.com/social/` on your phone. Then set the website/link field to `https://calvindaniel.com/social/` on the Facebook Page, Instagram, and TikTok.
+
+- [ ] **Step 7: Verify**
 
 Open each URL in a logged-out browser window: `https://www.instagram.com/calvindaniel06/`, `https://www.facebook.com/calvindaniel06`, `https://www.tiktok.com/@calvindaniel06`. Each shows the new name, bio, and the `/social/` link, and tapping the link opens the page.
 
