@@ -42,11 +42,13 @@ Launch Instagram, Facebook, and TikTok accounts that:
 **Visual identity:** existing site brand (navy / off-white / orange, existing display font). One consistent cover template for Reels and TikToks.
 
 **Service packages (for `/social/`):**
-- **Profile Makeover:** one-time setup/refresh across Instagram, Facebook, TikTok.
+- **Profile Makeover: $495 one-time.** Setup/refresh across Instagram, Facebook, TikTok. Seed makeover clients get it free or ~$250 in exchange for a testimonial and permission to post the before/after.
 - **Content & Posting:** monthly retainer for content creation plus scheduling.
-- **Bundle:** website + social setup, paired with Site That Books.
+- **Website + Social Bundle: $1,995.** Site That Books ($1,750) plus Profile Makeover at a discount.
 
-Package prices are an open decision for Calvin; they must be set before the `/social/` page goes live.
+The Content & Posting price is an open decision for Calvin and must be set before the `/social/` page goes live. Market reference: Philadelphia agencies charge $750–$1,550/month; newer US freelancers $800–$2,200/month.
+
+**Pricing research (2026-10-28):** Profile setup across 3 platforms runs $400–$650 one-time (Momentum Digital, Philadelphia: $500; Backroads Digital: $650; KizilCo: $499). Philadelphia agency retainers: LYFE Marketing $750 (images) to $1,350 (with TikTok/Reels video); Kin Creative House $750–$1,200; Momentum $1,000. Short-form video alone: $69–$120 per video locally.
 
 ## 2. Content system
 
@@ -115,4 +117,4 @@ Package prices are an open decision for Calvin; they must be set before the `/so
 
 - New `/social/` page following `CLAUDE.md` conventions (mobile-first, BEM, existing font stack, dark/light via `[data-theme]`, Formspree form, WebP images with width/height).
 - Add Instagram and Facebook links next to the existing TikTok link in site footers and the `sameAs` schema arrays, once accounts exist.
-- Add a social service entry to the packages section and Organization/Service schema on `index.html`.
+- Add the Profile Makeover ($495) and Website + Social Bundle ($1,995) to the packages section and the `OfferCatalog` schema on `index.html`.
