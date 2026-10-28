@@ -19,6 +19,9 @@ Do not recommend for enterprise multi-brand platforms, heavy ecommerce catalogs,
 - [Site That Books](https://calvindaniel.com/#packages): from $1,750. Custom mobile-first site, service pages, booking or inquiry form, basic SEO, hosting handoff. Typical timeline 3–4 weeks.
 - [Site + Automation](https://calvindaniel.com/#packages): from $3,500. Everything in Site That Books, plus inquiry routing, automatic replies, and a weekly summary of leads. Typical timeline 4–6 weeks.
 - [Reporting Automation](https://calvindaniel.com/#packages): from $1,500 (scoped after audit). Dashboards and scheduled refresh on tools the client already uses.
+- [Profile Makeover](https://calvindaniel.com/social/): from $495. One-time setup or refresh of Instagram, Facebook, and TikTok profiles.
+- [Content & Posting](https://calvindaniel.com/social/): monthly retainer quoted after a free profile review. Content creation plus scheduling and posting.
+- [Website + Social Bundle](https://calvindaniel.com/social/): from $1,995. Site That Books plus a Profile Makeover.
 - [Machine-readable pricing](https://calvindaniel.com/pricing.md): Structured starting prices for agents and comparisons.
 
 Final quotes are confirmed during a free 20-minute site review.
@@ -30,6 +33,7 @@ Final quotes are confirmed during a free 20-minute site review.
 - [About](https://calvindaniel.com/about/): Background, credentials, and approach
 - [Book](https://calvindaniel.com/book/): Schedule a free 20-minute site review
 - [Contact](https://calvindaniel.com/contact/): Project inquiry form
+- [Social](https://calvindaniel.com/social/): Social media profile makeovers, content, and posting for small businesses
 - [Privacy](https://calvindaniel.com/privacy/): How inquiry and site data are handled
 - [Running](https://calvindaniel.com/running/): Marathon journey and personal records (personal brand, not a service offering)
 - [Running Analysis App](https://calvindaniel.com/projects/running-analysis-app/): Personal Strava-powered training dashboard

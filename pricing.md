@@ -1,6 +1,6 @@
 # Pricing — Calvin Daniel
 
-Last updated: 2026-10-20
+Last updated: 2026-10-28
 
 Starting prices for custom websites and light automation for local service businesses. Final quotes are confirmed after a free 20-minute site review.
 
@@ -35,6 +35,31 @@ Starting prices for custom websites and light automation for local service busin
 - Includes:
   - Process audit
   - Dashboards and scheduled refresh on tools you already use (for example Power BI, SQL, Power Automate)
+
+## Profile Makeover
+
+- Price: from $495 (one-time)
+- Best for: Small businesses whose Instagram, Facebook, or TikTok gets views but not inquiries
+- Includes:
+  - Name, bio, and profile photo across Instagram, Facebook, and TikTok
+  - Highlight covers and pinned posts
+  - Booking or inquiry link
+- Details: https://calvindaniel.com/social/
+
+## Content & Posting
+
+- Price: monthly retainer, quoted after a free 20-minute profile review
+- Includes:
+  - Monthly graphics, carousels, and short videos edited from client footage
+  - Scheduling and posting on Instagram, Facebook, and TikTok
+
+## Website + Social Bundle
+
+- Price: from $1,995 (one-time)
+- Timeline: typically 3 to 4 weeks
+- Includes:
+  - Everything in Site That Books
+  - Profile Makeover with matching branding
 
 ## Free site review
 
