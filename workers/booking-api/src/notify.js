@@ -1,15 +1,15 @@
 /**
  * Email the host when a booking is created.
- * Uses the same Formspree form as the site contact form (inbox: info@).
- * Guest confirmation still comes from Google Calendar invite (sendUpdates=all).
+ * Primary: Gmail API → HOST_EMAIL (info@).
+ * Fallback: Formspree (same form as contact) if Gmail is unavailable.
+ * Guest confirmation still comes from Google Calendar invite on approve.
  */
 
-export const notifyHost = async (env, payload) => {
-  const endpoint = env.FORMSPREE_ENDPOINT;
-  if (!endpoint) return { sent: false, reason: 'FORMSPREE_ENDPOINT not set' };
+import { sendMail } from './google.js';
 
+const buildBody = (payload) => {
   const label = payload.label || payload.start;
-  const lines = [
+  return [
     `Booking request via calvindaniel.com/book`,
     ``,
     `Name: ${payload.name}`,
@@ -23,8 +23,16 @@ export const notifyHost = async (env, payload) => {
     `Approve: ${payload.approveUrl}`,
     `Decline: ${payload.declineUrl}`,
     `Review queue: ${payload.reviewUrl}`,
-  ].filter((line) => line !== null);
+  ]
+    .filter((line) => line !== null)
+    .join('\n');
+};
 
+const sendViaFormspree = async (env, payload, body) => {
+  const endpoint = env.FORMSPREE_ENDPOINT;
+  if (!endpoint) throw new Error('FORMSPREE_ENDPOINT not set');
+
+  const label = payload.label || payload.start;
   const res = await fetch(endpoint, {
     method: 'POST',
     headers: {
@@ -39,7 +47,7 @@ export const notifyHost = async (env, payload) => {
       website: payload.website || '',
       note: payload.note || '',
       start: payload.start,
-      message: lines.join('\n'),
+      message: body,
     }),
   });
 
@@ -47,6 +55,27 @@ export const notifyHost = async (env, payload) => {
     const text = await res.text().catch(() => '');
     throw new Error(`Formspree notify failed (${res.status}): ${text.slice(0, 200)}`);
   }
+  return { sent: true, via: 'formspree' };
+};
 
-  return { sent: true };
+export const notifyHost = async (env, accessToken, payload) => {
+  const hostEmail = env.HOST_EMAIL || 'info@calvindaniel.com';
+  const label = payload.label || payload.start;
+  const body = buildBody(payload);
+
+  if (accessToken) {
+    try {
+      await sendMail(accessToken, {
+        to: hostEmail,
+        subject: `Booking request: ${payload.name} — ${label}`,
+        body,
+      });
+      return { sent: true, via: 'gmail', to: hostEmail };
+    } catch (err) {
+      console.error('Gmail host notify failed, falling back to Formspree:', err?.message || err);
+    }
+  }
+
+  const result = await sendViaFormspree(env, payload, body);
+  return { ...result, to: hostEmail };
 };

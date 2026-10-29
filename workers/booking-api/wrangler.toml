@@ -23,8 +23,9 @@ DAILY_CAP = "4"
 TIMEZONE = "America/New_York"
 # JSON: weekdays 0=Sun..6=Sat, hours in 24h local time
 AVAILABILITY_JSON = "{\"days\":[2,3,4],\"startHour\":10,\"endHour\":16}"
-ALLOWED_ORIGINS = "https://calvindaniel.com,http://localhost:4173,http://localhost:5174,http://127.0.0.1:4173,http://127.0.0.1:8765"
-# Same Formspree form as the contact page — delivers booking alerts to info@
+ALLOWED_ORIGINS = "https://calvindaniel.com,https://www.calvindaniel.com,http://localhost:4173,http://localhost:5174,http://127.0.0.1:4173,http://127.0.0.1:8765"
+# Host inbox for booking alerts (Gmail API). Formspree is archive-only.
+HOST_EMAIL = "info@calvindaniel.com"
 FORMSPREE_ENDPOINT = "https://formspree.io/f/xojgvdjq"
 HOLD_HOURS = "48"
 PUBLIC_API_BASE = "https://booking-api.calvindaniel.workers.dev"

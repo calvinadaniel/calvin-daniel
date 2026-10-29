@@ -10,7 +10,10 @@ export const parseConfig = (env) => {
     /* keep defaults */
   }
 
-  const allowedOrigins = String(env.ALLOWED_ORIGINS || 'https://calvindaniel.com')
+  const allowedOrigins = String(
+    env.ALLOWED_ORIGINS ||
+      'https://calvindaniel.com,https://www.calvindaniel.com'
+  )
     .split(',')
     .map((s) => s.trim())
     .filter(Boolean);

@@ -60,7 +60,7 @@ Point the book page at `http://127.0.0.1:8787` via `localStorage.setItem('bookin
 | POST | `/api/book` | Body: `{ start, name, email, website?, note? }` |
 | GET | `/api/health` | Liveness |
 
-After a successful book: Google Calendar invites the guest; Formspree emails the host (same form as the contact page).
+After a successful book: a tentative Calendar hold is created; Gmail emails the host at `HOST_EMAIL` (default `info@calvindaniel.com`) with Approve/Decline links; Formspree archives a copy. The guest gets a Calendar invite only after you approve.
 
 ## Product config
 

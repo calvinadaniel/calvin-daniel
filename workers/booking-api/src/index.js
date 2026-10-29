@@ -28,13 +28,15 @@ const json = (data, status = 200, headers = {}) =>
 
 const corsHeaders = (origin, allowed) => {
   const ok = origin && allowed.includes(origin);
-  return {
-    'Access-Control-Allow-Origin': ok ? origin : allowed[0] || '*',
+  // Only echo an allowed Origin — never send a mismatched ACAO (breaks www vs apex).
+  const headers = {
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400',
     Vary: 'Origin',
   };
+  if (ok) headers['Access-Control-Allow-Origin'] = origin;
+  return headers;
 };
 
 /** Tiny in-memory rate limit (per isolate). Good enough against casual spam. */
@@ -246,7 +248,7 @@ const handleBook = async (request, env, config) => {
       id
     );
     const reviewUrl = `${config.reviewPageUrl}?key=${encodeURIComponent(secret)}`;
-    await notifyHost(env, {
+    await notifyHost(env, token, {
       name,
       email,
       website,
