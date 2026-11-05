@@ -249,6 +249,7 @@
   <link rel="stylesheet" href="css/contact-form.css" />
   <link rel="stylesheet" href="css/faq-accordion.css" />
   <link rel="stylesheet" href="css/hero-town.css" />
+  <link rel="stylesheet" href="css/work-media.css" />
   <link rel="icon" type="image/png" href="images/favicon-social-logo.png?v=2" />
 </head>
 <body class="font-body bg-warm-bg dark:bg-navy-bg text-navy-bg dark:text-offwhite overflow-x-hidden">
@@ -373,9 +374,14 @@
 <section id="case-study" class="bg-warm-bg dark:bg-navy-bg py-24 scroll-mt-[70px]">
   <div class="w-[90%] max-w-[1240px] mx-auto">
     <div class="grid gap-16 md:grid-cols-2 md:items-center">
-      <div data-reveal data-dir="left" class="relative overflow-hidden rounded-sm border border-navy-bg/10 dark:border-offwhite/10 bg-warm-section dark:bg-navy-section">
-        <img src="images/place-an-order-bachata-bakery-screenshot.png" alt="Bachata Bakery order page with scheduled presale window" width="1920" height="953" class="w-full" />
-      </div>
+      <figure data-reveal data-dir="left" class="work-media" aria-label="Bachata Bakery mobile and desktop views">
+        <div class="work-media__mobile bg-warm-section dark:bg-navy-section">
+          <img src="images/bachata-bakery-mobile.webp" alt="Bachata Bakery order page on mobile" width="390" height="844" loading="lazy" />
+        </div>
+        <div class="work-media__desktop bg-warm-section dark:bg-navy-section">
+          <img src="images/place-an-order-bachata-bakery-screenshot.png" alt="Bachata Bakery order page on desktop" width="1920" height="953" loading="lazy" />
+        </div>
+      </figure>
       <div class="flex flex-col justify-center">
         <div data-reveal><p class="font-mono text-[0.7rem] tracking-[0.18em] uppercase text-orange mb-2">Client work</p></div>
         <div data-reveal><h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.0] text-navy-bg dark:text-offwhite tracking-[0.01em]">Demand control for a one-person kitchen.</h2></div>
