@@ -1,0 +1,48 @@
+/* Desktop + mobile screenshot pair on /work/ */
+
+.work-media {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.work-media__desktop {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 0.125rem;
+  border: 1px solid rgba(0, 26, 77, 0.1);
+}
+
+.work-media__mobile {
+  flex: 0 0 auto;
+  width: 28%;
+  max-width: 9.75rem;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(0, 26, 77, 0.15);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.work-media__desktop img,
+.work-media__mobile img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html.dark .work-media__desktop,
+html.dark .work-media__mobile {
+  border-color: rgba(245, 247, 250, 0.15);
+}
+
+@media (min-width: 640px) {
+  .work-media {
+    gap: 1rem;
+  }
+
+  .work-media__mobile {
+    max-width: 10.5rem;
+  }
+}
