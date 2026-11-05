@@ -1,28 +1,42 @@
-/* Desktop + mobile screenshot pair on /work/ */
+/* Mobile-led screenshot pair on /work/: phone is primary, desktop is a supporting strip */
 
 .work-media {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.75rem;
+  --work-media-gap: 0.75rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+  justify-items: center;
   margin: 0;
+  min-height: 0;
+}
+
+.work-media__desktop,
+.work-media__mobile {
+  grid-area: 1 / 1;
+  overflow: hidden;
 }
 
 .work-media__desktop {
-  flex: 1 1 0;
-  min-width: 0;
-  overflow: hidden;
+  width: 88%;
+  max-width: 100%;
+  justify-self: start;
+  margin-bottom: 18%;
   border-radius: 0.125rem;
   border: 1px solid rgba(0, 26, 77, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  z-index: 1;
 }
 
 .work-media__mobile {
-  flex: 0 0 auto;
-  width: 28%;
-  max-width: 9.75rem;
-  overflow: hidden;
+  width: 46%;
+  max-width: 13.5rem;
+  justify-self: end;
   border-radius: 0.9rem;
   border: 1px solid rgba(0, 26, 77, 0.15);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+  z-index: 2;
 }
 
 .work-media__desktop img,
@@ -37,12 +51,22 @@ html.dark .work-media__mobile {
   border-color: rgba(245, 247, 250, 0.15);
 }
 
+html.dark .work-media__desktop {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+
+html.dark .work-media__mobile {
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
 @media (min-width: 640px) {
-  .work-media {
-    gap: 1rem;
+  .work-media__desktop {
+    width: 82%;
+    margin-bottom: 14%;
   }
 
   .work-media__mobile {
-    max-width: 10.5rem;
+    width: 42%;
+    max-width: 15rem;
   }
 }
