@@ -1,0 +1,169 @@
+/* Site & Booking Care one-pager layout + print */
+
+.care-sheet {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.care-sheet__price {
+  letter-spacing: 0.04em;
+}
+
+.care-sheet__columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .care-sheet__columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.care-sheet__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.care-sheet__list li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.care-sheet__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 1px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.care-sheet__list--in li::before {
+  background: #ff5910;
+  opacity: 1;
+}
+
+.care-sheet__fine {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.care-print-only {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.45in;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #001a4d !important;
+  }
+
+  #site-header,
+  #menu-overlay,
+  #off-canvas-nav,
+  #menu-open,
+  footer,
+  .page-strip__map,
+  .page-strip__route,
+  .care-no-print {
+    display: none !important;
+  }
+
+  .page-strip {
+    padding: 0.25rem 0 0.4rem !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .page-strip h1 {
+    font-size: 2.4rem !important;
+  }
+
+  .page-strip p {
+    margin-top: 0.35rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  main > section.bg-warm-bg,
+  main > section.dark\:bg-navy-bg {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  .care-print-only {
+    display: block;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .care-sheet {
+    max-width: none;
+  }
+
+  .care-sheet__price {
+    font-size: 2.6rem !important;
+  }
+
+  .care-sheet > .border-b {
+    margin-bottom: 0.75rem !important;
+    padding-bottom: 0.6rem !important;
+  }
+
+  .care-sheet__columns {
+    gap: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .care-sheet__panel {
+    break-inside: avoid;
+    border-color: rgba(0, 26, 77, 0.15) !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    padding: 0.75rem !important;
+  }
+
+  .care-sheet__list {
+    gap: 0.45rem !important;
+  }
+
+  .care-sheet__list li {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .care-sheet__fine {
+    font-size: 0.7rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .care-sheet__cta {
+    border: 1.5px solid #ff5910 !important;
+    color: #001a4d !important;
+    background: transparent !important;
+  }
+}

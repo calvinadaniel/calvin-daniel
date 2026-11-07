@@ -1,6 +1,6 @@
 # Pricing — Calvin Daniel
 
-Last updated: 2026-10-20
+Last updated: 2026-11-07
 
 Starting prices for custom websites and light automation for local service businesses. Final quotes are confirmed after a free 20-minute site review.
 
@@ -35,6 +35,22 @@ Starting prices for custom websites and light automation for local service busin
 - Includes:
   - Process audit
   - Dashboards and scheduled refresh on tools you already use (for example Power BI, SQL, Power Automate)
+
+## Site & Booking Care
+
+- Price: $899/year (about $75/month, billed annually in advance)
+- Page: https://calvindaniel.com/care/
+- One-pager PDF: `docs/sales/site-booking-care-one-pager.pdf`
+- Best for: Businesses whose website and custom booking system I host and maintain (new launches and renewals)
+- Includes:
+  - Domain renewal
+  - Website hosting and SSL
+  - Custom booking system hosting and uptime monitoring
+  - Security and maintenance for the booking stack
+  - Support for booking and calendar issues
+  - Small tweaks (hours, services, copy fixes) up to 45 minutes per month (unused time does not roll over)
+- Not included: Redesigns, new features, content overhauls, ads/social, third-party SaaS fees outside hosting and domain
+- Terms: Renews each year unless cancelled in writing at least 30 days before the term ends
 
 ## Free site review
 

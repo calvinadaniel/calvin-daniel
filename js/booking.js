@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var renderDays = function () {
     dayList.innerHTML = '';
     if (!state.days.length) {
-      setStatus('No open times in the next 30 days. Email info@calvindaniel.com and I will find a slot.', 'error');
+      setStatus('No open times in the next 30 days. Use the contact form and I will find a slot.', 'error');
       return;
     }
     state.days.forEach(function (day) {
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(function (err) {
         setStatus(
           err.message ||
-            'Booking is temporarily unavailable. Email info@calvindaniel.com.',
+            'Booking is temporarily unavailable. Please use the contact form instead.',
           'error'
         );
         dayList.innerHTML = '';
