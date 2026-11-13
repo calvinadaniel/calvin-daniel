@@ -2,6 +2,23 @@
 
 Updates to [calvindaniel.com](https://calvindaniel.com), newest first.
 
+## [2026-11-12] — About story rewrite
+
+Tell visitors who Calvin is — Bronx roots, creative-to-code path, marathon grit — so they trust they'll get hard work if they reach out.
+
+**Live:** https://calvindaniel.com/about/
+
+### About
+
+- Replaced credential-first bio with a personal story: Bronx upbringing, art and learning, path through graphics/3D/effects/frontend into AI.
+- Tied the don't-quit mindset to running (7 marathons in 4 years, 3 in 2026) and client work.
+- Removed day-job framing so the page reads as the business, not a side project.
+- Updated page subhead, meta/OG/Twitter descriptions, and Person schema to match.
+
+### Also in this push
+
+- Titan-ready HTML email signature with hosted icons (prior unpushed commit).
+
 ## 2026-10-21
 
 ### Booking (approve-before-confirm)
